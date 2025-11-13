@@ -1,83 +1,82 @@
 <style>
-/* Submenu position */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
-}
-
-
-</style>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-                <!-- Logo + Brand -->
-            <a class="navbar-brand d-flex align-items-center" href="./index.html">
-                <img src="imgs/artcogs-logo.png" 
-                    alt="ArtCogS Logo" 
-                    style="height:40px; width:auto; margin-right:10px;">
-                    ArtCogS
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./team.html">Team</a></li>
-                    <li class="nav-item dropdown">
-                        <!-- Main Link + Toggle -->
-                        <a class="nav-link" href="./projects/index.html">Projects</a>
-                        <a class="nav-link dropdown-toggle dropdown-toggle-split"
-                            href="#"
-                            id="projectsDropdown"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"></a>
-
-                        <!-- First Level Dropdown -->
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="projectsDropdown">
-
-                            <!-- Submenu: Current Projects -->
-                            <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">Current Projects</a>
-                            <ul class="dropdown-menu">
-
-                                <li><a class="dropdown-item" href="projects/archaeonav.html">ArchaeoNav</a></li>
-                                <li><a class="dropdown-item" href="projects/cmsml.html">CMSCML</a></li>
-                                <li><a class="dropdown-item" href="projects/ibrics.html">IBRICS</a></li>
-                                <li><a class="dropdown-item" href="projects/uniche.html">UNICHE</a></li>
-
-                            </ul>
-                            </li>
-
-                            <!-- Simple submenu -->
-                            <li><a class="dropdown-item" href="./past-projects.html">Past Projects</a></li>
-
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-<script>
-  // Get the current page filename (e.g., "team.html")
-  const currentPage = window.location.pathname.split("/").pop();
-
-  // Loop through all nav links
-  document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
-    const linkPage = link.getAttribute("href");
-
-    // Compare and activate
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
+    /* Optional: fine-tune submenu position for dropend inside dropdowns */
+    .dropdown-menu .dropend .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-left: 0.1rem;
     }
-  });
-</script>
+</style>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Logo + Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="./index.html">
+      <img src="imgs/artcogs-logo.png" 
+           alt="ArtCogS Logo" 
+           style="height:40px; width:auto; margin-right:10px;">
+      ArtCogS
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="./index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./team.html">Team</a>
+        </li>
+
+        <!-- Projects with multilevel dropdown -->
+        <li class="nav-item dropdown">
+          <!-- Main link -->
+          <a class="nav-link" href="./projects/index.html">Projects</a>
+          <!-- Split toggle for dropdown -->
+          <a class="nav-link dropdown-toggle dropdown-toggle-split"
+             href="#"
+             id="projectsDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false"></a>
+
+          <!-- First-level dropdown -->
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="projectsDropdown">
+            
+            <!-- Submenu: Current Projects -->
+            <li class="dropend">
+              <a class="dropdown-item dropdown-toggle"
+                 href="#"
+                 id="currentProjectsDropdown"
+                 role="button"
+                 data-bs-toggle="dropdown"
+                 aria-expanded="false">
+                Current Projects
+              </a>
+
+              <!-- Second-level dropdown -->
+              <ul class="dropdown-menu" aria-labelledby="currentProjectsDropdown">
+                <li><a class="dropdown-item" href="/projects/archaeonav.html">ArchaeoNav</a></li>
+                <li><a class="dropdown-item" href="/projects/cmsml.html">CMSCML</a></li>
+                <li><a class="dropdown-item" href="/projects/ibrics.html">IBRICS</a></li>
+                <li><a class="dropdown-item" href="/projects/uniche.html">UNICHE</a></li>
+              </ul>
+            </li>
+
+            <!-- Simple submenu item -->
+            <li>
+              <a class="dropdown-item" href="/projects/past-projects.html">Past Projects</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
