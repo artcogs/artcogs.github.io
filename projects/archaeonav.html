@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>From GIS to ABM – ArtCogS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Optional: your favicon -->
+  <!-- <link rel="icon" type="image/png" href="imgs/favicon.png"> -->
+</head>
+<body>
+
+  <!-- Optional: top menu loaded from external file -->
+  <!--
+  <div id="top-menu"></div>
+  <script>
+    fetch("top-menu.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("top-menu").innerHTML = data;
+
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+          const linkPage = link.getAttribute("href");
+          if (linkPage === currentPage) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+  </script>
+  -->
+
+  <main class="container py-5">
+
+    <!-- TITLE / HERO -->
+    <header class="text-center mb-5">
+      <h1 class="mb-3">From GIS to ABM: Rethinking Connectivity in Ancient Landscapes</h1>
+      <p class="lead">
+        Exploring how we move from static maps to dynamic, agent-based simulations to understand
+        ancient movement, trade, and social interaction.
+      </p>
+    </header>
+
+    <!-- OVERVIEW SECTION -->
+    <section class="mb-5">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <p>
+            The research initiative explores the evolution of research on networks and connectivity
+            in archaeology, tracing the shift from traditional 2D Geographic Information Systems (GIS)
+            representations to dynamic 3D environments built with modern game engines. By integrating
+            Agent-Based Simulation (ABS), we move beyond the static nature of conventional mapping
+            to model how people, goods, and ideas moved through ancient landscapes.
+          </p>
+          <p>
+            At the heart of this work lies a commitment to open-access tools and interdisciplinary
+            collaboration, bringing together archaeologists, computer scientists, and machine learning
+            specialists. This fusion of expertise allows us to design intelligent virtual agents capable
+            of simulating realistic patterns of movement, decision-making, and interaction within
+            reconstructed environments.
+          </p>
+        </div>
+
+        <!-- Placeholder image for the overall project -->
+        <div class="col-md-5 text-center">
+          <!-- Replace src with your actual image file -->
+          <img src="archaeonav/1.png"
+               alt="From GIS to ABM overview"
+               class="img-fluid rounded shadow-sm mb-3">
+          <small class="text-muted d-block">
+            Example visualization of movement in a reconstructed ancient landscape.
+          </small>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="mb-5">
+      <h2 class="mb-4 text-center">Case Studies</h2>
+
+      <div class="row g-4">
+        <!-- Thracian Forts -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <!-- Replace src with your actual image file -->
+            <img src="archaeonav/2.png"
+                 class="card-img-top"
+                 alt="Thracian forts along the Via Egnatia">
+            <div class="card-body">
+              <h5 class="card-title">Thracian Forts along the Via Egnatia</h5>
+              <p class="card-text">
+                ABS helps us understand the strategic placement of Thracian forts and their role
+                in controlling movement and visibility across rugged terrain. By simulating agents
+                moving through the landscape, we can explore how fort locations influenced routes,
+                surveillance, and communication.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kalapodi -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <!-- Replace src with your actual image file -->
+            <img src="archaeonav/3.png"
+                 class="card-img-top"
+                 alt="Sanctuary of Kalapodi">
+            <div class="card-body">
+              <h5 class="card-title">The Sanctuary of Kalapodi</h5>
+              <p class="card-text">
+                The sanctuary of Kalapodi in central Greece is a vital inland hub connected to
+                maritime trade networks. Simulations model the flow of goods from coastal harbors
+                to Kalapodi, revealing how terrain, transport modalities, and social behaviors
+                shaped the region’s connectivity and economic life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-4">
+        Through these examples, we demonstrate how computational simulations can uncover hidden
+        patterns in ancient navigation, trade, and social interaction—patterns influenced by both
+        natural features and socio-cultural dynamics. The integration of serious games within our
+        simulation framework further enhances accessibility and engagement, transforming these
+        research environments into interactive learning tools.
+      </p>
+
+      <p>
+        By going “from GIS to ABM,” our effort highlights how new digital methodologies can extend
+        the reach of archaeological interpretation. The approach offers a comprehensive and
+        cost-effective way to visualize movement and trade in the ancient world—bringing past
+        landscapes to life and opening new perspectives on how people experienced and shaped
+        their environments.
+      </p>
+    </section>
+
+    <!-- PRESENTATIONS / CONFERENCES -->
+    <section class="mb-5">
+      <h2 class="mb-4 text-center">Presentations &amp; Conferences</h2>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between flex-wrap">
+            <span class="fw-bold me-2">12/2025</span>
+            <span>
+              Evangelidis, V. <em>Extending the Potentials of Landscape Archaeology:
+              From GIS to ABM.</em> Lecture Series Atlas.
+            </span>
+          </div>
+        </li>
+
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between flex-wrap">
+            <span class="fw-bold me-2">02/2025</span>
+            <span>
+              Evangelidis, V., D. Grigoropoulos, C. Kiourt.
+              <em>3D Environment Multiagent Simulation: Tracking Movement and Trade in Roman Greece.</em>
+              Conference <em>Three-Dimensional Experiences of Ancient Environments</em>,
+              American School of Classical Studies at Athens &amp; Case Western Reserve University.
+            </span>
+          </div>
+        </li>
+
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between flex-wrap">
+            <span class="fw-bold me-2">11/2024</span>
+            <span>
+              Kiourt, C., Evangelidis, V., Grigoropoulos, D.
+              <em>Agent-Based Simulation of Crowd Movements in Uneven Terrains: Archaeological Case Studies.</em>
+              Conference <em>Archaeo-Informatics 2024: Use and Challenges of AI in Archaeology.</em>
+            </span>
+          </div>
+        </li>
+      </ul>
+
+      <!-- External link as a button -->
+      <div class="mt-4 text-center">
+        <a href="https://www.google.com/search?sca_esv=740dc6ac61211c57&udm=7&sxsrf=AE3TifPiuiMwWFqOkRb6A0NHUBNbqpSwxw:1763026585583&q=three+dimensional+experiences+of+ancient+environments&sa=X&ved=2ahUKEwiN1PPq6e6QAxUChf0HHSE8B9QQ8ccDKAJ6BAgWEAQ&biw=1920&bih=953&dpr=1#fpstate=ive&vld=cid:b5a1e567,vid:mOB7KEDGO6o,st:0"
+           class="btn btn-outline-primary"
+           target="_blank"
+           rel="noopener">
+          More on “Three-Dimensional Experiences of Ancient Environments”
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bootstrap JS (bundle includes Popper) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
