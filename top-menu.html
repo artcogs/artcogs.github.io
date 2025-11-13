@@ -23,56 +23,15 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="./index.html">Home</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="./team.html">Team</a>
-        </li>
-
-        <!-- Projects with multilevel dropdown -->
+        <li class="nav-item"> <a class="nav-link active" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./team.html">Team</a></li>
         <li class="nav-item dropdown">
-          <!-- Main link -->
-          <a class="nav-link" href="./projects/index.html">Projects</a>
-          <!-- Split toggle for dropdown -->
-          <a class="nav-link dropdown-toggle dropdown-toggle-split"
-             href="#"
-             id="projectsDropdown"
-             role="button"
-             data-bs-toggle="dropdown"
-             aria-expanded="false"></a>
-
-          <!-- First-level dropdown -->
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="projectsDropdown">
-            
-            <!-- Submenu: Current Projects -->
-            <li class="dropend">
-              <a class="dropdown-item dropdown-toggle"
-                 href="#"
-                 id="currentProjectsDropdown"
-                 role="button"
-                 data-bs-toggle="dropdown"
-                 aria-expanded="false">
-                Current Projects
-              </a>
-
-              <!-- Second-level dropdown -->
-              <ul class="dropdown-menu" aria-labelledby="currentProjectsDropdown">
-                <li><a class="dropdown-item" href="/projects/archaeonav.html">ArchaeoNav</a></li>
-                <li><a class="dropdown-item" href="/projects/cmsml.html">CMSCML</a></li>
-                <li><a class="dropdown-item" href="/projects/ibrics.html">IBRICS</a></li>
-                <li><a class="dropdown-item" href="/projects/uniche.html">UNICHE</a></li>
-              </ul>
-            </li>
-
-            <!-- Simple submenu item -->
-            <li>
-              <a class="dropdown-item" href="/projects/past-projects.html">Past Projects</a>
-            </li>
-          </ul>
-        </li>
-
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Projects </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="./current-projects.html">Currect</a>
+            <a class="dropdown-item" href="#">Past</a>
+        </div>
+      </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
