@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArtCogS</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ArtCogS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <h1>Hello ArtCogS!</h1>
+      <!-- TEAM SECTION -->
+<div class="container py-5">
+  <h2 class="text-center mb-4">Our Team</h2>
+
+  <div class="row justify-content-center">
+
+    <!-- PERSON CARD -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card text-center h-100 shadow-sm">
+
+        <!-- Profile photo (square) -->
+        <img src="img/team/person1.jpg"
+             class="card-img-top"
+             alt="Person Name"
+             style="aspect-ratio: 1 / 1; object-fit: cover;">
+
+        <div class="card-body">
+          <!-- Name -->
+          <h5 class="card-title mb-3">Person Name</h5>
+
+          <!-- Social icons (small images) -->
+          <div class="d-flex justify-content-center gap-2">
+            <a href="https://www.linkedin.com/in/USERNAME" target="_blank">
+              <img src="img/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://scholar.google.com/..." target="_blank">
+              <img src="img/icons/google-scholar.png" alt="Google Scholar" class="social-icon">
+            </a>
+            <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">
+              <img src="img/icons/orcid.png" alt="ORCID" class="social-icon">
+            </a>
+            <a href="https://PERSON-WEBSITE" target="_blank">
+              <img src="img/icons/webpage.png" alt="Webpage" class="social-icon">
+            </a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=XXXX" target="_blank">
+              <img src="img/icons/scopus.png" alt="Scopus" class="social-icon">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /PERSON CARD -->
+
+    <!-- Copy-paste the card above for each team member and just change image, name, links -->
+
+  </div>
+</div>
+
+<!-- Small CSS for icon size -->
+<style>
+  .social-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+</style>
+
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+  </body>
+</html>
