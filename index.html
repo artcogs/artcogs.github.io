@@ -20,6 +20,9 @@
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-20">
+                     <img src="imgs/artcogs-logo.png" 
+                    alt="ArtCogS Logo" 
+                    style="height:120px; width:auto; margin-bottom:20px;">
 
             <h3 class="text-center mb-4">Welcome to the Artificial Cognitive Systems Group (ArtCogS)</h3>
 
@@ -27,9 +30,6 @@
               and artificial cognition meet. Our research focuses on understanding and engineering cognitive behaviours in 
               artificial systems through advanced AI methods, with a strong emphasis on Reinforcement Learning, simulation, and agent-based modelling.
             </p>
-              <img src="imgs/artcogs-logo.png" 
-                    alt="ArtCogS Logo" 
-                    style="height:120px; width:auto; margin-bottom:20px;">
 
             <p class="lead text-center">As part of the Athena Research Center, our group collaborates across disciplines to design systems that
              can perceive, learn, reason, and act autonomously in complex environments. We conduct applied and theoretical research in areas such as 
@@ -43,5 +43,23 @@
     </div>
 
     <script src="./js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+    <script>
+  fetch("top-menu.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("top-menu").innerHTML = data;
+
+      // Run the active menu code AFTER the menu loads
+      const currentPage = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === currentPage) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+</script>
   </body>
 </html>
