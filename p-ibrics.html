@@ -71,10 +71,27 @@
             <a href="https://github.com/hucebot/ahmp" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Code </a>
           </div>
           <div class="p-3 mt-3" style="background-color:#f7f7f7; border-radius:6px;">
+            h5 class="mb-2">Key Contributions</h5>
+            <ul>
+              <li><strong>Bi-Level Optimization Framework:</strong> Integration of contact sequence discovery (CEM-MD) with SE(3) tangent-space trajectory optimization for agile whole-body motion planning.</li>
+              <li><strong>Automatic Contact Discovery:</strong> Eliminates the need for manual contact sequence specification through black-box optimization of contact timings and locations.</li>
+              <li><strong>Efficient Implementation:</strong> Generates feasible multi-contact motions in median time of ~200 seconds by leveraging parallel evaluation and SE(3) tangent-space parameterization.</li>
+              <li><strong>Dynamic Motion Generation:</strong> Capable of producing highly agile and dynamic whole-body motions for humanoid robots in complex environments.</li>
+            </ul>
+            </hr>
+            <h5 class="mt-4 mb-2">Method Overview</h5>
+            <div class="text-center my-3">
+              <img src="imgs/ibrics/concept_figure.jpeg"
+                  alt="IBRICS Method Overview"
+                  class="img-fluid rounded shadow-sm"
+                  style="max-width: 700px;">
+            </div>
+            <p class="mb-1"><strong>AHMP Framework Pipeline</strong></p>
             <p class="mb-0">
-                Additional notes, figures, images, or supplementary material can be added here.
-                You can also embed thumbnails, diagrams, etc.
-              </p>
+              Bi-level optimization: CEM-MD samples contact sequences (outer loop),  
+              each evaluated via SE(3) tangent-space trajectory optimization (inner loop).  
+              Best solutions update the contact distribution iteratively.
+            </p>
           </div>
         </div>
       </section>
