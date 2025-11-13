@@ -1,6 +1,14 @@
 
 
+<div id="top-menu"></div>
 
+<script>
+  fetch("top-menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("top-menu").innerHTML = data;
+    });
+</script>
 
 
 
@@ -101,3 +109,14 @@
   </div>
 
 </div>
+
+<div id="top-menu"></div>
+
+<script>
+  fetch("top-menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("top-menu").innerHTML = data;
+    });
+</script>
+
