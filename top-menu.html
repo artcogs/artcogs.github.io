@@ -21,3 +21,20 @@
           </div>
         </div>
       </nav>
+
+      <script>
+  // Get the current page filename (e.g., "team.html")
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Loop through all nav links
+  document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    // Compare and activate
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+</script>
