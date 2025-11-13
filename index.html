@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ArtCogS</title>
     <link href="./css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script>
+      fetch("top-menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("top-menu").innerHTML = data;
+        });
+    </script>
   </head>
   <body>
+    <div class="container-fluid"></div>
+      <div id="top-menu"></div>
 
-    
       <h1>Hello ArtCogS!</h1>
     </div>
     <script src="./js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
