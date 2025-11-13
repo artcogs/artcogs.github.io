@@ -78,111 +78,119 @@
             <a href="https://hal.science/hal-05072261" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm"> Paper</a>
             <a href="https://www.youtube.com/watch?v=7htEV2UDsAE" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Video</a>
             <a href="https://github.com/hucebot/ahmp" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Code </a>
+            <button class="btn btn-sm btn-outline-dark mb-2" 
+               type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#P1analysisBox">
+                Show / Hide Analysis
+              </button>
           </div>
-          <div class="p-3 mt-3" style="background-color:#f7f7f7; border-radius:6px;">
-            h5 class="mb-2">Key Contributions</h5>
-            <ul>
-              <li><strong>Bi-Level Optimization Framework:</strong> Integration of contact sequence discovery (CEM-MD) with SE(3) tangent-space trajectory optimization for agile whole-body motion planning.</li>
-              <li><strong>Automatic Contact Discovery:</strong> Eliminates the need for manual contact sequence specification through black-box optimization of contact timings and locations.</li>
-              <li><strong>Efficient Implementation:</strong> Generates feasible multi-contact motions in median time of ~200 seconds by leveraging parallel evaluation and SE(3) tangent-space parameterization.</li>
-              <li><strong>Dynamic Motion Generation:</strong> Capable of producing highly agile and dynamic whole-body motions for humanoid robots in complex environments.</li>
-            </ul>
-            </hr>
-            <h5 class="mt-4 mb-2">Method Overview</h5>
-            <div class="text-center my-3">
-              <img src="imgs/ibrics/concept_figure.jpeg"
-                  alt="IBRICS Method Overview"
-                  class="img-fluid rounded shadow-sm"
-                  style="max-width: 400px;">
-            </div>
-            <p class="mb-1"><strong>AHMP Framework Pipeline</strong></p>
-            <p class="mb-0">
-              Bi-level optimization: CEM-MD samples contact sequences (outer loop),  
-              each evaluated via SE(3) tangent-space trajectory optimization (inner loop).  
-              Best solutions update the contact distribution iteratively.
-            </p>
-            <h5 class="mt-4 mb-2">Experimental Scenarios</h5>
-            <div class="row g-4">
-
-              <!-- Video 1 -->
-              <div class="col-md-4">
-                <h6 class="text-center">Handrail Corridor</h6>
-                <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
-                    <video 
-                        src="./imgs/ibrics/handrails.mp4" 
-                        autoplay 
-                        muted 
-                        loop 
-                        playsinline 
-                        class="w-100 rounded">
-                      </video>
-                </div>
-                <p class="text-muted small text-center">
-                  Move 3m forward in a handrail-equipped environment. The robot leverages dynamics for agile movements including hand-walking.
-                </p>
-              </div>
-
-              <!-- Video 2 -->
-              <div class="col-md-4">
-                <h6 class="text-center">Chimney - Low Target (1m)</h6>
-                <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
-                    <video 
-                        src="./imgs/ibrics/chimney_low.mp4" 
-                        autoplay 
-                        muted 
-                        loop 
-                        playsinline 
-                        class="w-100 rounded">
-                      </video>
-                </div>
-                <p class="text-muted small text-center">
-                  Climb 1m height in chimney environment. Robot weaves left-right using feet and hands to propel upward.
-                </p>
-              </div>
-
-              <!-- Video 3 -->
-              <div class="col-md-4">
-                <h6 class="text-center">Chimney - High Target (3m)</h6>
-                <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
-                    <video 
-                        src="./imgs/ibrics/chimney_high.mp4" 
-                        autoplay 
-                        muted 
-                        loop 
-                        playsinline 
-                        class="w-100 rounded">
-                      </video>
-                </div>
-                <p class="text-muted small text-center">
-                  Climb 3m height with more deliberate, altitude-gaining motions. Demonstrates complex contact sequences.
-                </p>
-              </div>
-
-            </hr>
-            <h5 class="mt-4 mb-2">Experimental Results</h5>
-            <div class="text-center my-3">
-              <img src="imgs/ibrics/wall_times.png"
-                  alt="IBRICS Method Overview"
-                  class="img-fluid rounded shadow-sm"
-                  style="max-width: 400px;">
-            </div>
-
-            </hr>
-            <h5 class="mt-4 mb-2">Performance Summary:</h5>
-
-              <ul class="list-group mb-4">
-                <li class="list-group-item">
-                  <strong>Handrails:</strong> 100% success rate, median time ~100s (over 10 runs)
-                </li>
-                <li class="list-group-item">
-                  <strong>Chimney (1m):</strong> 80% success rate, median time ~150s (over 10 runs)
-                </li>
-                <li class="list-group-item">
-                  <strong>Chimney (3m):</strong> 50% success rate, median time ~300s (over 10 runs)
-                </li>
+          <div class="collapse" id="P1analysisBox">
+            <div class="p-3 mt-3" style="background-color:#f7f7f7; border-radius:6px;">
+              <h5 class="mb-2">Key Contributions</h5>
+              <ul>
+                <li><strong>Bi-Level Optimization Framework:</strong> Integration of contact sequence discovery (CEM-MD) with SE(3) tangent-space trajectory optimization for agile whole-body motion planning.</li>
+                <li><strong>Automatic Contact Discovery:</strong> Eliminates the need for manual contact sequence specification through black-box optimization of contact timings and locations.</li>
+                <li><strong>Efficient Implementation:</strong> Generates feasible multi-contact motions in median time of ~200 seconds by leveraging parallel evaluation and SE(3) tangent-space parameterization.</li>
+                <li><strong>Dynamic Motion Generation:</strong> Capable of producing highly agile and dynamic whole-body motions for humanoid robots in complex environments.</li>
               </ul>
+              </hr>
+              <h5 class="mt-4 mb-2">Method Overview</h5>
+              <div class="text-center my-3">
+                <img src="imgs/ibrics/concept_figure.jpeg"
+                    alt="IBRICS Method Overview"
+                    class="img-fluid rounded shadow-sm"
+                    style="max-width: 400px;">
+              </div>
+              <p class="mb-1"><strong>AHMP Framework Pipeline</strong></p>
+              <p class="mb-0">
+                Bi-level optimization: CEM-MD samples contact sequences (outer loop),  
+                each evaluated via SE(3) tangent-space trajectory optimization (inner loop).  
+                Best solutions update the contact distribution iteratively.
+              </p>
+              <h5 class="mt-4 mb-2">Experimental Scenarios</h5>
+              <div class="row g-4">
+
+                <!-- Video 1 -->
+                <div class="col-md-4">
+                  <h6 class="text-center">Handrail Corridor</h6>
+                  <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
+                      <video 
+                          src="./imgs/ibrics/handrails.mp4" 
+                          autoplay 
+                          muted 
+                          loop 
+                          playsinline 
+                          class="w-100 rounded">
+                        </video>
+                  </div>
+                  <p class="text-muted small text-center">
+                    Move 3m forward in a handrail-equipped environment. The robot leverages dynamics for agile movements including hand-walking.
+                  </p>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="col-md-4">
+                  <h6 class="text-center">Chimney - Low Target (1m)</h6>
+                  <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
+                      <video 
+                          src="./imgs/ibrics/chimney_low.mp4" 
+                          autoplay 
+                          muted 
+                          loop 
+                          playsinline 
+                          class="w-100 rounded">
+                        </video>
+                  </div>
+                  <p class="text-muted small text-center">
+                    Climb 1m height in chimney environment. Robot weaves left-right using feet and hands to propel upward.
+                  </p>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="col-md-4">
+                  <h6 class="text-center">Chimney - High Target (3m)</h6>
+                  <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
+                      <video 
+                          src="./imgs/ibrics/chimney_high.mp4" 
+                          autoplay 
+                          muted 
+                          loop 
+                          playsinline 
+                          class="w-100 rounded">
+                        </video>
+                  </div>
+                  <p class="text-muted small text-center">
+                    Climb 3m height with more deliberate, altitude-gaining motions. Demonstrates complex contact sequences.
+                  </p>
+                </div>
+
+              </hr>
+              <h5 class="mt-4 mb-2">Experimental Results</h5>
+              <div class="text-center my-3">
+                <img src="imgs/ibrics/wall_times.png"
+                    alt="IBRICS Method Overview"
+                    class="img-fluid rounded shadow-sm"
+                    style="max-width: 400px;">
+              </div>
+
+              </hr>
+              <h5 class="mt-4 mb-2">Performance Summary:</h5>
+
+                <ul class="list-group mb-4">
+                  <li class="list-group-item">
+                    <strong>Handrails:</strong> 100% success rate, median time ~100s (over 10 runs)
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Chimney (1m):</strong> 80% success rate, median time ~150s (over 10 runs)
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Chimney (3m):</strong> 50% success rate, median time ~300s (over 10 runs)
+                  </li>
+                </ul>
+            </div>
+            </div>
           </div>
-        </div>
     </section>
       <!-- People section -->
     <section class="mb-5" id="People">
