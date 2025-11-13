@@ -1,21 +1,15 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ArtCogS</title>
-    <link href="./css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <div id="top-menu"></div>
+
     <script>
       fetch("top-menu.html")
-        .then(response => response.text())
+        .then(res => res.text())
         .then(data => {
           document.getElementById("top-menu").innerHTML = data;
         });
     </script>
-  </head>
-  <body>
-      <div id="top-menu"></div>
        
       <div class="container-fluid">
         <br>
@@ -43,22 +37,12 @@
       </div>
     </div>
 
-    <script src="./js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
-    <script>
-  // Get the current page filename (e.g., "team.html")
-  const currentPage = window.location.pathname.split("/").pop();
-
-  // Loop through all nav links
-  document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
-    const linkPage = link.getAttribute("href");
-
-    // Compare and activate
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
-</script>
-  </body>
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
 </html>
