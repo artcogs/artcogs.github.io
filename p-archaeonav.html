@@ -164,12 +164,12 @@
       </div>
     </section>
 
-<div id="top-menu"></div>
-
+<div id="footer"></div>
 <script>
-  fetch("top-menu.html")
+  fetch("footer.html")
     .then(res => res.text())
     .then(data => {
-      document.getElementById("top-menu").innerHTML = data;
+      document.getElementById("footer").innerHTML = data;
     });
 </script>
+<script src="./js/bootstrap.bundle.min.js"></script>
