@@ -1,1 +1,27 @@
-IBRICS Peroject
+
+<div id="top-menu"></div>
+
+<script>
+  fetch("top-menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("top-menu").innerHTML = data;
+    });
+</script>
+
+<main class="flex-grow-1">
+<div class="container py-5">
+  <h1>IBRICS Project</h1>
+  <p>Your content here…</p>
+</div>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
