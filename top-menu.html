@@ -1,13 +1,4 @@
-<style>
-    /* Optional: fine-tune submenu position for dropend inside dropdowns */
-    .dropdown-menu .dropend .dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-left: 0.1rem;
-    }
-</style>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <!-- Logo + Brand -->
     <a class="navbar-brand d-flex align-items-center" href="./index.html">
@@ -23,18 +14,34 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"> <a class="nav-link active" href="./index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="./team.html">Team</a></li>
+        <li class="nav-item">
+          <a class="nav-link active" href="./index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./team.html">Team</a>
+        </li>
+
+        <!-- DROPDOWN -->
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Projects </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="./current-projects.html">Currect</a>
-            <a class="dropdown-item" href="#">Past</a>
-        </div>
-      </li>
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="navbarDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Projects
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="./current-projects.html">Current</a></li>
+            <li><a class="dropdown-item" href="#">Past</a></li>
+          </ul>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
+
       </ul>
     </div>
   </div>
