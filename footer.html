@@ -1,0 +1,23 @@
+<!-- footer.html -->
+
+<footer class="bg-dark text-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-1">&copy; 2025 ArtCogS – Artificial Cognitive Systems Group</p>
+    <p class="small mb-0">Part of Athena Research Center</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Auto-highlight active menu -->
+<script>
+  const current = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".nav-link").forEach(link => {
+    const match = link.getAttribute("href");
+    if (match === current) link.classList.add("active");
+  });
+</script>
+
+</body>
+</html>

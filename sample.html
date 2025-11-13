@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<div id="top-menu"></div>
+
+<script>
+  fetch("top-menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("top-menu").innerHTML = data;
+    });
+</script>
+
+<div class="container py-5">
+  <h1>Welcome to ArtCogS</h1>
+  <p>Your content here…</p>
+</div>
+
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</html>
