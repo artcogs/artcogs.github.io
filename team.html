@@ -5,25 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ArtCogS</title>
     <link href="./css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script>
+      fetch("top-menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("top-menu").innerHTML = data;
+        });
+    </script>
   </head>
   <body>
     <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">ArtCogS</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <div id="top-menu"></div>
     
       <h1>Hello ArtCogS!</h1>
       <!-- TEAM SECTION -->
