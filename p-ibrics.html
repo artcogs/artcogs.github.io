@@ -47,78 +47,22 @@
 
     </section>
 
-    <!-- Key research directions / contributions -->
-    <section class="mb-5">
-      <h3>Research Directions</h3>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Human Pose Extraction</h5>
-              <p class="card-text">
-                Detecting and tracking human body pose from images and video
-                as a basis for motion understanding and imitation.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">3D Motion Analysis</h5>
-              <p class="card-text">
-                Representing and analysing 3D human motion to capture complex,
-                dynamic behaviours in a structured way.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Trajectory Tracking</h5>
-              <p class="card-text">
-                Designing methods for accurate tracking of dynamic trajectories
-                in 3D space for legged and humanoid robots.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Robot Control</h5>
-              <p class="card-text">
-                Developing controllers that map learned motion patterns onto
-                physical robotic platforms for agile whole-body behaviour.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Publications section -->
     <section class="mb-5">
       <h3>Selected Publications</h3>
 
       <!-- Example publication card 1 -->
-      <div class="card mb-3 shadow-sm">
         <div class="card-body">
           <h5 class="card-title">
-            AHMP: Agile Humanoid Motion Planning With Contact Sequence Discovery
+            AHMP: Agile Humanoid Motion Planning With Contact Sequence Discovery. Tsikelis, I., Tsiatsianas, E., Kiourt, C., Ivaldi, S., Chatzilygeroudis, K., Hoffman, E.M.  IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids)
           </h5>
-          <p class="card-subtitle text-muted mb-2">
-            Tsikelis, Tsiatsianas, Kiourt, Ivaldi, Chatzilygeroudis, Hoffman – Humanoids 2025
-          </p>
-          <p class="card-text">
-            A bi-level optimization framework for agile whole-body motion planning in humanoid
-            robots, combining automatic contact sequence discovery with efficient trajectory
-            optimization.
-          </p>
+          <a class="card-subtitle text-muted mb-2"> Abstract: Planning agile whole-body motions for legged and humanoid robots is a fundamental requirement 
+            for enabling dynamic tasks such as running, jumping, and fast reactive maneuvers. In this work, we present AHMP, a multi-contact motion 
+            planning framework based on bi-level optimization that integrates a contact sequence discovery technique, using the Mixed-Distribution 
+            Cross-Entropy Method (CEM-MD), and an efficient trajectory optimization scheme, which parameterizes the robot’s poses and motions in
+             the tangent space of SE(3). AHMP permits the automatic generation of feasible contact configurations, with associated whole-body dynamic
+              transitions. We validate our approach on a set of challenging agile motion planning tasks for humanoid robots, demonstrating that contact
+               sequence discovery combined with tangent space parameterization leads to highly dynamic motion plans while remaining computationally efficient.</a>
           <div class="d-flex flex-wrap gap-2">
             <!-- Replace with actual links -->
             <a href="https://hal.science" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">
@@ -132,93 +76,6 @@
             </a>
           </div>
         </div>
-      </div>
-
-      <!-- Example publication card 2 -->
-      <div class="card mb-3 shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">
-            A Comparative Study of Floating-Base Space Parameterizations for Agile Whole-Body Motion Planning
-          </h5>
-          <p class="card-subtitle text-muted mb-2">
-            Tsiatsianas, Kiourt, Chatzilygeroudis – Humanoids 2025
-          </p>
-          <p class="card-text">
-            A systematic comparison of different floating-base parameterizations for trajectory
-            optimization in legged systems, highlighting the benefits of SE(3) tangent-space
-            formulations for agile motions.
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <!-- Replace with actual links -->
-            <a href="https://arxiv.org" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">
-              Paper
-            </a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">
-              Video
-            </a>
-            <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">
-              Code
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- People section -->
-    <section class="mb-5">
-      <h3>People</h3>
-      <div class="row g-3">
-        <!-- Example cards – adapt to match your style / people page -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Konstantinos Chatzilygeroudis</h5>
-              <p class="card-text mb-1">Assistant Professor</p>
-              <a href="https://costashatz.github.io" target="_blank" rel="noopener" class="card-link">
-                Personal page
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add more people as needed -->
-        <!-- Chairi, Dimitris, PhD students, etc. -->
-      </div>
-    </section>
-
-    <!-- Media / figures section -->
-    <section class="mb-5">
-      <h3>Media &amp; Demonstrations</h3>
-      <div class="row g-4">
-
-        <!-- Example image placeholder -->
-        <div class="col-md-6">
-          <div class="card shadow-sm">
-            <img src="imgs/ibrics-pipeline-placeholder.jpg"
-                 class="card-img-top"
-                 alt="IBRICS framework overview">
-            <div class="card-body">
-              <p class="card-text">
-                Framework overview: from human motion capture and analysis to robotic motion
-                generation and control.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Example YouTube embed placeholder -->
-        <div class="col-md-6">
-          <div class="ratio ratio-16x9 shadow-sm">
-            <!-- Replace src with real YouTube video URL -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-                    title="IBRICS Demo Video"
-                    allowfullscreen></iframe>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
   </div>
 </main>
 
