@@ -1,3 +1,4 @@
+<!-- cmsml.html -->
 
 <div id="top-menu"></div>
 
@@ -10,10 +11,289 @@
 </script>
 
 <main class="flex-grow-1">
-<div class="container py-5">
-  <h1>CMSML Project</h1>
-  <p>Your content here…</p>
-</div>
+  <div class="container py-5">
+
+    <!-- In-page navigation -->
+    <div class="d-flex flex-wrap gap-3 my-4 justify-content-center">
+      <a href="#overview" class="btn btn-outline-dark btn-sm">Overview</a>
+      <a href="#funding" class="btn btn-outline-dark btn-sm">Funding</a>
+      <a href="#simulation" class="btn btn-outline-dark btn-sm">Simulation &amp; Results</a>
+      <a href="#perception" class="btn btn-outline-dark btn-sm">Perception &amp; Scene Understanding</a>
+      <a href="#people" class="btn btn-outline-dark btn-sm">People</a>
+    </div>
+
+    <!-- Title + subtitle -->
+    <header class="mb-4 text-center">
+      <h1 class="mb-2">CMSML</h1>
+      <h4 class="text-muted">
+        Crowd Management System for Emergency Situations Using Machine Learning Technologies
+      </h4>
+    </header>
+
+    <!-- Abstract / Project overview -->
+    <section class="mb-5" id="overview">
+      <h3>Abstract</h3>
+      <p class="lead">
+        CMSML aims to develop an intelligent crowd management system for emergency situations by
+        combining Machine Learning, Computer Vision, and Reinforcement Learning within a simulation
+        environment. The system receives real-time information about the composition and
+        characteristics of the crowd from RGB cameras and ML models that detect people, estimate
+        densities, and extract attributes such as age groups or the presence of vulnerable individuals.
+      </p>
+      <p>
+        These data are streamed into a simulation environment where human behaviours are modelled as
+        reinforcement learning agents. The platform performs near real-time evacuation forecasts and
+        crowd management planning, supporting decision-makers during critical events. The overall
+        goal is to provide a flexible and reusable tool that can be applied to venues such as
+        airports, stadiums, shopping centres, or large cultural events, improving safety and
+        preparedness while offering a rich testbed for research on human–machine interaction in
+        crisis scenarios.
+      </p>
+    </section>
+
+    <!-- Funding info -->
+    <section class="mb-5" id="funding">
+      <h3>Funding</h3>
+      <p>
+        The project is implemented at the <strong>Athena Research Center</strong> in collaboration
+        with the <strong>Archimedes RC</strong> unit. It is planned for the period
+        <strong>1 January 2025 – 31 December 2025</strong> and is associated with the National
+        Recovery and Resilience Plan <em>Greece 2.0</em>, funded by the European Union under the
+        <strong>NextGenerationEU</strong> programme.
+      </p>
+    </section>
+
+    <!-- Simulation & RL results -->
+    <section class="mb-5" id="simulation">
+      <h3>Simulation Environment &amp; RL Results</h3>
+      <p>
+        The CMSML simulator models agents navigating indoor environments with static or dynamic
+        obstacles, using reinforcement learning to optimise evacuation behaviours. Below we show
+        representative environments and the performance of a hierarchical RL policy compared with
+        random behaviour.
+      </p>
+
+      <!-- Top row: environments -->
+      <div class="row g-4 mt-3">
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Dynamic Obstacles &amp; Mixed Policies</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/dynamic_obstacles_rl_random.png"
+                     alt="Dynamic obstacles with RL and random agents"
+                     class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                Simulation with moving obstacles, where one agent follows a trained RL policy
+                (green rays) and another behaves randomly (red rays). The setup is used to
+                evaluate robustness of learned behaviours under disturbance by non-cooperative
+                agents.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Static Obstacles &amp; Goal-Directed RL</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/static_obstacles_rl.png"
+                     alt="Static obstacles with RL agent"
+                     class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                Environment with static obstacles where an RL agent learns to reach the exit while
+                avoiding collisions and dead ends. The scenario abstracts evacuation in cluttered
+                indoor spaces.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom row: performance graphs -->
+      <div class="row g-4 mt-4">
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">% Successes – 20 Obstacles</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/success_20_obstacles.png"
+                     alt="Success rate with 20 obstacles"
+                     class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                Comparison of success rates over training episodes for random behaviour versus
+                hierarchical RL in a dense environment with 20 obstacles. Hierarchical RL converges
+                to substantially higher success than random playing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">% Successes – 10 Obstacles</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/success_10_obstacles.png"
+                     alt="Success rate with 10 obstacles"
+                     class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                In a sparser environment with 10 obstacles, hierarchical RL quickly approaches
+                near-perfect success and maintains superior performance over random policies across
+                1,000 episodes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perception & VLM section -->
+    <section class="mb-5" id="perception">
+      <h3>Perception &amp; Scene Understanding</h3>
+      <p>
+        CMSML combines classical Computer Vision with modern Vision–Language Models (VLMs) to
+        analyse crowd scenes, detect individuals and roles, and derive high-level contextual
+        information that feeds the simulation layer.
+      </p>
+
+      <div class="row g-4 mt-3">
+        <!-- VLM context extraction -->
+        <div class="col-md-5">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Vision–Language Context Extraction</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/vlm_context.png"
+                     alt="VLM context extraction"
+                     class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                Example of a VLM generating high-level textual descriptions of the scene, including
+                location, roles (e.g., police officers, crowd), and dominant emotional tone. This
+                context can be used to parameterise simulation scenarios or support decision-making.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pose / detection -->
+        <div class="col-md-7">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Pose Estimation &amp; Crowd Analysis</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/pose_westminster.jpg"
+                     alt="Pose estimation in Westminster crowd scene"
+                     class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                Pose estimation and human detection over a crowded urban scene near Westminster
+                Station. Detected skeletons and bounding boxes provide detailed information about
+                densities, postures, and the presence of security personnel, feeding into the crowd
+                behaviour models of the CMSML simulator.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- People section -->
+    <section class="mb-5" id="people">
+      <h3 class="mb-4">People</h3>
+
+      <div class="row g-3">
+
+        <!-- PERSON 1 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/profile/Kiourt.Chairi.png"
+                 alt="Chairi Kiourt"
+                 class="rounded-circle me-3"
+                 style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <a href="https://chairiq.github.io" target="_blank" class="fw-bold text-decoration-none">
+                Dr. Chairi Kiourt
+              </a>
+              <div class="text-muted small">PI, Senior Researcher – Athena RC</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSON 2 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/placeholder-image.png"
+                 alt="Anestis Koutsoudis"
+                 class="rounded-circle me-3"
+                 style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <a href="#" target="_blank" class="fw-bold text-decoration-none">
+                Dr. Anestis Koutsoudis
+              </a>
+              <div class="text-muted small">Research Director – Athena RC</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSON 3 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/placeholder-image.png"
+                 alt="RL & Behaviour Modelling Expert"
+                 class="rounded-circle me-3"
+                 style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <span class="fw-bold">New Position 1</span>
+              <div class="text-muted small">RL &amp; Human Behaviour Modelling Expert</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSON 4 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/placeholder-image.png"
+                 alt="Software Engineer"
+                 class="rounded-circle me-3"
+                 style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <span class="fw-bold">New Position 2</span>
+              <div class="text-muted small">Software Engineer – Simulation Platform</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSON 5 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/placeholder-image.png"
+                 alt="ML & CV Specialist"
+                 class="rounded-circle me-3"
+                 style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <span class="fw-bold">New Position 3</span>
+              <div class="text-muted small">Machine Learning &amp; Computer Vision Specialist</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
 </main>
 
 <div id="footer"></div>
