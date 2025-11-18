@@ -73,21 +73,6 @@
           C., Ivaldi, S., Chatzilygeroudis, K., Hoffman, E.M. IEEE-RAS 24th International Conference on Humanoid Robots
           (Humanoids)
         </h5>
-        <p class="card-subtitle text-muted mb-2"> Abstract: Planning agile whole-body motions for legged and humanoid
-          robots is a fundamental requirement
-          for enabling dynamic tasks such as running, jumping, and fast reactive maneuvers. In this work, we present
-          AHMP, a multi-contact motion
-          planning framework based on bi-level optimization that integrates a contact sequence discovery technique,
-          using the Mixed-Distribution
-          Cross-Entropy Method (CEM-MD), and an efficient trajectory optimization scheme, which parameterizes the
-          robot’s poses and motions in
-          the tangent space of SE(3). AHMP permits the automatic generation of feasible contact configurations, with
-          associated whole-body dynamic
-          transitions. We validate our approach on a set of challenging agile motion planning tasks for humanoid robots,
-          demonstrating that contact
-          sequence discovery combined with tangent space parameterization leads to highly dynamic motion plans while
-          remaining computationally efficient.
-        </p>
         <div class="d-flex flex-wrap gap-2">
           <a href="https://hal.science/hal-05072261" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">
             Paper</a>
@@ -95,11 +80,30 @@
             class="btn btn-outline-dark btn-sm">Video</a>
           <a href="https://github.com/hucebot/ahmp" target="_blank" rel="noopener"
             class="btn btn-outline-dark btn-sm">Code </a>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
           <button class="btn btn-sm btn-outline-dark" type="button" data-bs-toggle="collapse"
             data-bs-target="#P1analysisBox"> Paper Analysis </button>
         </div>
         <div class="collapse" id="P1analysisBox">
           <div class="p-3 mt-3" style="background-color:#f7f7f7; border-radius:6px;">
+            <h5 class="mb-2">Abstract</h5>
+            <p class="card-subtitle text-muted mb-2"> Planning agile whole-body motions for legged and humanoid
+              robots is a fundamental requirement
+              for enabling dynamic tasks such as running, jumping, and fast reactive maneuvers. In this work, we present
+              AHMP, a multi-contact motion
+              planning framework based on bi-level optimization that integrates a contact sequence discovery technique,
+              using the Mixed-Distribution
+              Cross-Entropy Method (CEM-MD), and an efficient trajectory optimization scheme, which parameterizes the
+              robot’s poses and motions in
+              the tangent space of SE(3). AHMP permits the automatic generation of feasible contact configurations, with
+              associated whole-body dynamic
+              transitions. We validate our approach on a set of challenging agile motion planning tasks for humanoid
+              robots,
+              demonstrating that contact
+              sequence discovery combined with tangent space parameterization leads to highly dynamic motion plans while
+              remaining computationally efficient.
+            </p>
             <h5 class="mb-2">Key Contributions</h5>
             <ul>
               <li><strong>Bi-Level Optimization Framework:</strong> Integration of contact sequence discovery (CEM-MD)
@@ -190,146 +194,151 @@
         </div>
       </div>
       <!-- Example publication card 2 -->
-<div class="card-body">
-  <h5 class="card-title">
-    A Comparative Study of Floating-Base Space Parameterizations for Agile Whole-Body Motion Planning.
-    Tsiatsianas, E., Kiourt, C., Chatzilygeroudis, K. 2025.
-    IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids).
-  </h5>
-  <p class="card-subtitle text-muted mb-2">
-    Abstract: Automatically generating agile whole-body motions for legged and humanoid robots remains a fundamental
-    challenge in robotics. While numerous trajectory optimization approaches have been proposed, there is no clear
-    guideline on how the choice of floating-base space parameterization affects performance, especially for agile
-    behaviors involving complex contact dynamics. In this paper, we present a comparative study of different
-    parameterizations for direct transcription-based trajectory optimization of agile motions in legged systems.
-    We systematically evaluate several common choices under identical optimization settings to ensure a fair
-    comparison. Furthermore, we introduce a novel formulation based on the tangent space of SE(3) for representing
-    the robot’s floating-base pose, which, to our knowledge, has not received attention from the literature.
-    This approach enables the use of mature off-the-shelf numerical solvers without requiring specialized
-    manifold optimization techniques. We hope that our experiments and analysis will provide meaningful insights
-    for selecting the appropriate floating-based representation for agile whole-body motion generation.
-  </p>
+      <div class="card-body">
+        <h5 class="card-title">
+          A Comparative Study of Floating-Base Space Parameterizations for Agile Whole-Body Motion Planning.
+          Tsiatsianas, E., Kiourt, C., Chatzilygeroudis, K. 2025.
+          IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids).
+        </h5>
+        <p class="card-subtitle text-muted mb-2">
+          Abstract: Automatically generating agile whole-body motions for legged and humanoid robots remains a
+          fundamental
+          challenge in robotics. While numerous trajectory optimization approaches have been proposed, there is no clear
+          guideline on how the choice of floating-base space parameterization affects performance, especially for agile
+          behaviors involving complex contact dynamics. In this paper, we present a comparative study of different
+          parameterizations for direct transcription-based trajectory optimization of agile motions in legged systems.
+          We systematically evaluate several common choices under identical optimization settings to ensure a fair
+          comparison. Furthermore, we introduce a novel formulation based on the tangent space of SE(3) for representing
+          the robot’s floating-base pose, which, to our knowledge, has not received attention from the literature.
+          This approach enables the use of mature off-the-shelf numerical solvers without requiring specialized
+          manifold optimization techniques. We hope that our experiments and analysis will provide meaningful insights
+          for selecting the appropriate floating-based representation for agile whole-body motion generation.
+        </p>
 
-  <div class="d-flex flex-wrap gap-2">
-    <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">View on arXiv</a>
-    <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Watch Video</a>
-    <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">View Code</a>
-    <button class="btn btn-sm btn-outline-dark" type="button"
-            data-bs-toggle="collapse" data-bs-target="#P2analysisBox">
-      Paper Analysis
-    </button>
-  </div>
-
-  <div class="collapse" id="P2analysisBox">
-    <div class="p-3 mt-3" style="background-color:#f7f7f7; border-radius:6px;">
-      <h5 class="mb-2">Key Contributions</h5>
-      <ul>
-        <li><strong>Comparative Study:</strong> Systematic comparison of floating-base space parameterizations
-          for direct transcription-based trajectory optimization in legged and humanoid robots.</li>
-        <li><strong>Fair Evaluation:</strong> All parameterizations are evaluated under identical optimization
-          and numerical settings to ensure fairness.</li>
-        <li><strong>Novel SE(3) Tangent Formulation:</strong> New trajectory optimization formulation using
-          the tangent space of SE(3), enabling the use of standard numerical solvers without specialized
-          manifold optimization.</li>
-        <li><strong>Guidelines for Practice:</strong> Provides insights on which floating-base representation
-          is more robust and effective for agile whole-body motion generation.</li>
-      </ul>
-
-      <hr class="my-3" />
-
-      <h5 class="mt-2 mb-2">Floating-Base Representations Compared</h5>
-      <ul>
-        <li><strong>Euler Angles:</strong> Simple but prone to singularities and failure under large rotations.</li>
-        <li><strong>Quaternions:</strong> More stable than Euler angles but can be numerically fragile in complex tasks.</li>
-        <li><strong>Hybrid Variants:</strong> Mixed formulations that attempt to combine benefits but show limited robustness.</li>
-        <li><strong>SE(3) Tangent Space:</strong> Proposed formulation offering consistent performance across
-          highly agile motions.</li>
-      </ul>
-
-      <hr class="my-3" />
-
-      <h5 class="mt-2 mb-2">Experimental Scenarios</h5>
-      <div class="row g-4">
-        <!-- Scenario 1 -->
-        <div class="col-md-4">
-          <h6 class="text-center">Walk (Talos)</h6>
-          <p class="text-muted small text-center mb-0">
-            Straight gait over a 2 m course, emphasizing stable forward locomotion.
-          </p>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">View on arXiv</a>
+          <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Watch Video</a>
+          <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">View Code</a>
+          <button class="btn btn-sm btn-outline-dark" type="button" data-bs-toggle="collapse"
+            data-bs-target="#P2analysisBox">
+            Paper Analysis
+          </button>
         </div>
 
-        <!-- Scenario 2 -->
-        <div class="col-md-4">
-          <h6 class="text-center">Hopscotch (Talos)</h6>
-          <p class="text-muted small text-center mb-0">
-            Alternating double hops over a 2 m course, testing rapid contact transitions.
-          </p>
-        </div>
+        <div class="collapse" id="P2analysisBox">
+          <div class="p-3 mt-3" style="background-color:#f7f7f7; border-radius:6px;">
+            <h5 class="mb-2">Key Contributions</h5>
+            <ul>
+              <li><strong>Comparative Study:</strong> Systematic comparison of floating-base space parameterizations
+                for direct transcription-based trajectory optimization in legged and humanoid robots.</li>
+              <li><strong>Fair Evaluation:</strong> All parameterizations are evaluated under identical optimization
+                and numerical settings to ensure fairness.</li>
+              <li><strong>Novel SE(3) Tangent Formulation:</strong> New trajectory optimization formulation using
+                the tangent space of SE(3), enabling the use of standard numerical solvers without specialized
+                manifold optimization.</li>
+              <li><strong>Guidelines for Practice:</strong> Provides insights on which floating-base representation
+                is more robust and effective for agile whole-body motion generation.</li>
+            </ul>
 
-        <!-- Scenario 3 -->
-        <div class="col-md-4">
-          <h6 class="text-center">Big Jump (Talos)</h6>
-          <p class="text-muted small text-center mb-0">
-            1 m forward jump, requiring strong dynamic push-off and landing stability.
-          </p>
-        </div>
+            <hr class="my-3" />
 
-        <!-- Scenario 4 -->
-        <div class="col-md-4">
-          <h6 class="text-center">Handstand (Talos)</h6>
-          <p class="text-muted small text-center mb-0">
-            Stand → handstand → return, probing extreme whole-body reorientation.
-          </p>
-        </div>
+            <h5 class="mt-2 mb-2">Floating-Base Representations Compared</h5>
+            <ul>
+              <li><strong>Euler Angles:</strong> Simple but prone to singularities and failure under large rotations.
+              </li>
+              <li><strong>Quaternions:</strong> More stable than Euler angles but can be numerically fragile in complex
+                tasks.</li>
+              <li><strong>Hybrid Variants:</strong> Mixed formulations that attempt to combine benefits but show limited
+                robustness.</li>
+              <li><strong>SE(3) Tangent Space:</strong> Proposed formulation offering consistent performance across
+                highly agile motions.</li>
+            </ul>
 
-        <!-- Scenario 5 -->
-        <div class="col-md-4">
-          <h6 class="text-center">Back-flip (G1)</h6>
-          <p class="text-muted small text-center mb-0">
-            Somersault with 0.5 m backward displacement, testing highly non-linear rotations.
-          </p>
-        </div>
+            <hr class="my-3" />
 
-        <!-- Scenario 6 -->
-        <div class="col-md-4">
-          <h6 class="text-center">Side-flip (Go2)</h6>
-          <p class="text-muted small text-center mb-0">
-            Lateral somersault with 0.3 m sideways displacement, stressing lateral agility.
-          </p>
+            <h5 class="mt-2 mb-2">Experimental Scenarios</h5>
+            <div class="row g-4">
+              <!-- Scenario 1 -->
+              <div class="col-md-4">
+                <h6 class="text-center">Walk (Talos)</h6>
+                <p class="text-muted small text-center mb-0">
+                  Straight gait over a 2 m course, emphasizing stable forward locomotion.
+                </p>
+              </div>
+
+              <!-- Scenario 2 -->
+              <div class="col-md-4">
+                <h6 class="text-center">Hopscotch (Talos)</h6>
+                <p class="text-muted small text-center mb-0">
+                  Alternating double hops over a 2 m course, testing rapid contact transitions.
+                </p>
+              </div>
+
+              <!-- Scenario 3 -->
+              <div class="col-md-4">
+                <h6 class="text-center">Big Jump (Talos)</h6>
+                <p class="text-muted small text-center mb-0">
+                  1 m forward jump, requiring strong dynamic push-off and landing stability.
+                </p>
+              </div>
+
+              <!-- Scenario 4 -->
+              <div class="col-md-4">
+                <h6 class="text-center">Handstand (Talos)</h6>
+                <p class="text-muted small text-center mb-0">
+                  Stand → handstand → return, probing extreme whole-body reorientation.
+                </p>
+              </div>
+
+              <!-- Scenario 5 -->
+              <div class="col-md-4">
+                <h6 class="text-center">Back-flip (G1)</h6>
+                <p class="text-muted small text-center mb-0">
+                  Somersault with 0.5 m backward displacement, testing highly non-linear rotations.
+                </p>
+              </div>
+
+              <!-- Scenario 6 -->
+              <div class="col-md-4">
+                <h6 class="text-center">Side-flip (Go2)</h6>
+                <p class="text-muted small text-center mb-0">
+                  Lateral somersault with 0.3 m sideways displacement, stressing lateral agility.
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-3" />
+
+            <h5 class="mt-2 mb-2">Experimental Results and Conclusions</h5>
+            <div class="text-center my-3">
+              <!-- Replace with actual paths to your result images -->
+              <img src="imgs/fb_param/image1.png" alt="Floating-base comparison result 1"
+                class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
+              <img src="imgs/fb_param/image2.png" alt="Floating-base comparison result 2"
+                class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
+              <img src="imgs/fb_param/image3.png" alt="Floating-base comparison result 3"
+                class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
+              <img src="imgs/fb_param/image4.png" alt="Floating-base comparison result 4"
+                class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
+            </div>
+
+            <ul class="list-group mb-4">
+              <li class="list-group-item">
+                <strong>Euler:</strong> Effective for simple tasks but often fails or becomes unstable under large
+                rotations.
+              </li>
+              <li class="list-group-item">
+                <strong>Quaternions:</strong> Sometimes successful but fragile in demanding scenarios; hybrid variants
+                underperform overall.
+              </li>
+              <li class="list-group-item">
+                <strong>SE(3) Tangent Space:</strong> Most consistent, robust, and effective representation across all
+                evaluated scenarios, particularly for highly agile motions.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <hr class="my-3" />
-
-      <h5 class="mt-2 mb-2">Experimental Results and Conclusions</h5>
-      <div class="text-center my-3">
-        <!-- Replace with actual paths to your result images -->
-        <img src="imgs/fb_param/image1.png" alt="Floating-base comparison result 1"
-             class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
-        <img src="imgs/fb_param/image2.png" alt="Floating-base comparison result 2"
-             class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
-        <img src="imgs/fb_param/image3.png" alt="Floating-base comparison result 3"
-             class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
-        <img src="imgs/fb_param/image4.png" alt="Floating-base comparison result 4"
-             class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
-      </div>
-
-      <ul class="list-group mb-4">
-        <li class="list-group-item">
-          <strong>Euler:</strong> Effective for simple tasks but often fails or becomes unstable under large rotations.
-        </li>
-        <li class="list-group-item">
-          <strong>Quaternions:</strong> Sometimes successful but fragile in demanding scenarios; hybrid variants
-          underperform overall.
-        </li>
-        <li class="list-group-item">
-          <strong>SE(3) Tangent Space:</strong> Most consistent, robust, and effective representation across all
-          evaluated scenarios, particularly for highly agile motions.
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 
     </section>
     <!-- People section -->
