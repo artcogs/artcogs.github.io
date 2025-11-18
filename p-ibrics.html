@@ -1,4 +1,3 @@
-
 <div id="top-menu"></div>
 
 <script>
@@ -14,10 +13,10 @@
 
     <div class="d-flex flex-wrap gap-3 my-4 justify-content-center">
 
-        <a href="#overview" class="btn btn-outline-dark btn-sm">Overview</a>
-        <a href="#funding" class="btn btn-outline-dark btn-sm">Funding</a>
-        <a href="#publications" class="btn btn-outline-dark btn-sm">Publications</a>
-        <a href="#people" class="btn btn-outline-dark btn-sm">People</a>
+      <a href="#overview" class="btn btn-outline-dark btn-sm">Overview</a>
+      <a href="#funding" class="btn btn-outline-dark btn-sm">Funding</a>
+      <a href="#publications" class="btn btn-outline-dark btn-sm">Publications</a>
+      <a href="#people" class="btn btn-outline-dark btn-sm">People</a>
 
     </div>
 
@@ -33,27 +32,33 @@
     <section class="mb-5" id="overview">
       <h3>Abstract</h3>
       <p class="lead">
-        The research project focuses on developing a system that combines Computer Vision, Machine Learning, 
-        and Optimization-based Control for analyzing and recognizing human behaviors in realistic environments, 
-        and transferring these behaviors to robotic systems. The aim is to create a system that enables robotic 
-        systems to imitate dynamic movements and behaviors through the processing of visual data and machine learning algorithms.
-        The project contributes to the development of intelligent robotic agents that can interact effectively both with each 
+        The research project focuses on developing a system that combines Computer Vision, Machine Learning,
+        and Optimization-based Control for analyzing and recognizing human behaviors in realistic environments,
+        and transferring these behaviors to robotic systems. The aim is to create a system that enables robotic
+        systems to imitate dynamic movements and behaviors through the processing of visual data and machine learning
+        algorithms.
+        The project contributes to the development of intelligent robotic agents that can interact effectively both with
+        each
         other and with humans in real-world situations.
       </p>
       <p>
         The project advances innovative technologies in four main directions: extraction of human body pose from images,
-         analysis of 3D human motion, tracking of dynamic trajectories in 3D, and development of controllers for robot manipulation. 
-         The project leverages deep learning, reinforcement learning, and optimization-based control techniques, with the goal of developing robotic 
-         systems for industrial and other applications, such as human-robot collaboration.
-      
+        analysis of 3D human motion, tracking of dynamic trajectories in 3D, and development of controllers for robot
+        manipulation.
+        The project leverages deep learning, reinforcement learning, and optimization-based control techniques, with the
+        goal of developing robotic
+        systems for industrial and other applications, such as human-robot collaboration.
+
       </p>
     </section>
 
     <!-- Funding info -->
     <section class="mb-5" id="funding">
       <h3>Funding</h3>
-      <p>  The project is funded by  <a href="https://archimedesai.gr">Archimedes RC</a>: it falls under the project MIS 5154714 of 
-      the National Recovery and Resilience Plan Greece 2.0 funded by the European Union under the NextGenerationEU Program.
+      <p> The project is funded by <a href="https://archimedesai.gr">Archimedes RC</a>: it falls under the project MIS
+        5154714 of
+        the National Recovery and Resilience Plan Greece 2.0 funded by the European Union under the NextGenerationEU
+        Program.
       </p>
 
     </section>
@@ -62,271 +67,398 @@
     <section class="mb-5" id="publications">
       <h3>Publications</h3>
       <!-- Example publication card 1 -->
-        <div class="card-body">
-          <h5 class="card-title">
-            AHMP: Agile Humanoid Motion Planning With Contact Sequence Discovery. Tsikelis, I., Tsiatsianas, E., Kiourt, C., Ivaldi, S., Chatzilygeroudis, K., Hoffman, E.M.  IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids)
-          </h5>
-          <p class="card-subtitle text-muted mb-2"> Abstract: Planning agile whole-body motions for legged and humanoid robots is a fundamental requirement 
-            for enabling dynamic tasks such as running, jumping, and fast reactive maneuvers. In this work, we present AHMP, a multi-contact motion 
-            planning framework based on bi-level optimization that integrates a contact sequence discovery technique, using the Mixed-Distribution 
-            Cross-Entropy Method (CEM-MD), and an efficient trajectory optimization scheme, which parameterizes the robot’s poses and motions in
-             the tangent space of SE(3). AHMP permits the automatic generation of feasible contact configurations, with associated whole-body dynamic
-              transitions. We validate our approach on a set of challenging agile motion planning tasks for humanoid robots, demonstrating that contact
-               sequence discovery combined with tangent space parameterization leads to highly dynamic motion plans while remaining computationally efficient.
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <a href="https://hal.science/hal-05072261" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm"> Paper</a>
-            <a href="https://www.youtube.com/watch?v=7htEV2UDsAE" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Video</a>
-            <a href="https://github.com/hucebot/ahmp" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Code </a>
-            <button class="btn btn-sm btn-outline-dark" type="button"  data-bs-toggle="collapse"  data-bs-target="#P1analysisBox"> Paper Analysis </button>
-          </div>
-          <div class="collapse" id="P1analysisBox">
-            <div class="p-3 mt-3" style="background-color:#f7f7f7; border-radius:6px;">
-              <h5 class="mb-2">Key Contributions</h5>
-              <ul>
-                <li><strong>Bi-Level Optimization Framework:</strong> Integration of contact sequence discovery (CEM-MD) with SE(3) tangent-space trajectory optimization for agile whole-body motion planning.</li>
-                <li><strong>Automatic Contact Discovery:</strong> Eliminates the need for manual contact sequence specification through black-box optimization of contact timings and locations.</li>
-                <li><strong>Efficient Implementation:</strong> Generates feasible multi-contact motions in median time of ~200 seconds by leveraging parallel evaluation and SE(3) tangent-space parameterization.</li>
-                <li><strong>Dynamic Motion Generation:</strong> Capable of producing highly agile and dynamic whole-body motions for humanoid robots in complex environments.</li>
-              </ul>
-              </hr>
-              <h5 class="mt-4 mb-2">Method Overview</h5>
-              <div class="text-center my-3">
-                <img src="imgs/ibrics/concept_figure.jpeg"
-                    alt="IBRICS Method Overview"
-                    class="img-fluid rounded shadow-sm"
-                    style="max-width: 400px;">
+      <div class="card-body">
+        <h5 class="card-title">
+          AHMP: Agile Humanoid Motion Planning With Contact Sequence Discovery. Tsikelis, I., Tsiatsianas, E., Kiourt,
+          C., Ivaldi, S., Chatzilygeroudis, K., Hoffman, E.M. IEEE-RAS 24th International Conference on Humanoid Robots
+          (Humanoids)
+        </h5>
+        <p class="card-subtitle text-muted mb-2"> Abstract: Planning agile whole-body motions for legged and humanoid
+          robots is a fundamental requirement
+          for enabling dynamic tasks such as running, jumping, and fast reactive maneuvers. In this work, we present
+          AHMP, a multi-contact motion
+          planning framework based on bi-level optimization that integrates a contact sequence discovery technique,
+          using the Mixed-Distribution
+          Cross-Entropy Method (CEM-MD), and an efficient trajectory optimization scheme, which parameterizes the
+          robot’s poses and motions in
+          the tangent space of SE(3). AHMP permits the automatic generation of feasible contact configurations, with
+          associated whole-body dynamic
+          transitions. We validate our approach on a set of challenging agile motion planning tasks for humanoid robots,
+          demonstrating that contact
+          sequence discovery combined with tangent space parameterization leads to highly dynamic motion plans while
+          remaining computationally efficient.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="https://hal.science/hal-05072261" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">
+            Paper</a>
+          <a href="https://www.youtube.com/watch?v=7htEV2UDsAE" target="_blank" rel="noopener"
+            class="btn btn-outline-dark btn-sm">Video</a>
+          <a href="https://github.com/hucebot/ahmp" target="_blank" rel="noopener"
+            class="btn btn-outline-dark btn-sm">Code </a>
+          <button class="btn btn-sm btn-outline-dark" type="button" data-bs-toggle="collapse"
+            data-bs-target="#P1analysisBox"> Paper Analysis </button>
+        </div>
+        <div class="collapse" id="P1analysisBox">
+          <div class="p-3 mt-3" style="background-color:#f7f7f7; border-radius:6px;">
+            <h5 class="mb-2">Key Contributions</h5>
+            <ul>
+              <li><strong>Bi-Level Optimization Framework:</strong> Integration of contact sequence discovery (CEM-MD)
+                with SE(3) tangent-space trajectory optimization for agile whole-body motion planning.</li>
+              <li><strong>Automatic Contact Discovery:</strong> Eliminates the need for manual contact sequence
+                specification through black-box optimization of contact timings and locations.</li>
+              <li><strong>Efficient Implementation:</strong> Generates feasible multi-contact motions in median time of
+                ~200 seconds by leveraging parallel evaluation and SE(3) tangent-space parameterization.</li>
+              <li><strong>Dynamic Motion Generation:</strong> Capable of producing highly agile and dynamic whole-body
+                motions for humanoid robots in complex environments.</li>
+            </ul>
+            </hr>
+            <h5 class="mt-4 mb-2">Method Overview</h5>
+            <div class="text-center my-3">
+              <img src="imgs/ibrics/concept_figure.jpeg" alt="IBRICS Method Overview"
+                class="img-fluid rounded shadow-sm" style="max-width: 400px;">
+            </div>
+            <p class="mb-1"><strong>AHMP Framework Pipeline</strong></p>
+            <p class="mb-0">
+              Bi-level optimization: CEM-MD samples contact sequences (outer loop),
+              each evaluated via SE(3) tangent-space trajectory optimization (inner loop).
+              Best solutions update the contact distribution iteratively.
+            </p>
+            <h5 class="mt-4 mb-2">Experimental Scenarios</h5>
+            <div class="row g-4">
+
+              <!-- Video 1 -->
+              <div class="col-md-4">
+                <h6 class="text-center">Handrail Corridor</h6>
+                <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
+                  <video src="./imgs/ibrics/handrails.mp4" autoplay muted loop playsinline class="w-100 rounded">
+                  </video>
+                </div>
+                <p class="text-muted small text-center">
+                  Move 3m forward in a handrail-equipped environment. The robot leverages dynamics for agile movements
+                  including hand-walking.
+                </p>
               </div>
-              <p class="mb-1"><strong>AHMP Framework Pipeline</strong></p>
-              <p class="mb-0">
-                Bi-level optimization: CEM-MD samples contact sequences (outer loop),  
-                each evaluated via SE(3) tangent-space trajectory optimization (inner loop).  
-                Best solutions update the contact distribution iteratively.
-              </p>
-              <h5 class="mt-4 mb-2">Experimental Scenarios</h5>
-              <div class="row g-4">
 
-                <!-- Video 1 -->
-                <div class="col-md-4">
-                  <h6 class="text-center">Handrail Corridor</h6>
-                  <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
-                      <video 
-                          src="./imgs/ibrics/handrails.mp4" 
-                          autoplay 
-                          muted 
-                          loop 
-                          playsinline 
-                          class="w-100 rounded">
-                        </video>
-                  </div>
-                  <p class="text-muted small text-center">
-                    Move 3m forward in a handrail-equipped environment. The robot leverages dynamics for agile movements including hand-walking.
-                  </p>
+              <!-- Video 2 -->
+              <div class="col-md-4">
+                <h6 class="text-center">Chimney - Low Target (1m)</h6>
+                <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
+                  <video src="./imgs/ibrics/chimney_low.mp4" autoplay muted loop playsinline class="w-100 rounded">
+                  </video>
                 </div>
+                <p class="text-muted small text-center">
+                  Climb 1m height in chimney environment. Robot weaves left-right using feet and hands to propel upward.
+                </p>
+              </div>
 
-                <!-- Video 2 -->
-                <div class="col-md-4">
-                  <h6 class="text-center">Chimney - Low Target (1m)</h6>
-                  <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
-                      <video 
-                          src="./imgs/ibrics/chimney_low.mp4" 
-                          autoplay 
-                          muted 
-                          loop 
-                          playsinline 
-                          class="w-100 rounded">
-                        </video>
-                  </div>
-                  <p class="text-muted small text-center">
-                    Climb 1m height in chimney environment. Robot weaves left-right using feet and hands to propel upward.
-                  </p>
+              <!-- Video 3 -->
+              <div class="col-md-4">
+                <h6 class="text-center">Chimney - High Target (3m)</h6>
+                <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
+                  <video src="./imgs/ibrics/chimney_high.mp4" autoplay muted loop playsinline class="w-100 rounded">
+                  </video>
                 </div>
-
-                <!-- Video 3 -->
-                <div class="col-md-4">
-                  <h6 class="text-center">Chimney - High Target (3m)</h6>
-                  <div class="ratio ratio-16x9 mb-2 shadow-sm rounded">
-                      <video 
-                          src="./imgs/ibrics/chimney_high.mp4" 
-                          autoplay 
-                          muted 
-                          loop 
-                          playsinline 
-                          class="w-100 rounded">
-                        </video>
-                  </div>
-                  <p class="text-muted small text-center">
-                    Climb 3m height with more deliberate, altitude-gaining motions. Demonstrates complex contact sequences.
-                  </p>
-                </div>
+                <p class="text-muted small text-center">
+                  Climb 3m height with more deliberate, altitude-gaining motions. Demonstrates complex contact
+                  sequences.
+                </p>
+              </div>
 
               </hr>
               <h5 class="mt-4 mb-2">Experimental Results</h5>
               <div class="text-center my-3">
-                <img src="imgs/ibrics/wall_times.png"
-                    alt="IBRICS Method Overview"
-                    class="img-fluid rounded shadow-sm"
-                    style="max-width: 400px;">
+                <img src="imgs/ibrics/wall_times.png" alt="IBRICS Method Overview" class="img-fluid rounded shadow-sm"
+                  style="max-width: 400px;">
               </div>
 
               </hr>
               <h5 class="mt-4 mb-2">Performance Summary:</h5>
 
-                <ul class="list-group mb-4">
-                  <li class="list-group-item">
-                    <strong>Handrails:</strong> 100% success rate, median time ~100s (over 10 runs)
-                  </li>
-                  <li class="list-group-item">
-                    <strong>Chimney (1m):</strong> 80% success rate, median time ~150s (over 10 runs)
-                  </li>
-                  <li class="list-group-item">
-                    <strong>Chimney (3m):</strong> 50% success rate, median time ~300s (over 10 runs)
-                  </li>
-                </ul>
-            </div>
+              <ul class="list-group mb-4">
+                <li class="list-group-item">
+                  <strong>Handrails:</strong> 100% success rate, median time ~100s (over 10 runs)
+                </li>
+                <li class="list-group-item">
+                  <strong>Chimney (1m):</strong> 80% success rate, median time ~150s (over 10 runs)
+                </li>
+                <li class="list-group-item">
+                  <strong>Chimney (3m):</strong> 50% success rate, median time ~300s (over 10 runs)
+                </li>
+              </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <!-- Example publication card 2 -->
+<div class="card-body">
+  <h5 class="card-title">
+    A Comparative Study of Floating-Base Space Parameterizations for Agile Whole-Body Motion Planning.
+    Tsiatsianas, E., Kiourt, C., Chatzilygeroudis, K. 2025.
+    IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids).
+  </h5>
+  <p class="card-subtitle text-muted mb-2">
+    Abstract: Automatically generating agile whole-body motions for legged and humanoid robots remains a fundamental
+    challenge in robotics. While numerous trajectory optimization approaches have been proposed, there is no clear
+    guideline on how the choice of floating-base space parameterization affects performance, especially for agile
+    behaviors involving complex contact dynamics. In this paper, we present a comparative study of different
+    parameterizations for direct transcription-based trajectory optimization of agile motions in legged systems.
+    We systematically evaluate several common choices under identical optimization settings to ensure a fair
+    comparison. Furthermore, we introduce a novel formulation based on the tangent space of SE(3) for representing
+    the robot’s floating-base pose, which, to our knowledge, has not received attention from the literature.
+    This approach enables the use of mature off-the-shelf numerical solvers without requiring specialized
+    manifold optimization techniques. We hope that our experiments and analysis will provide meaningful insights
+    for selecting the appropriate floating-based representation for agile whole-body motion generation.
+  </p>
+
+  <div class="d-flex flex-wrap gap-2">
+    <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">View on arXiv</a>
+    <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Watch Video</a>
+    <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">View Code</a>
+    <button class="btn btn-sm btn-outline-dark" type="button"
+            data-bs-toggle="collapse" data-bs-target="#P2analysisBox">
+      Paper Analysis
+    </button>
+  </div>
+
+  <div class="collapse" id="P2analysisBox">
+    <div class="p-3 mt-3" style="background-color:#f7f7f7; border-radius:6px;">
+      <h5 class="mb-2">Key Contributions</h5>
+      <ul>
+        <li><strong>Comparative Study:</strong> Systematic comparison of floating-base space parameterizations
+          for direct transcription-based trajectory optimization in legged and humanoid robots.</li>
+        <li><strong>Fair Evaluation:</strong> All parameterizations are evaluated under identical optimization
+          and numerical settings to ensure fairness.</li>
+        <li><strong>Novel SE(3) Tangent Formulation:</strong> New trajectory optimization formulation using
+          the tangent space of SE(3), enabling the use of standard numerical solvers without specialized
+          manifold optimization.</li>
+        <li><strong>Guidelines for Practice:</strong> Provides insights on which floating-base representation
+          is more robust and effective for agile whole-body motion generation.</li>
+      </ul>
+
+      <hr class="my-3" />
+
+      <h5 class="mt-2 mb-2">Floating-Base Representations Compared</h5>
+      <ul>
+        <li><strong>Euler Angles:</strong> Simple but prone to singularities and failure under large rotations.</li>
+        <li><strong>Quaternions:</strong> More stable than Euler angles but can be numerically fragile in complex tasks.</li>
+        <li><strong>Hybrid Variants:</strong> Mixed formulations that attempt to combine benefits but show limited robustness.</li>
+        <li><strong>SE(3) Tangent Space:</strong> Proposed formulation offering consistent performance across
+          highly agile motions.</li>
+      </ul>
+
+      <hr class="my-3" />
+
+      <h5 class="mt-2 mb-2">Experimental Scenarios</h5>
+      <div class="row g-4">
+        <!-- Scenario 1 -->
+        <div class="col-md-4">
+          <h6 class="text-center">Walk (Talos)</h6>
+          <p class="text-muted small text-center mb-0">
+            Straight gait over a 2 m course, emphasizing stable forward locomotion.
+          </p>
+        </div>
+
+        <!-- Scenario 2 -->
+        <div class="col-md-4">
+          <h6 class="text-center">Hopscotch (Talos)</h6>
+          <p class="text-muted small text-center mb-0">
+            Alternating double hops over a 2 m course, testing rapid contact transitions.
+          </p>
+        </div>
+
+        <!-- Scenario 3 -->
+        <div class="col-md-4">
+          <h6 class="text-center">Big Jump (Talos)</h6>
+          <p class="text-muted small text-center mb-0">
+            1 m forward jump, requiring strong dynamic push-off and landing stability.
+          </p>
+        </div>
+
+        <!-- Scenario 4 -->
+        <div class="col-md-4">
+          <h6 class="text-center">Handstand (Talos)</h6>
+          <p class="text-muted small text-center mb-0">
+            Stand → handstand → return, probing extreme whole-body reorientation.
+          </p>
+        </div>
+
+        <!-- Scenario 5 -->
+        <div class="col-md-4">
+          <h6 class="text-center">Back-flip (G1)</h6>
+          <p class="text-muted small text-center mb-0">
+            Somersault with 0.5 m backward displacement, testing highly non-linear rotations.
+          </p>
+        </div>
+
+        <!-- Scenario 6 -->
+        <div class="col-md-4">
+          <h6 class="text-center">Side-flip (Go2)</h6>
+          <p class="text-muted small text-center mb-0">
+            Lateral somersault with 0.3 m sideways displacement, stressing lateral agility.
+          </p>
+        </div>
+      </div>
+
+      <hr class="my-3" />
+
+      <h5 class="mt-2 mb-2">Experimental Results and Conclusions</h5>
+      <div class="text-center my-3">
+        <!-- Replace with actual paths to your result images -->
+        <img src="imgs/fb_param/image1.png" alt="Floating-base comparison result 1"
+             class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
+        <img src="imgs/fb_param/image2.png" alt="Floating-base comparison result 2"
+             class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
+        <img src="imgs/fb_param/image3.png" alt="Floating-base comparison result 3"
+             class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
+        <img src="imgs/fb_param/image4.png" alt="Floating-base comparison result 4"
+             class="img-fluid rounded shadow-sm mb-2" style="max-width: 250px;">
+      </div>
+
+      <ul class="list-group mb-4">
+        <li class="list-group-item">
+          <strong>Euler:</strong> Effective for simple tasks but often fails or becomes unstable under large rotations.
+        </li>
+        <li class="list-group-item">
+          <strong>Quaternions:</strong> Sometimes successful but fragile in demanding scenarios; hybrid variants
+          underperform overall.
+        </li>
+        <li class="list-group-item">
+          <strong>SE(3) Tangent Space:</strong> Most consistent, robust, and effective representation across all
+          evaluated scenarios, particularly for highly agile motions.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
     </section>
-      <!-- People section -->
+    <!-- People section -->
     <section class="mb-5" id="people">
-  <h3 class="mb-4">People</h3>
+      <h3 class="mb-4">People</h3>
 
-  <div class="row g-3">
+      <div class="row g-3">
 
-    <!-- PERSON 1 -->
-    <div class="col-md-4 col-lg-3">
-      <div class="d-flex align-items-center">
-        <img src="imgs/profile/Kiourt.Chairi.png"
-             alt="Chairi Kiourt"
-             class="rounded-circle me-3"
-             style="width:55px; height:55px; object-fit:cover;">
-        <div>
-          <a href="https://chairiq.github.io" target="_blank" class="fw-bold text-decoration-none">
-            Dr. Chairi Kiourt
-          </a>
-          <div class="text-muted small">PI. Principal Researcher</div>
+        <!-- PERSON 1 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/profile/Kiourt.Chairi.png" alt="Chairi Kiourt" class="rounded-circle me-3"
+              style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <a href="https://chairiq.github.io" target="_blank" class="fw-bold text-decoration-none">
+                Dr. Chairi Kiourt
+              </a>
+              <div class="text-muted small">PI. Principal Researcher</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- PERSON 2 -->
-    <div class="col-md-4 col-lg-3">
-      <div class="d-flex align-items-center">
-        <img src="imgs/ibrics/costas.jpg"
-             alt="Konstantinos Chatzilygeroudis"
-             class="rounded-circle me-3"
-             style="width:55px; height:55px; object-fit:cover;">
-        <div>
-          <a href="http://costashatz.github.io/" target="_blank" class="fw-bold text-decoration-none">
-            Konstantinos Chatzilygeroudis
-          </a>
-          <div class="text-muted small">Assistant Professor</div>
+        <!-- PERSON 2 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/ibrics/costas.jpg" alt="Konstantinos Chatzilygeroudis" class="rounded-circle me-3"
+              style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <a href="http://costashatz.github.io/" target="_blank" class="fw-bold text-decoration-none">
+                Konstantinos Chatzilygeroudis
+              </a>
+              <div class="text-muted small">Assistant Professor</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- PERSON 3 -->
-    <div class="col-md-4 col-lg-3">
-      <div class="d-flex align-items-center">
-        <img src="imgs/ibrics/tsiatsianas.jpeg"
-             alt="Evangelos Tsiatsianas"
-             class="rounded-circle me-3"
-             style="width:55px; height:55px; object-fit:cover;">
-        <div>
-          <a href="https://lar.upatras.gr/projects/ibrics.html#" target="_blank" class="fw-bold text-decoration-none">
-            Evangelos Tsiatsianas
-          </a>
-          <div class="text-muted small">Kinodynamic Contact Planning</div>
+        <!-- PERSON 3 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/ibrics/tsiatsianas.jpeg" alt="Evangelos Tsiatsianas" class="rounded-circle me-3"
+              style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <a href="https://lar.upatras.gr/projects/ibrics.html#" target="_blank"
+                class="fw-bold text-decoration-none">
+                Evangelos Tsiatsianas
+              </a>
+              <div class="text-muted small">Kinodynamic Contact Planning</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- PERSON 4 -->
-    <div class="col-md-4 col-lg-3">
-      <div class="d-flex align-items-center">
-        <img src="imgs/placeholder-image.png"
-             alt="Panos Syriopoulos"
-             class="rounded-circle me-3"
-             style="width:55px; height:55px; object-fit:cover;">
-        <div>
-          <a href="https://www.researchgate.net/profile/Panos-Syriopoulos" target="_blank" class="fw-bold text-decoration-none">
-            Panos Syriopoulos
-          </a>
-          <div class="text-muted small">PhD Student, University of Patras (Department of Mathematics)</div>
+        <!-- PERSON 4 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/placeholder-image.png" alt="Panos Syriopoulos" class="rounded-circle me-3"
+              style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <a href="https://www.researchgate.net/profile/Panos-Syriopoulos" target="_blank"
+                class="fw-bold text-decoration-none">
+                Panos Syriopoulos
+              </a>
+              <div class="text-muted small">PhD Student, University of Patras (Department of Mathematics)</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
         <!-- PERSON 5 -->
-    <div class="col-md-4 col-lg-3">
-      <div class="d-flex align-items-center">
-        <img src="imgs/ibrics/ntagkas.jpeg"
-             alt="Alexandros Ntagkas"
-             class="rounded-circle me-3"
-             style="width:55px; height:55px; object-fit:cover;">
-        <div>
-          <a href="#" target="_blank" class="fw-bold text-decoration-none">
-            Alexandros Ntagkas
-          </a>
-          <div class="text-muted small">Incoming PhD Student, Oxford Robotics Institute</div>
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/ibrics/ntagkas.jpeg" alt="Alexandros Ntagkas" class="rounded-circle me-3"
+              style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <a href="#" target="_blank" class="fw-bold text-decoration-none">
+                Alexandros Ntagkas
+              </a>
+              <div class="text-muted small">Incoming PhD Student, Oxford Robotics Institute</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
 
-      <!-- PERSON 7 -->
-    <div class="col-md-4 col-lg-3">
-      <div class="d-flex align-items-center">
-        <img src="imgs/ibrics/kastaniotis.jpeg"
-             alt="Dimitris Kastaniotis"
-             class="rounded-circle me-3"
-             style="width:55px; height:55px; object-fit:cover;">
-        <div>
-          <a href="https://scholar.google.gr/citations?user=V2r7hKEAAAAJ&hl=en" target="_blank" class="fw-bold text-decoration-none">
-             Dimitris Kastaniotis
-          </a>
-          <div class="text-muted small">
-            Machine Learning & Computer Vision</div>
+        <!-- PERSON 7 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/ibrics/kastaniotis.jpeg" alt="Dimitris Kastaniotis" class="rounded-circle me-3"
+              style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <a href="https://scholar.google.gr/citations?user=V2r7hKEAAAAJ&hl=en" target="_blank"
+                class="fw-bold text-decoration-none">
+                Dimitris Kastaniotis
+              </a>
+              <div class="text-muted small">
+                Machine Learning & Computer Vision</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-     <!-- PERSON 8 -->
-    <div class="col-md-4 col-lg-3">
-      <div class="d-flex align-items-center">
-        <img src="imgs/ibrics/printzios.png"
-             alt="Lampros Printzios"
-             class="rounded-circle me-3"
-             style="width:55px; height:55px; object-fit:cover;">
-        <div>
-          <a href="#" target="_blank" class="fw-bold text-decoration-none">
-             Dimitris Kastaniotis
-          </a>
-          <div class="text-muted small">
-            Accelerated Optimization Techniques for Robot Control</div>
+        <!-- PERSON 8 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/ibrics/printzios.png" alt="Lampros Printzios" class="rounded-circle me-3"
+              style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <a href="#" target="_blank" class="fw-bold text-decoration-none">
+                Dimitris Kastaniotis
+              </a>
+              <div class="text-muted small">
+                Accelerated Optimization Techniques for Robot Control</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-     <!-- PERSON 9 -->
-    <div class="col-md-4 col-lg-3">
-      <div class="d-flex align-items-center">
-        <img src="imgs/ibrics/aa.jpg"
-             alt="Aristeidis Androutsopoulos"
-             class="rounded-circle me-3"
-             style="width:55px; height:55px; object-fit:cover;">
-        <div>
-          <a href="#" target="_blank" class="fw-bold text-decoration-none">
-             Aristeidis Androutsopoulos
-          </a>
-          <div class="text-muted small">
-            Robotic Skill Discovery via Manifold Techniques</div>
+        <!-- PERSON 9 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="d-flex align-items-center">
+            <img src="imgs/ibrics/aa.jpg" alt="Aristeidis Androutsopoulos" class="rounded-circle me-3"
+              style="width:55px; height:55px; object-fit:cover;">
+            <div>
+              <a href="#" target="_blank" class="fw-bold text-decoration-none">
+                Aristeidis Androutsopoulos
+              </a>
+              <div class="text-muted small">
+                Robotic Skill Discovery via Manifold Techniques</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-  </div>
-</section>
+      </div>
+    </section>
 
 
   </div>
@@ -341,4 +473,3 @@
     });
 </script>
 <script src="./js/bootstrap.bundle.min.js"></script>
-
