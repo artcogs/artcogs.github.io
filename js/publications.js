@@ -57,28 +57,33 @@ async function renderBibtexList(bibPath, containerId) {
       // smaller vertical spacing between cards (mb-2 instead of mb-3)
       card.className = "card mb-2 shadow-sm border-0";
 
+
       card.innerHTML = `
-        <div class="card-body" style="background-color:#f7f7f7; border-radius:6px; padding:0.0rem 0.0rem;">
-          <p class="mb-1">${apa}</p>
+  <div class="card-body" style="background-color:#f7f7f7; border-radius:6px; padding:0.2rem 0.4rem;">
 
-          <!-- Collapsible button area -->
-          <div class="collapse mt-1" id="${collapseId}">
-            <div class="d-flex flex-wrap gap-2 btn-group-area mt-1"></div>
+    <!-- INLINE APA TEXT + ARROW BUTTON -->
+    <div class="d-flex justify-content-between align-items-start">
+      <p class="mb-1 flex-grow-1" style="padding-right:10px;">${apa}</p>
 
-          <!-- Tiny toggle arrow -->
-          <div class="text-end mt-1">
-            <button class="btn btn-sm p-0 toggle-arrow btn-info"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#${collapseId}"
-                    aria-expanded="false"
-                    aria-controls="${collapseId}">
-              <span style="font-size:0.9rem;">▾</span>
-            </button>
-          </div>
-        </div>
-                  </div>
-      `;
+      <button class="btn btn-sm p-0 toggle-arrow btn-info"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#${collapseId}"
+              aria-expanded="false"
+              aria-controls="${collapseId}"
+              style="width:28px; height:28px; border-radius:50%; font-size:1.1rem; line-height:1;">
+        ▾
+      </button>
+    </div>
+
+    <!-- Collapsible actions -->
+    <div class="collapse mt-2" id="${collapseId}">
+      <div class="d-flex flex-wrap gap-2 btn-group-area"></div>
+    </div>
+
+  </div>
+`;
+     
 
       const btnGroup = card.querySelector(".btn-group-area");
 
