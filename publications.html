@@ -122,6 +122,89 @@
 
 
 
+<script>
+  async function renderBibtexList(bibPath, containerId) {
+    try {
+      const res = await fetch(bibPath);
+      const bibText = await res.text();
+
+      const entries = bibtexParse.toJSON(bibText);  // from @orcid/bibtex-parse-js
+      const container = document.getElementById(containerId);
+      container.innerHTML = "";
+
+      entries.forEach(entry => {
+        const tags = entry.entryTags || {};
+
+        const title    = tags.title    || "Untitled";
+        const authors  = tags.author   || "";
+        const year     = tags.year     || "";
+        const journal  = tags.journal  || tags.booktitle || "";
+        const url      = tags.url      || "";
+        const doi      = tags.doi      || "";
+
+        const card = document.createElement("div");
+        card.className = "card mb-3 shadow-sm";
+
+        card.innerHTML = `
+          <div class="card-body">
+            <h5 class="card-title mb-1">${title}</h5>
+            <p class="card-subtitle text-muted mb-1">${authors}</p>
+            <p class="mb-2">
+              ${journal ? `<em>${journal}</em>` : ""}${year ? (journal ? ", " : "") + year : ""}
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              ${url ? `<a href="${url}" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Link</a>` : ""}
+              ${doi ? `<a href="https://doi.org/${doi}" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">DOI</a>` : ""}
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    } catch (e) {
+      console.error("Error loading bib file:", bibPath, e);
+      const container = document.getElementById(containerId);
+      container.innerHTML = `<p class="text-danger">Failed to load publications from <code>${bibPath}</code>.</p>`;
+    }
+  }
+
+  // One call per section
+  renderBibtexList("publications/journals.bib",    "journal-list");
+  renderBibtexList("publications/conferences.bib", "conference-list");
+</script>
+
+<main class="flex-grow-1">
+  <div class="container py-5">
+
+    <!-- Navigation buttons (optional) -->
+    <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+      <a href="#journal-articles" class="btn btn-outline-dark btn-sm">Journal Articles</a>
+      <a href="#conference-papers" class="btn btn-outline-dark btn-sm">Conference Papers</a>
+    </div>
+
+    <!-- Journals -->
+    <section id="journal-articles" class="mb-5">
+      <h2 class="mb-3">Journal Articles</h2>
+      <div id="journal-list"></div>
+    </section>
+
+    <!-- Conferences -->
+    <section id="conference-papers" class="mb-5">
+      <h2 class="mb-3">Conference Papers</h2>
+      <div id="conference-list"></div>
+    </section>
+
+  </div>
+</main>
+
+<style>
+  html { scroll-behavior: smooth; }
+</style>
+
+
+
+
+
 
 
 
