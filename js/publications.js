@@ -66,7 +66,7 @@ async function renderBibtexList(bibPath, containerId) {
       <p class="mb-1 flex-grow-1" style="padding-right:10px;">${apa}</p>
 
       <div style="flex: 0 0 32px; display:flex; justify-content:center;">
-      <button class="btn btn-sm p-0 toggle-arrow btn-outline-info"
+      <button class="btn btn-sm p-0 toggle-arrow btn-outline-secondaryo"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#${collapseId}"
