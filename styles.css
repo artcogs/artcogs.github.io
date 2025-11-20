@@ -1,10 +1,26 @@
-/* Orbitron for logo */
-.navbar-brand {
-  font-family: "Orbitron", sans-serif;
-  letter-spacing: 0.08em;
+
+.navbar-brand,
+.navbar-nav .nav-link,
+h1, h2, h3, h4 {
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 0.5px;
 }
 
-/* Optionally apply to menu items too */
+.navbar-brand {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.navbar-brand {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+}
+
 .navbar-nav .nav-link {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
 }
