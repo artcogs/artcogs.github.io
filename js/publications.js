@@ -1,5 +1,3 @@
-// js/publications.js
-
 async function renderBibtexList(bibPath, containerId) {
   try {
     const res = await fetch(bibPath);
@@ -9,7 +7,7 @@ async function renderBibtexList(bibPath, containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = "";
 
-    entries.forEach(entry => {
+    entries.forEach((entry, idx) => {
       const tags = entry.entryTags || {};
 
       const title    = tags.title    || "Untitled";
@@ -24,9 +22,8 @@ async function renderBibtexList(bibPath, containerId) {
       const code     = tags.code     || tags.github || "";
       const doi      = tags.doi      || "";
 
-      const authorsAPA = authors
-        ? authors.replace(/\s+and\s+/g, ", ")
-        : "";
+      // APA-like formatting
+      const authorsAPA = authors ? authors.replace(/\s+and\s+/g, ", ") : "";
 
       let apa = "";
       if (authorsAPA) apa += authorsAPA + ". ";
@@ -45,6 +42,7 @@ async function renderBibtexList(bibPath, containerId) {
         apa += ` ${url}`;
       }
 
+      // BibTeX string
       const bibtexString =
         `@${entry.entryType}{${entry.citationKey},\n` +
         Object.entries(tags)
@@ -52,13 +50,33 @@ async function renderBibtexList(bibPath, containerId) {
           .join(",\n") +
         `\n}`;
 
+      // Unique id for collapse per card
+      const collapseId = `actions-${containerId}-${idx}`;
+
       const card = document.createElement("div");
-      card.className = "card mb-3 shadow-sm";
+      // smaller vertical spacing between cards (mb-2 instead of mb-3)
+      card.className = "card mb-2 shadow-sm border-0";
 
       card.innerHTML = `
-        <div class="card-body" style="background-color:#f7f7f7; border-radius:6px;">
-          <p class="mb-2">${apa}</p>
-          <div class="d-flex flex-wrap gap-2 btn-group-area"></div>
+        <div class="card-body" style="background-color:#f7f7f7; border-radius:6px; padding:0.5rem 0.75rem;">
+          <p class="mb-1">${apa}</p>
+
+          <!-- Collapsible button area -->
+          <div class="collapse mt-1" id="${collapseId}">
+            <div class="d-flex flex-wrap gap-2 btn-group-area mt-1"></div>
+          </div>
+
+          <!-- Tiny toggle arrow -->
+          <div class="text-end mt-1">
+            <button class="btn btn-link btn-sm p-0 toggle-arrow"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#${collapseId}"
+                    aria-expanded="false"
+                    aria-controls="${collapseId}">
+              <span style="font-size:0.9rem;">▾</span>
+            </button>
+          </div>
         </div>
       `;
 
