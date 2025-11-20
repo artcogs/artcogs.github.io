@@ -58,7 +58,7 @@ async function renderBibtexList(bibPath, containerId) {
       card.className = "card mb-2 shadow-sm border-0";
 
       card.innerHTML = `
-        <div class="card-body" style="background-color:#f7f7f7; border-radius:6px; padding:0.5rem 0.75rem;">
+        <div class="card-body" style="background-color:#f7f7f7; border-radius:6px; padding:0.0rem 0.0rem;">
           <p class="mb-1">${apa}</p>
 
           <!-- Collapsible button area -->
