@@ -64,7 +64,6 @@ async function renderBibtexList(bibPath, containerId) {
           <!-- Collapsible button area -->
           <div class="collapse mt-1" id="${collapseId}">
             <div class="d-flex flex-wrap gap-2 btn-group-area mt-1"></div>
-          </div>
 
           <!-- Tiny toggle arrow -->
           <div class="text-end mt-1">
@@ -74,10 +73,11 @@ async function renderBibtexList(bibPath, containerId) {
                     data-bs-target="#${collapseId}"
                     aria-expanded="false"
                     aria-controls="${collapseId}">
-              <span style="font-size:2rem;">▾</span>
+              <span style="font-size:0.9rem;">▾</span>
             </button>
           </div>
         </div>
+                  </div>
       `;
 
       const btnGroup = card.querySelector(".btn-group-area");
