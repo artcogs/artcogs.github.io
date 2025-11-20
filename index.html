@@ -13,7 +13,7 @@
 
 
 <main class="flex-grow-1">
-  <div class="container py-5">
+  <div class="container py-4">
     <br>
     <div class="row justify-content-center">
       <!--<img src="imgs/UnderConstruction.jpeg" class="d-block mx-auto"
@@ -43,8 +43,6 @@
         </p>
       </div>
     </div>
-  </div>
-  <div class="container py-4">
     <hr class="my-4">
 
     <h3 class="text-center mb-3">Key Research Directions</h3>
@@ -128,13 +126,14 @@
       </div>
     </div>
     <hr class="my-4">
-
-    <div id="footer"></div>
-    <script>
-      fetch("footer.html")
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById("footer").innerHTML = data;
-        });
-    </script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
+  </div>
+</main>
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+<script src="./js/bootstrap.bundle.min.js"></script>
