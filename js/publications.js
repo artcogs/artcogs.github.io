@@ -56,7 +56,7 @@ async function renderBibtexList(bibPath, containerId) {
       card.className = "card mb-3 shadow-sm";
 
       card.innerHTML = `
-        <div class="card-body">
+        <div class="card-body" style="background-color:#f7f7f7; border-radius:6px;">
           <p class="mb-2">${apa}</p>
           <div class="d-flex flex-wrap gap-2 btn-group-area"></div>
         </div>
