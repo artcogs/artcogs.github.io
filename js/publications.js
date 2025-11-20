@@ -71,7 +71,7 @@ async function renderBibtexList(bibPath, containerId) {
               data-bs-target="#${collapseId}"
               aria-expanded="false"
               aria-controls="${collapseId}"
-              style="width:28px; height:28px; border-radius:50%; font-size:1.1rem; line-height:1;">
+              style="width:28px; height:28px; border-radius:10%; font-size:1.1rem; line-height:1;">
         ▾
       </button>
     </div>
