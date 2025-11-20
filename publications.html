@@ -9,158 +9,80 @@
     });
 </script>
 
-<!-- Publications Page -->
 <main class="flex-grow-1">
   <div class="container py-5">
 
     <!-- Page Title -->
-    <header class="mb-5 text-center">
+    <header class="mb-4 text-center">
       <h1 class="mb-2">Publications</h1>
-      <h5 class="text-muted">Selected Research Outputs of Our Team</h5>
+      <h5 class="text-muted">Selected Research Outputs</h5>
     </header>
 
-    <!-- Tabs Navigation -->
-    <ul class="nav nav-pills justify-content-center mb-4" id="pubsTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active"
-                id="journals-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#journals"
-                type="button"
-                role="tab"
-                aria-controls="journals"
-                aria-selected="true">
-          Journal Articles
-        </button>
-      </li>
+    <!-- Top Navigation Buttons -->
+    <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+      <a href="#journal-articles" class="btn btn-outline-dark btn-sm">
+        Journal Articles
+      </a>
+      <a href="#peer-reviewed-conferences" class="btn btn-outline-dark btn-sm">
+        Peer-Reviewed Conference Papers
+      </a>
+      <a href="#posters-presentations" class="btn btn-outline-dark btn-sm">
+        Conference Posters &amp; Presentations
+      </a>
+    </div>
 
-      <li class="nav-item" role="presentation">
-        <button class="nav-link"
-                id="conferences-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#conferences"
-                type="button"
-                role="tab"
-                aria-controls="conferences"
-                aria-selected="false">
-          Peer-Reviewed Conference Papers
-        </button>
-      </li>
+    <!-- SECTION 1: Journal Articles -->
+    <section id="journal-articles" class="mb-5">
+      <h2 class="mb-3">Journal Articles</h2>
+      <p class="text-muted mb-4">
+        Peer-reviewed journal publications showcasing our core research results.
+      </p>
 
-      <li class="nav-item" role="presentation">
-        <button class="nav-link"
-                id="posters-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#posters"
-                type="button"
-                role="tab"
-                aria-controls="posters"
-                aria-selected="false">
-          Conference Posters &amp; Presentations
-        </button>
-      </li>
-    </ul>
-
-    <!-- Tabs Content -->
-    <div class="tab-content" id="pubsTabContent">
-
-      <!-- Journal Articles -->
-      <div class="tab-pane fade show active" id="journals" role="tabpanel" aria-labelledby="journals-tab">
-        <div class="list-group">
-
-          <!-- Journal Article 1 -->
-          <div class="list-group-item py-3">
-            <h5 class="mb-1">
-              <!-- Replace with real title -->
-              Journal Article Title Goes Here
-            </h5>
-            <p class="mb-1 text-muted">
-              <!-- Authors -->
-              A. Author, B. Author, C. Author
-            </p>
-            <p class="mb-1">
-              <!-- Venue -->
-              <em>Journal Name</em>, Volume X, Issue Y, Year.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-2">
-              <!-- Optional links -->
-              <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Publisher</a>
-              <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">PDF</a>
-              <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Code</a>
-            </div>
+      <!-- Example journal card -->
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">
+            <!-- Title -->
+            Journal Paper Title Goes Here
+          </h5>
+          <p class="card-subtitle text-muted mb-1">
+            <!-- Authors -->
+            A. Author, B. Author, C. Author
+          </p>
+          <p class="mb-2">
+            <!-- Venue / details -->
+            <em>Journal Name</em>, Volume X, Issue Y, Year.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Publisher</a>
+            <a href="#" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">PDF</a>
+            <a href="#" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Code</a>
           </div>
-
-          <!-- Add more journal items by copying the block above -->
-
         </div>
       </div>
+      <!-- Duplicate card blocks here for more journal articles -->
 
-      <!-- Peer-Reviewed Conference Papers -->
-      <div class="tab-pane fade" id="conferences" role="tabpanel" aria-labelledby="conferences-tab">
-        <div class="list-group">
+    </section>
 
-          <!-- Conference Paper 1 -->
-          <div class="list-group-item py-3">
-            <h5 class="mb-1">
-              <!-- Replace with real title -->
-              Conference Paper Title Goes Here
-            </h5>
-            <p class="mb-1 text-muted">
-              <!-- Authors -->
-              A. Author, B. Author, C. Author
-            </p>
-            <p class="mb-1">
-              <!-- Venue -->
-              In: <em>Proceedings of the XYZ International Conference on Something</em>, Year.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-2">
-              <!-- Optional links -->
-              <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Paper</a>
-              <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Video</a>
-              <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Code</a>
-            </div>
-          </div>
+    <!-- SECTION 2: Peer-Reviewed Conference Papers -->
+    <section id="peer-reviewed-conferences" class="mb-5">
+      <h2 class="mb-3">Peer-Reviewed Conference Papers</h2>
+      <p class="text-muted mb-4">
+        Full conference papers published in international peer-reviewed venues.
+      </p>
 
-          <!-- Add more conference paper items here -->
+      <!-- Example conference card -->
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">
+            Conference Paper Title Goes Here
+          </h5>
+          <p class="card-subtitle text-muted mb-1">
+            A. Author, B. Author, C. Author
+          </p>
+          <p class="mb-2">
+            In: <em>Proceedings o
 
-        </div>
-      </div>
-
-      <!-- Conference Posters & Presentations (No Proceedings) -->
-      <div class="tab-pane fade" id="posters" role="tabpanel" aria-labelledby="posters-tab">
-        <div class="list-group">
-
-          <!-- Poster / Presentation 1 -->
-          <div class="list-group-item py-3">
-            <h5 class="mb-1">
-              <!-- Replace with real title -->
-              Poster / Talk Title Goes Here
-            </h5>
-            <p class="mb-1 text-muted">
-              <!-- Authors -->
-              A. Author, B. Author, C. Author
-            </p>
-            <p class="mb-1">
-              <!-- Venue / Event -->
-              Poster / oral presentation at <em>Conference / Workshop / Symposium Name</em>, Year.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-2">
-              <!-- Optional links -->
-              <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Abstract</a>
-              <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Slides</a>
-              <a href="#" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Poster</a>
-            </div>
-          </div>
-
-          <!-- Add more poster / presentation items here -->
-
-        </div>
-      </div>
-
-    </div> <!-- /tab-content -->
-
-  </div>
-</main>
 
 
 
