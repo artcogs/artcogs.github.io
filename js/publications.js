@@ -157,4 +157,5 @@ async function renderBibtexList(bibPath, containerId) {
 document.addEventListener("DOMContentLoaded", () => {
   renderBibtexList("publications/journals.bib",    "journal-list");
   renderBibtexList("publications/conferences.bib", "conference-list");
+  renderBibtexList("publications/conferences-no-proceeding.bib", "conference-no-proceeding-list");
 });
