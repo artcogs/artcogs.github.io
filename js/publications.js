@@ -65,6 +65,7 @@ async function renderBibtexList(bibPath, containerId) {
     <div class="d-flex justify-content-between align-items-start">
       <p class="mb-1 flex-grow-1" style="padding-right:10px;">${apa}</p>
 
+      <div style="flex: 0 0 32px; display:flex; justify-content:center;">
       <button class="btn btn-sm p-0 toggle-arrow btn-outline-info"
               type="button"
               data-bs-toggle="collapse"
@@ -74,6 +75,7 @@ async function renderBibtexList(bibPath, containerId) {
               style="width:28px; height:28px; border-radius:10%; font-size:1.1rem; line-height:1;">
         ▾
       </button>
+      </div>
     </div>
 
     <!-- Collapsible actions -->
