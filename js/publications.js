@@ -68,13 +68,13 @@ async function renderBibtexList(bibPath, containerId) {
 
           <!-- Tiny toggle arrow -->
           <div class="text-end mt-1">
-            <button class="btn btn-link btn-sm p-0 toggle-arrow"
+            <button class="btn btn-sm p-0 toggle-arrow btn-info"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#${collapseId}"
                     aria-expanded="false"
                     aria-controls="${collapseId}">
-              <span style="font-size:0.9rem;">▾</span>
+              <span style="font-size:2rem;">▾</span>
             </button>
           </div>
         </div>
