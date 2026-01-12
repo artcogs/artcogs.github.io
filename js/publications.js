@@ -155,6 +155,7 @@ async function renderBibtexList(bibPath, containerId) {
 
 // Run after DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
+  renderBibtexList("publications/book-chapters.bib",    "book-chapters-list");
   renderBibtexList("publications/journals.bib",    "journal-list");
   renderBibtexList("publications/conferences.bib", "conference-list");
   renderBibtexList("publications/conferences-no-proceeding.bib", "conference-no-proceeding-list");
