@@ -189,5 +189,13 @@ const teamData = {
         webpage: "https://lar.upatras.gr/projects/ibrics.html"
       }
     }
+  ],
+  other: [
+    {
+      id: "dimitrisgrigoropoulos",
+      name: "Dr. Dimitris Grigoropoulos",
+      role: ["Archaeology"],
+      img: "imgs/profile/person-place-holder.jpg",
+    }
   ]
 };
