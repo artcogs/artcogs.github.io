@@ -153,6 +153,74 @@ async function renderBibtexList(bibPath, containerId) {
   }
 }
 
+async function renderFilteredBibtexList(bibPath, containerId, filterIds) {
+  try {
+    const res = await fetch(bibPath);
+    const bibText = await res.text();
+
+    const entries = bibtexParse.toJSON(bibText);
+    const container = document.getElementById(containerId);
+    container.innerHTML = "";
+
+    entries.forEach((entry, idx) => {
+
+      // ✅ FILTER
+      if (filterIds && !filterIds.includes(entry.citationKey)) {
+        return;
+      }
+
+      const tags = entry.entryTags || {};
+
+      const title    = tags.title    || "Untitled";
+      const authors  = tags.author   || "";
+      const year     = tags.year     || "";
+      const journal  = tags.journal  || tags.booktitle || "";
+      const volume   = tags.volume   || "";
+      const number   = tags.number   || "";
+      const pages    = tags.pages    || "";
+      const url      = tags.url      || "";
+      const pdf      = tags.pdf      || "";
+      const code     = tags.code     || tags.github || "";
+      const doi      = tags.doi      || "";
+
+      const authorsAPA = authors ? authors.replace(/\s+and\s+/g, ", ") : "";
+
+      let apa = "";
+      if (authorsAPA) apa += authorsAPA + ". ";
+      if (year)       apa += `(${year}). `;
+      apa += `${title}. `;
+      if (journal) {
+        apa += `<em>${journal}</em>`;
+        if (volume) apa += `, ${volume}`;
+        if (number) apa += `(${number})`;
+        if (pages)  apa += `, ${pages}`;
+        apa += ".";
+      }
+      if (doi) {
+        apa += ` https://doi.org/${doi}`;
+      } else if (url) {
+        apa += ` ${url}`;
+      }
+
+      const collapseId = `filtered-${containerId}-${idx}`;
+
+      const card = document.createElement("div");
+      card.className = "card mb-2 shadow-sm border-0";
+
+      card.innerHTML = `
+        <div class="card-body" style="background-color:#f7f7f7; border-radius:6px; padding:0.2rem 0.4rem;">
+          <p class="mb-1">${apa}</p>
+        </div>
+      `;
+
+      container.appendChild(card);
+    });
+
+  } catch (e) {
+    console.error("Error loading filtered bib file:", bibPath, e);
+  }
+}
+
 // Run after DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   renderBibtexList("publications/book-chapters.bib",    "book-chapters-list");
