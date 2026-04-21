@@ -196,6 +196,16 @@ const teamData = {
       name: "Dr. Dimitris Grigoropoulos",
       role: ["Archaeology"],
       img: "imgs/profile/person-place-holder.jpg",
+    },
+    {
+      id:"anestiskoutsoudis",
+      name:"Dr Anestis Koutsoudis",
+      role:["Research Director of 3D technolgies – Athena RC"],
+       links: {
+        webpage: "https://www.ceti.gr/~akoutsou/"
+      }
+
     }
+
   ]
 };
