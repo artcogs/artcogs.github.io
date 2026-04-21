@@ -65,10 +65,11 @@ function renderPeople(list, containerId, size = "normal") {
       .map(([key, url]) => createSocialIcon(key, url))
       .join("");
 
+
     const card = `
-      <div class="$team-card">
+      <div class="${config.col} mb-3">
         <div class="card text-center shadow-sm ${config.card}">
-          <div class="card-body d-flex flex-column">
+          <div class="card-body">
 
             <img src="${person.img}" 
                  class="card-img-top mb-2"
@@ -80,7 +81,7 @@ function renderPeople(list, containerId, size = "normal") {
             ${roles}
             ${email}
 
-            <div class="mt-auto d-flex justify-content-center gap-2 mt-2 flex-wrap">
+            <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
               ${links}
             </div>
 

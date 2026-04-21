@@ -220,7 +220,11 @@
     <!-- People section -->
     <section class="mb-5" id="people">
       <h3 class="mb-4">People</h3>
-      <div class="team-grid" id="filtered-team"></div>
+
+      <div class="row g-3">
+        <div class="row" id="filtered-team"></div>
+
+      </div>
     </section>
 
   </div>
@@ -265,14 +269,6 @@
   }
   .card .card-title {
   min-height: 2.5em;
-}
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-.team-card .card {
-  height: 100%;
 }
 </style>
 
