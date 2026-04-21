@@ -1,4 +1,3 @@
-
 <div id="top-menu"></div>
 
 <script>
@@ -13,8 +12,8 @@
 <script src="js/team.js"></script>
 <script src="js/renderTeam.js"></script>
 
-  <main class="flex-grow-1">
-      <div class="container py-5">
+<main class="flex-grow-1">
+  <div class="container py-5">
 
     <!-- TITLE / HERO -->
     <header class="text-center mb-5">
@@ -24,7 +23,7 @@
         ancient movement, trade, and social interaction.
       </p>
     </header>
-        <!-- FEATURED VIDEO -->
+    <!-- FEATURED VIDEO -->
     <section class="mb-5">
       <h2 class="text-center fw-bold mb-4">
         🎥 Watch: From Static Maps to Living Landscapes
@@ -33,9 +32,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="ratio ratio-16x9 shadow-sm rounded">
-            <iframe 
-              src="https://www.youtube.com/embed/_CkRB3ETiTI"
-              title="From GIS to ABM Video"
+            <iframe src="https://www.youtube.com/embed/_CkRB3ETiTI" title="From GIS to ABM Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
             </iframe>
@@ -71,9 +68,7 @@
         <!-- Placeholder image for the overall project -->
         <div class="col-md-5 text-center">
           <!-- Replace src with your actual image file -->
-          <img src="imgs/archaeonav/1.png"
-               alt="From GIS to ABM overview"
-               class="img-fluid rounded shadow-sm mb-3">
+          <img src="imgs/archaeonav/1.png" alt="From GIS to ABM overview" class="img-fluid rounded shadow-sm mb-3">
           <small class="text-muted d-block">
             Example visualization of movement in a reconstructed ancient landscape.
           </small>
@@ -90,9 +85,7 @@
         <div class="col-md-6">
           <div class="card h-100 shadow-sm">
             <!-- Replace src with your actual image file -->
-            <img src="imgs/archaeonav/2.png"
-                 class="card-img-top"
-                 alt="Thracian forts along the Via Egnatia">
+            <img src="imgs/archaeonav/2.png" class="card-img-top" alt="Thracian forts along the Via Egnatia">
             <div class="card-body">
               <h5 class="card-title">Thracian Forts along the Via Egnatia</h5>
               <p class="card-text">
@@ -109,9 +102,7 @@
         <div class="col-md-6">
           <div class="card h-100 shadow-sm">
             <!-- Replace src with your actual image file -->
-            <img src="imgs/archaeonav/3.png"
-                 class="card-img-top"
-                 alt="Sanctuary of Kalapodi">
+            <img src="imgs/archaeonav/3.png" class="card-img-top" alt="Sanctuary of Kalapodi">
             <div class="card-body">
               <h5 class="card-title">The Sanctuary of Kalapodi</h5>
               <p class="card-text">
@@ -145,8 +136,8 @@
     <!-- PRESENTATIONS / CONFERENCES -->
     <section class="mb-5">
       <h2 class="mb-4 text-center">Papers, Presentations &amp; Conferences</h2>
-         <div id="filtered-journal-list"> Test test</div>
-        <div id="filtered-conference-list"> Test test</div>
+      <div id="filtered-journal-list"> Test test</div>
+      <div id="filtered-conference-list"> Test test</div>
     </section>
     <section class="mb-5" id="people">
       <h3 class="mb-4">People</h3>
@@ -154,7 +145,7 @@
       <div class="row g-3">
         <div class="row" id="filtered-team"></div>
     </section>
-    </div>
+  </div>
 </main>
 <div id="footer"></div>
 
@@ -167,22 +158,23 @@
 </script>
 
 <style>
-    .social-icon {
-        width: 22px;
-        height: 22px;
-        object-fit: contain;
-    }
-    .small-card {
-        font-size: 0.85rem;
-        }
+  .social-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
 
-        .xsmall-card {
-        font-size: 0.75rem;
-        }
+  .small-card {
+    font-size: 0.85rem;
+  }
 
-        .xsmall-card h5 {
-        font-size: 0.9rem;
-        }
+  .xsmall-card {
+    font-size: 0.75rem;
+  }
+
+  .xsmall-card h5 {
+    font-size: 0.9rem;
+  }
 </style>
 
 <script>
@@ -194,26 +186,26 @@
   renderFilteredBibtexList(
     "publications/conferences-no-proceeding.bib",
     "filtered-conference-list",
-    ["evangelidis2025landscape", "evangelidis20253denvironment","kiourt2024crowds"]
+    ["evangelidis2025landscape", "evangelidis20253denvironment", "kiourt2024crowds"]
   );
 </script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
 
 
-      // ✅ FILTERED RENDER (by id)
-      const selectedIds = [
-        "chairikiourt",
-        "vassilisevangelidis",
-        "dimitrisgrigoropoulos"
-      ];
-      const filtered = filterPeople({
-        ids: selectedIds
-      });
-
-      renderPeople(filtered, "filtered-team","small");
-
+    // ✅ FILTERED RENDER (by id)
+    const selectedIds = [
+      "chairikiourt",
+      "vassilisevangelidis",
+      "dimitrisgrigoropoulos"
+    ];
+    const filtered = filterPeople({
+      ids: selectedIds
     });
-  </script>
+
+    renderPeople(filtered, "filtered-team", "small");
+
+  });
+</script>
 <script src="./js/bootstrap.bundle.min.js"></script>
