@@ -18,6 +18,8 @@ function createSocialIcon(type, url) {
   `;
 }
 
+
+// 🎯 MAIN RENDER FUNCTION
 function renderPeople(list, containerId, size = "normal") {
   const container = document.getElementById(containerId);
 
@@ -63,10 +65,17 @@ function renderPeople(list, containerId, size = "normal") {
       .map(([key, url]) => createSocialIcon(key, url))
       .join("");
 
+    // Optional category badge
+    const badge = person.category
+      ? `<span class="badge bg-secondary mb-1">${person.category}</span>`
+      : "";
+
     const card = `
       <div class="${config.col} mb-3">
         <div class="card text-center h-100 shadow-sm ${config.card}">
           <div class="card-body">
+
+            ${badge}
 
             <img src="${person.img}" 
                  class="card-img-top mb-2"
@@ -88,5 +97,39 @@ function renderPeople(list, containerId, size = "normal") {
     `;
 
     container.innerHTML += card;
+  });
+}
+
+
+// 🎯 GLOBAL FILTER FUNCTION
+function filterPeople({ ids = null, keyword = null } = {}) {
+
+  const allPeople = [
+    ...teamData.team.map(p => ({ ...p, category: "Team" })),
+    ...teamData.collaborators.map(p => ({ ...p, category: "Collaborator" })),
+    ...teamData.former.map(p => ({ ...p, category: "Former" }))
+    ...teamData.former.map(p => ({ ...p, category: "Other" }))
+  ];
+
+  return allPeople.filter(person => {
+
+    // Filter by IDs
+    if (ids && !ids.includes(person.id)) {
+      return false;
+    }
+
+    // Filter by keyword (name + roles)
+    if (keyword) {
+      const text = [
+        person.name,
+        ...(person.role || [])
+      ].join(" ").toLowerCase();
+
+      if (!text.includes(keyword.toLowerCase())) {
+        return false;
+      }
+    }
+
+    return true;
   });
 }
