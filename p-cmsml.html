@@ -226,8 +226,9 @@
       <h3 class="mb-4">People</h3>
 
       <div class="row g-3">
+        <div class="row" id="filtered-team"></div>
 
-        <!-- PERSON 1 -->
+        <!-- 
         <div class="col-md-4 col-lg-3">
           <div class="d-flex align-items-center">
             <img src="imgs/profile/Kiourt.Chairi.png"
@@ -242,7 +243,7 @@
             </div>
           </div>
         </div>
-        <!-- PERSON 2 -->
+   
         <div class="col-md-4 col-lg-3">
           <div class="d-flex align-items-center">
             <img src="imgs/cmsml/koutsoudis.jpg"
@@ -257,7 +258,7 @@
             </div>
           </div>
         </div>
-        <!-- PERSON 2 -->
+     
         <div class="col-md-4 col-lg-3">
           <div class="d-flex align-items-center">
             <img src="imgs/profile/kalles.jpg"
@@ -273,7 +274,7 @@
           </div>
         </div>
 
-        <!-- PERSON 3 -->
+
         <div class="col-md-4 col-lg-3">
           <div class="d-flex align-items-center">
             <img src="imgs/profile/VasilisZafeiropoulos.png"
@@ -287,7 +288,7 @@
           </div>
         </div>
 
-        <!-- PERSON 4 -->
+    
         <div class="col-md-4 col-lg-3">
           <div class="d-flex align-items-center">
             <img src="imgs/profile/helen.jpg"
@@ -301,7 +302,7 @@
           </div>
         </div>
 
-        <!-- PERSON 5 -->
+
         <div class="col-md-4 col-lg-3">
           <div class="d-flex align-items-center">
             <img src="imgs/placeholder-image.png"
@@ -315,7 +316,7 @@
           </div>
         </div>
 
-        <!-- PERSON 5 -->
+  
         <div class="col-md-4 col-lg-3">
           <div class="d-flex align-items-center">
             <img src="imgs/placeholder-image.png"
@@ -327,7 +328,7 @@
               <div class="text-muted small">ML Engineer</div>
             </div>
           </div>
-        </div>
+        </div>-->
 
       </div>
     </section>
@@ -336,6 +337,25 @@
 </main>
 
 <div id="footer"></div>
+
+<style>
+    .social-icon {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+    }
+    .small-card {
+        font-size: 0.85rem;
+        }
+
+        .xsmall-card {
+        font-size: 0.75rem;
+        }
+
+        .xsmall-card h5 {
+        font-size: 0.9rem;
+        }
+</style>
 <script>
   fetch("footer.html")
     .then(res => res.text())
@@ -348,5 +368,24 @@
     ["theodoropoulou2026pipeline", "zervas2026context"]
   );
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+
+      // ✅ FILTERED RENDER (by id)
+      const selectedIds = [
+        "chairikiourt",
+        "vassilisevangelidis",
+        "dimitrisgrigoropoulos"
+      ];
+      const filtered = filterPeople({
+        ids: selectedIds
+      });
+
+      renderPeople(filtered, "filtered-team","small");
+
+    });
+  </script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 
