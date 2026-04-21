@@ -8,6 +8,8 @@
       document.getElementById("top-menu").innerHTML = data;
     });
 </script>
+<script src="js/bibtexParse.js"></script>
+<script src="js/publications.js"></script>
 
   <main class="container py-5">
 
@@ -141,6 +143,8 @@
     <section class="mb-5">
       <h2 class="mb-4 text-center">Papers, Presentations &amp; Conferences</h2>
 
+        <div id="filtered-conference-list"> Test test</div>
+
       <ul class="list-group list-group-flush">
 
          <li class="list-group-item">
@@ -259,5 +263,10 @@
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
+  renderFilteredBibtexList(
+    "publications/conferences.bib",
+    "filtered-conference-list",
+    ["theodoropoulou2026pipeline", "zervas2026context"]
+  );
 </script>
 <script src="./js/bootstrap.bundle.min.js"></script>
