@@ -5,6 +5,10 @@ async function renderBibtexList(bibPath, containerId) {
 
     const entries = bibtexParse.toJSON(bibText);
     const container = document.getElementById(containerId);
+    if (!container) {
+      console.warn(`Container '${containerId}' not found. Skipping.`);
+      return;
+    }
     container.innerHTML = "";
 
     entries.forEach((entry, idx) => {
@@ -160,6 +164,10 @@ async function renderFilteredBibtexList(bibPath, containerId, filterIds) {
 
     const entries = bibtexParse.toJSON(bibText);
     const container = document.getElementById(containerId);
+    if (!container) {
+      console.warn(`Container '${containerId}' not found. Skipping.`);
+      return;
+    }
     container.innerHTML = "";
 
     entries.forEach((entry, idx) => {
