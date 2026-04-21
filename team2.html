@@ -1,0 +1,99 @@
+<div id="top-menu"></div>
+
+<script>
+    fetch("top-menu.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("top-menu").innerHTML = data;
+        });
+</script>
+
+<main class="flex-grow-1">
+    <div class="container-fluid">
+
+
+        <!-- TEAM SECTION -->
+        <div class="container py-5">
+             <!-- 🔽 FILTERED SECTION -->
+            <h2 class="mb-3">Core Members (Filtered)</h2>
+            <div class="row" id="filtered-team"></div>
+
+            <hr>
+
+            <!-- 🔽 FULL TEAM -->
+            <h2 class="mb-3">All Team Members</h2>
+            <div class="row" id="team-container"></div>
+
+            <hr>
+
+            <!-- 🔽 COLLABORATORS -->
+            <h2 class="mb-3">Collaborators</h2>
+            <div class="row" id="collaborators-container"></div>
+
+            <hr>
+
+            <!-- 🔽 FORMER -->
+            <h2 class="mb-3">Former Members</h2>
+            <div class="row" id="former-container"></div>
+
+
+        </div>
+</main>
+<!-- Small CSS for icon size -->
+<style>
+    .social-icon {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+    }
+</style>
+
+<div id="footer"></div>
+<script>
+    fetch("footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+</script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const current = location.pathname.split("/").pop(); // current file, e.g. "team.html"
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+      const linkPage = link.getAttribute("href");
+
+      if (linkPage === current || (current === "" && linkPage === "./")) {
+        link.classList.add("active");
+      }
+    });
+  });
+  
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      // ✅ FULL RENDER
+      renderPeople(teamData.team, "team-container");
+      renderPeople(teamData.collaborators, "collaborators-container");
+      renderPeople(teamData.former, "former-container");
+
+      // ✅ FILTERED RENDER (by id)
+      const selectedIds = [
+        "chairikiourt",
+        "michaliszervas",
+        "helenatheodoropoulou"
+      ];
+
+      const filtered = teamData.team.filter(p =>
+        selectedIds.includes(p.id)
+      );
+
+      renderPeople(filtered, "filtered-team");
+
+    });
+  </script>
