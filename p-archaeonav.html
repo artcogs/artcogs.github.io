@@ -241,6 +241,9 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
+
+
+
       // ✅ FILTERED RENDER (by id)
       const selectedIds = [
         "chairikiourt",
@@ -248,11 +251,9 @@
         "dimitrisgrigoropoulos",
         "lamprosprintzios"
       ];
-      const allPeople = [teamData.team, teamData.collaborators, teamData.former];
-
-      const filtered = allPeople.filter(p =>
-        selectedIds.includes(p.id)
-      );
+      const filtered = filterPeople({
+        ids: selectedIds
+      });
 
       renderPeople(filtered, "filtered-team","small");
 
