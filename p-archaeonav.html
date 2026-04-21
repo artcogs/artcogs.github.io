@@ -221,12 +221,15 @@
         font-size: 0.9rem;
         }
 </style>
+
 <script>
   fetch("footer.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
+</script>
+<script>
   renderFilteredBibtexList(
     "publications/journals.bib",
     "filtered-journal-list",
@@ -239,9 +242,10 @@
   );
 </script>
 
+
+
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-
 
 
       // ✅ FILTERED RENDER (by id)
