@@ -18,12 +18,34 @@ function createSocialIcon(type, url) {
   `;
 }
 
-function renderPeople(list, containerId) {
+function renderPeople(list, containerId, size = "normal") {
   const container = document.getElementById(containerId);
+
   if (!container) {
     console.error("Container not found:", containerId);
     return;
   }
+
+  // 🎯 Size configurations
+  const sizeConfig = {
+    normal: {
+      col: "col-12 col-sm-6 col-md-4 col-lg-3",
+      card: "",
+      imgStyle: "aspect-ratio:1/1; object-fit:cover;"
+    },
+    small: {
+      col: "col-6 col-sm-4 col-md-3 col-lg-2",
+      card: "small-card",
+      imgStyle: "aspect-ratio:1/1; object-fit:cover; max-height:140px;"
+    },
+    xsmall: {
+      col: "col-6 col-sm-3 col-md-2 col-lg-2",
+      card: "xsmall-card",
+      imgStyle: "aspect-ratio:1/1; object-fit:cover; max-height:100px;"
+    }
+  };
+
+  const config = sizeConfig[size] || sizeConfig.normal;
 
   container.innerHTML = "";
 
@@ -42,21 +64,21 @@ function renderPeople(list, containerId) {
       .join("");
 
     const card = `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-        <div class="card text-center h-100 shadow-sm">
+      <div class="${config.col} mb-3">
+        <div class="card text-center h-100 shadow-sm ${config.card}">
           <div class="card-body">
 
             <img src="${person.img}" 
-                 class="card-img-top mb-3"
+                 class="card-img-top mb-2"
                  alt="${person.name}"
-                 style="aspect-ratio: 1 / 1; object-fit: cover;">
+                 style="${config.imgStyle}">
 
-            <h5 class="card-title mb-3">${person.name}</h5>
+            <h5 class="card-title mb-2">${person.name}</h5>
 
             ${roles}
             ${email}
 
-            <div class="d-flex justify-content-center gap-2 mt-2">
+            <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
               ${links}
             </div>
 

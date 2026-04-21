@@ -17,10 +17,10 @@
         <!-- TEAM SECTION -->
         <div class="container py-5">
              <!-- 🔽 FILTERED SECTION -->
-            <!--<h2 class="mb-3">Core Members (Filtered)</h2>
+            <h2 class="mb-3">Core Members (Filtered)</h2>
             <div class="row" id="filtered-team"></div>
 
-            <hr>-->
+            <hr>
 
             <!-- 🔽 FULL TEAM -->
             <h2 class="mb-3">All Team Members</h2>
@@ -48,6 +48,17 @@
         height: 22px;
         object-fit: contain;
     }
+    .small-card {
+        font-size: 0.85rem;
+        }
+
+        .xsmall-card {
+        font-size: 0.75rem;
+        }
+
+        .xsmall-card h5 {
+        font-size: 0.9rem;
+        }
 </style>
 
 <div id="footer"></div>
@@ -80,9 +91,9 @@
     document.addEventListener("DOMContentLoaded", () => {
 
       // ✅ FULL RENDER
-      renderPeople(teamData.team, "team-container");
-      renderPeople(teamData.collaborators, "collaborators-container");
-      renderPeople(teamData.former, "former-container");
+      renderPeople(teamData.team, "team-container", "normal");
+      renderPeople(teamData.collaborators, "collaborators-container", "normal");
+      renderPeople(teamData.former, "former-container", "small");
 
       // ✅ FILTERED RENDER (by id)
       const selectedIds = [
@@ -95,7 +106,7 @@
         selectedIds.includes(p.id)
       );
 
-      renderPeople(filtered, "filtered-team");
+      renderPeople(filtered, "filtered-team","xsmall");
 
     });
   </script>
