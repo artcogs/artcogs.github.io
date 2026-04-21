@@ -72,7 +72,7 @@ function renderPeople(list, containerId, size = "normal") {
 
     const card = `
       <div class="${config.col} mb-3">
-        <div class="card text-center h-100 shadow-sm ${config.card}">
+        <div class="card text-center shadow-sm ${config.card}">
           <div class="card-body">
 
             ${badge}
