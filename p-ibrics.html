@@ -7,6 +7,8 @@
       document.getElementById("top-menu").innerHTML = data;
     });
 </script>
+<script src="js/team.js"></script>
+<script src="js/renderTeam.js"></script>
 
 <main class="flex-grow-1">
   <div class="container py-5">
@@ -353,6 +355,7 @@
       <h3 class="mb-4">People</h3>
 
       <div class="row g-3">
+        <div class="row team-grid" id="filtered-team"></div>
 
         <!-- PERSON 1 -->
         <div class="col-md-4 col-lg-3">
@@ -502,5 +505,29 @@
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+
+    // ✅ FILTERED RENDER (by id)
+    const selectedIds = [
+      "chairikiourt",
+      "konstantinoschatzilygeroudis",
+      "dimitriskastaniotis",
+      "lamprosprintzios",
+      "konstantinosasimakopoulos",
+      "panossyriopoulos",
+      "aristeidisandroutsopoulos",
+      "evangelostsiatsianas",
+      "alexandrosntagkas"
+    ];
+    const filtered = filterPeople({
+      ids: selectedIds
+    });
+
+    renderPeople(filtered, "filtered-team", "small");
+
+  });
 </script>
 <script src="./js/bootstrap.bundle.min.js"></script>
