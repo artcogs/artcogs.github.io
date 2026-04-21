@@ -10,6 +10,8 @@
 </script>
 <script src="js/bibtexParse.js"></script>
 <script src="js/publications.js"></script>
+<script src="js/team.js"></script>
+<script src="js/renderTeam.js"></script>
 
   <main class="container py-5">
 
@@ -149,8 +151,9 @@
       <h3 class="mb-4">People</h3>
 
       <div class="row g-3">
+        <div class="row" id="filtered-team"></div>
 
-        <!-- PERSON 1 -->
+        <!-- PERSON 1 
         <div class="col-md-4 col-lg-3">
           <div class="d-flex align-items-center">
             <img src="imgs/profile/Kiourt.Chairi.png"
@@ -166,7 +169,7 @@
           </div>
         </div>
 
-        <!-- PERSON 1 -->
+        
         <div class="col-md-4 col-lg-3">
           <div class="d-flex align-items-center">
             <img src="imgs/profile/vassilis.evangelidis.jpg"
@@ -181,7 +184,7 @@
             </div>
           </div>
         </div>
-                <!-- PERSON 1 -->
+              
         <div class="col-md-4 col-lg-3">
           <div class="d-flex align-items-center">
             <img src="imgs/profile/person-place-holder.jpg"
@@ -196,10 +199,28 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
     </section>
 
 <div id="footer"></div>
+<style>
+    .social-icon {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+    }
+    .small-card {
+        font-size: 0.85rem;
+        }
+
+        .xsmall-card {
+        font-size: 0.75rem;
+        }
+
+        .xsmall-card h5 {
+        font-size: 0.9rem;
+        }
+</style>
 <script>
   fetch("footer.html")
     .then(res => res.text())
@@ -217,4 +238,25 @@
     ["evangelidis2025landscape", "evangelidis20253denvironment","kiourt2024crowds"]
   );
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+  
+
+      // ✅ FILTERED RENDER (by id)
+      const selectedIds = [
+        "chairikiourt",
+        "vassilisevangelidis",
+        "helenatheodoropoulou"
+      ];
+
+      const filtered = teamData.team.filter(p =>
+        selectedIds.includes(p.id)
+      );
+
+      renderPeople(filtered, "filtered-team","xsmall");
+
+    });
+  </script>
 <script src="./js/bootstrap.bundle.min.js"></script>
