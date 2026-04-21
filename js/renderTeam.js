@@ -80,7 +80,7 @@ function renderPeople(list, containerId, size = "normal") {
             ${roles}
             ${email}
 
-            <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+            <div class="mt-auto d-flex justify-content-center gap-2 flex-wrap">
               ${links}
             </div>
 
