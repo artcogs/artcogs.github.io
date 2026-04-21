@@ -142,65 +142,8 @@
     <!-- PRESENTATIONS / CONFERENCES -->
     <section class="mb-5">
       <h2 class="mb-4 text-center">Papers, Presentations &amp; Conferences</h2>
-
+         <div id="filtered-journal-list"> Test test</div>
         <div id="filtered-conference-list"> Test test</div>
-
-      <ul class="list-group list-group-flush">
-
-         <li class="list-group-item">
-          <div class="d-flex flex-wrap">
-            <span class="fw-bold me-2">2026</span>
-            <span>
-              C. Kiourt, Evangelidis, V., D. Grigoropoulos.
-              <em>Multi-Agent-Based Simulation of Archaeological Mobility in Uneven Landscapes</em> 
-              <em><a href="https://arxiv.org/pdf/2603.03390">https://arxiv.org/pdf/2603.03390</a></em>,
-            </span>
-          </div>
-        </li>
-
-        <li class="list-group-item">
-          <div class="d-flex  flex-wrap">
-            <span class="fw-bold me-2">12/2025</span>
-            <span>
-              Evangelidis, V. 
-              <em>Extending the Potentials of Landscape Archaeology: From GIS to ABM.</em> Lecture Series Atlas.
-            </span>
-          </div>
-        </li>
-
-        <li class="list-group-item">
-          <div class="d-flex flex-wrap">
-            <span class="fw-bold me-2">02/2025</span>
-            <span>
-              Evangelidis, V., D. Grigoropoulos, C. Kiourt.
-              <em>3D Environment Multiagent Simulation: Tracking Movement and Trade in Roman Greece.</em>
-              Conference <em>Three-Dimensional Experiences of Ancient Environments</em>,
-              American School of Classical Studies at Athens &amp; Case Western Reserve University.
-            </span>
-          </div>
-        </li>
-
-        <li class="list-group-item">
-          <div class="d-flex flex-wrap">
-            <span class="fw-bold me-2">11/2024</span>
-            <span>
-              Kiourt, C., Evangelidis, V., Grigoropoulos, D.
-              <em>Agent-Based Simulation of Crowd Movements in Uneven Terrains: Archaeological Case Studies.</em>
-              Conference <em>Archaeo-Informatics 2024: Use and Challenges of AI in Archaeology.</em>
-            </span>
-          </div>
-        </li>
-      </ul>
-
-      <!-- External link as a button 
-      <div class="mt-4 text-center">
-        <a href="https://www.google.com/search?sca_esv=740dc6ac61211c57&udm=7&sxsrf=AE3TifPiuiMwWFqOkRb6A0NHUBNbqpSwxw:1763026585583&q=three+dimensional+experiences+of+ancient+environments&sa=X&ved=2ahUKEwiN1PPq6e6QAxUChf0HHSE8B9QQ8ccDKAJ6BAgWEAQ&biw=1920&bih=953&dpr=1#fpstate=ive&vld=cid:b5a1e567,vid:mOB7KEDGO6o,st:0"
-           class="btn btn-outline-primary"
-           target="_blank"
-           rel="noopener">
-          More on “Three-Dimensional Experiences of Ancient Environments”
-        </a>
-      </div>-->
     </section>
     <section class="mb-5" id="people">
       <h3 class="mb-4">People</h3>
@@ -265,7 +208,7 @@
     });
   renderFilteredBibtexList(
     "publications/journals.bib",
-    "filtered-conference-list",
+    "filtered-journal-list",
     ["kiourt2026mobility"]
   );
   renderFilteredBibtexList(
