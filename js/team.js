@@ -201,6 +201,7 @@ const teamData = {
       id:"anestiskoutsoudis",
       name:"Dr Anestis Koutsoudis",
       role:["Research Director of 3D technolgies – Athena RC"],
+      img: "imgs/cmsml/koutsoudis.jpg",
        links: {
         webpage: "https://www.ceti.gr/~akoutsou/"
       }
