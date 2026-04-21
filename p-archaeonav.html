@@ -264,9 +264,14 @@
       document.getElementById("footer").innerHTML = data;
     });
   renderFilteredBibtexList(
-    "publications/conferences.bib",
+    "publications/conferences-no-proceeding.bib",
     "filtered-conference-list",
-    ["theodoropoulou2026pipeline", "zervas2026context"]
+    ["evangelidis2025landscape", "evangelidis20253denvironment","kiourt2024crowds"]
+  );
+  renderFilteredBibtexList(
+    "publications/conferences-no-proceeding.bib",
+    "filtered-conference-list",
+    ["evangelidis2025landscape", "evangelidis20253denvironment","kiourt2024crowds"]
   );
 </script>
 <script src="./js/bootstrap.bundle.min.js"></script>
