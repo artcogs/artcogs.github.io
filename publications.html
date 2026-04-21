@@ -70,5 +70,11 @@
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
+  
+  renderFilteredBibtexList(
+  "publications/conferences.bib",
+  "conference-list",
+  ["theodoropoulou2026pipeline", "zervas2026context"]
+);
 </script>
 <script src="./js/bootstrap.bundle.min.js"></script>

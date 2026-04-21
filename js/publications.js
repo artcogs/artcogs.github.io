@@ -228,3 +228,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderBibtexList("publications/conferences.bib", "conference-list");
   renderBibtexList("publications/conferences-no-proceeding.bib", "conference-no-proceeding-list");
 });
+
+
