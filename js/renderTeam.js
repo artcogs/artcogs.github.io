@@ -66,8 +66,8 @@ function renderPeople(list, containerId, size = "normal") {
       .join("");
 
     const card = `
-      <div class="${config.col} mb-3">
-        <div class="card text-center h-100 shadow-sm ${config.card}">
+      <div>
+        <div class="card text-center shadow-sm ${config.card}">
           <div class="card-body d-flex flex-column">
 
             <img src="${person.img}" 
