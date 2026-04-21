@@ -65,11 +65,6 @@ function renderPeople(list, containerId, size = "normal") {
       .map(([key, url]) => createSocialIcon(key, url))
       .join("");
 
-    // Optional category badge
-    //const badge = person.category
-    //  ? `<span class="badge bg-secondary mb-1">${person.category}</span>`
-    //  : "";
-
     const card = `
       <div class="${config.col} mb-3">
         <div class="card text-center shadow-sm ${config.card}">
