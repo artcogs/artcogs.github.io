@@ -117,7 +117,7 @@ const teamData = {
     {
       id: "konstantinoschatzilygeroudis",
       name: "Dr. Konstantinos Chatzilygeroudis",
-      role: ["Assistant Professor","Robotics and AY"],
+      role: ["Assistant Professor","Robotics and AI"],
       img: "imgs/ibrics/costas.jpg",
       links: {
         webpage: "http://costashatz.github.io/"
