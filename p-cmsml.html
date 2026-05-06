@@ -65,6 +65,20 @@
 
       </p>
     </section>
+    <section class="mb-5" id="from-rgb">
+      <h3>Knowledge extraction from single RGB-image</h3>
+      <p>From a single RGB image, the pipeline extracts per-person demographic attributes, 
+        facial emotion and body pose , as well as indicators of mobility assistance 
+        (e.g., wheelchair, walking frame, crutches). When emotion confidence from facial 
+        expression is low, a VLM is prompted. First, it recognizes the scene context and 
+        then it uses this alongside the individual's cropped image, to refine the emotion 
+        estimate. A monocular depth estimator converts the image into a metric point cloud,
+         placing each detected person in 3D space. This enables real-world interpersonal 
+         distance measurements without the need for additional sensing hardware. 
+         Pose keypoints are projected into this 3D space alongside age, gender and emotion, 
+         to provide the simulator with a spatially grounded crowd state ready for initialization.</p>
+
+    </section>
 
     <!-- Simulation & RL results -->
     <section class="mb-5" id="simulation">
@@ -75,6 +89,63 @@
         representative environments and the performance of a hierarchical RL policy compared with
         random behaviour.
       </p>
+
+      <!-- Top row: environments -->
+      <div class="row g-4 mt-3">
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Dynamic Obstacles &amp; Mixed Policies</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/faces_emotions.jpg" alt="Face ideintification"
+                  class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                Simulation with moving obstacles, where one agent follows a trained RL policy
+                (green rays) and another behaves randomly (red rays). The setup is used to
+                evaluate robustness of learned behaviours under disturbance by non-cooperative
+                agents.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Static Obstacles &amp; Goal-Directed RL</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/depth_1.png" alt="Depth extraction"
+                  class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                Environment with static obstacles where an RL agent learns to reach the exit while
+                avoiding collisions and dead ends. The scenario abstracts evacuation in cluttered
+                indoor spaces.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Static Obstacles &amp; Goal-Directed RL</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/pose-estimation.png" alt="Depth extraction"
+                  class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                Environment with static obstacles where an RL agent learns to reach the exit while
+                avoiding collisions and dead ends. The scenario abstracts evacuation in cluttered
+                indoor spaces.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Top row: environments -->
       <div class="row g-4 mt-3">
