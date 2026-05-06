@@ -82,7 +82,7 @@
         <div class="col-md-6">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title">Dynamic Obstacles &amp; Mixed Policies</h5>
+              <h5 class="card-title">Face and demographic knoledge extraction</h5>
               <div class="text-center mb-3">
                 <!-- rename src to your actual file path -->
                 <img src="imgs/cmsml/faces_emotions.jpg" alt="Face ideintification"
@@ -101,7 +101,7 @@
         <div class="col-md-6">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title">Static Obstacles &amp; Goal-Directed RL</h5>
+              <h5 class="card-title">Monocular depth estimatorL</h5>
               <div class="text-center mb-3">
                 <!-- rename src to your actual file path -->
                 <img src="imgs/cmsml/depth_1.png" alt="Depth extraction"
@@ -118,7 +118,7 @@
         <div class="col-md-6">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title">Static Obstacles &amp; Goal-Directed RL</h5>
+              <h5 class="card-title">Pose and position estimation</h5>
               <div class="text-center mb-3">
                 <!-- rename src to your actual file path -->
                 <img src="imgs/cmsml/pose-estimation.png" alt="Depth extraction"
@@ -128,6 +128,43 @@
                 Environment with static obstacles where an RL agent learns to reach the exit while
                 avoiding collisions and dead ends. The scenario abstracts evacuation in cluttered
                 indoor spaces.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- VLM context extraction -->
+        <div class="col-md-5">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Vision–Language Context Extraction</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/vlm_context.png" alt="VLM context extraction" class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                Example of a VLM generating high-level textual descriptions of the scene, including
+                location, roles (e.g., police officers, crowd), and dominant emotional tone. This
+                context can be used to parameterise simulation scenarios or support decision-making.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pose / detection -->
+        <div class="col-md-7">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Pose Estimation &amp; Crowd Analysis</h5>
+              <div class="text-center mb-3">
+                <!-- rename src to your actual file path -->
+                <img src="imgs/cmsml/pose-estimator.jpg" alt="Pose estimation in Westminster crowd scene"
+                  class="img-fluid rounded">
+              </div>
+              <p class="card-text small text-muted mb-0">
+                HUman behaviours and pose estimation over a crowded urban scene. Detected skeletons, face expressions
+                and bounding boxes provide detailed information about
+                densities, postures, and the presence of security personnel, feeding into the crowd
+                behaviour models of the CMSML simulator.
               </p>
             </div>
           </div>
@@ -237,45 +274,7 @@
         information that feeds the simulation layer.
       </p>
 
-      <div class="row g-4 mt-3">
-        <!-- VLM context extraction -->
-        <div class="col-md-5">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Vision–Language Context Extraction</h5>
-              <div class="text-center mb-3">
-                <!-- rename src to your actual file path -->
-                <img src="imgs/cmsml/vlm_context.png" alt="VLM context extraction" class="img-fluid rounded">
-              </div>
-              <p class="card-text small text-muted mb-0">
-                Example of a VLM generating high-level textual descriptions of the scene, including
-                location, roles (e.g., police officers, crowd), and dominant emotional tone. This
-                context can be used to parameterise simulation scenarios or support decision-making.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pose / detection -->
-        <div class="col-md-7">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Pose Estimation &amp; Crowd Analysis</h5>
-              <div class="text-center mb-3">
-                <!-- rename src to your actual file path -->
-                <img src="imgs/cmsml/pose-estimator.jpg" alt="Pose estimation in Westminster crowd scene"
-                  class="img-fluid rounded">
-              </div>
-              <p class="card-text small text-muted mb-0">
-                HUman behaviours and pose estimation over a crowded urban scene. Detected skeletons, face expressions
-                and bounding boxes provide detailed information about
-                densities, postures, and the presence of security personnel, feeding into the crowd
-                behaviour models of the CMSML simulator.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </section>
 
 
