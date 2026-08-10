@@ -116,9 +116,10 @@ const teamData = {
       name: "Panteleimon Stanimeros",
       role: ["ML Engineer"],
       email: "p.stanimeros@athenarc.gr",
-      img: "imgs/profile/person-place-holder.jpg",
+      img: "imgs/profile/stanimeros.jpg",
       links: {
         linkedin: "https://www.linkedin.com/in/stanimeros/"
+        orcid: "https://orcid.org/0009-0001-1759-6061"
       }
     }
   ],
