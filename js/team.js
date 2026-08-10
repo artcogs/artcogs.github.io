@@ -115,7 +115,7 @@ const teamData = {
       id: "pantelisstanimeros",
       name: "Panteleimon Stanimeros",
       role: ["ML Engineer"],
-      email: "p.stanimeros@athenarc.gr",
+      email: "p.stanimeros(AT)athenarc.gr",
       img: "imgs/profile/stanimeros.jpg",
       links: {
         linkedin: "https://www.linkedin.com/in/stanimeros/",
@@ -137,6 +137,7 @@ const teamData = {
       id: "alexandroskarakasidis",
       name: "Dr. Alexandros Karakasidis",
       role: ["Laboratory Lecturer - UoM","Big Data - Privacy"],
+      email: "alexandros.karakasidis(AT)athenarc.gr",
       img: "imgs/profile/karakasidis.jpeg",
       links: {
         scholar: "https://scholar.google.gr/citations?user=oYoiZGwAAAAJ",
