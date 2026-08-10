@@ -112,7 +112,7 @@ const teamData = {
       }
     }
   ],
-  academic-collaborators: [
+  academic_collaborators: [
     {
       id: "konstantinoschatzilygeroudis",
       name: "Dr. Konstantinos Chatzilygeroudis",
