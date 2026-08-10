@@ -135,7 +135,7 @@ const teamData = {
     {
       id: "alexandroskarakasidis",
       name: "Dr. Alexandros Karakasidis",
-      role: ["Visiting Lecturer - UOM","Big Data - Privacy"],
+      role: ["Visiting Lecturer - UoM","Big Data - Privacy"],
       img: "imgs/profile/karakasidis.jpg",
       links: {
         scholar: "https://scholar.google.gr/citations?user=oYoiZGwAAAAJ",
