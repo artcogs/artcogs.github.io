@@ -18,8 +18,14 @@
         <div class="container py-5">
 
             <!-- 🔽 FULL TEAM -->
-            <h2 class="mb-3">All Team Members</h2>
+            <h2 class="mb-3">Team Members</h2>
             <div class="row" id="team-container"></div>
+
+            <hr>
+
+            <!-- 🔽 COLLABORATORS -->
+            <h2 class="mb-3">Academic Collaborators</h2>
+            <div class="row" id="academic-collaborators-container"></div>
 
             <hr>
 
@@ -87,6 +93,7 @@
 
       // ✅ FULL RENDER
       renderPeople(teamData.team, "team-container", "normal");
+      renderPeople(teamData.team, "academic-collaborators-container", "normal");
       renderPeople(teamData.collaborators, "collaborators-container", "normal");
       renderPeople(teamData.former, "former-container", "small");
 

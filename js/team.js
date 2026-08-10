@@ -112,8 +112,7 @@ const teamData = {
       }
     }
   ],
-
-  collaborators: [
+  academic-collaborators: [
     {
       id: "konstantinoschatzilygeroudis",
       name: "Dr. Konstantinos Chatzilygeroudis",
@@ -122,7 +121,10 @@ const teamData = {
       links: {
         webpage: "http://costashatz.github.io/"
       }
-    },
+    }
+  ]
+
+  collaborators: [
     {
       id: "dimitriskastaniotis",
       name: "Dr. Dimitris Kastaniotis",
