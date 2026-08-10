@@ -17,8 +17,8 @@ const teamData = {
     },
     {
       id: "dimitriskalles",
-      name: "Prof. Dimitris Kalles",
-      role: ["Senior Researcher", "Artificial Intelligence"],
+      name: "Dr. Dimitris Kalles",
+      role: ["Professor - HOU", "Artificial Intelligence"],
       email: "kalles(at)eap.gr",
       img: "imgs/profile/kalles.jpg",
       links: {
@@ -110,16 +110,35 @@ const teamData = {
       links: {
         linkedin: "https://www.linkedin.com/in/ioannis-zikos-84a868255/"
       }
+    },
+    {
+      id: "pantelisstanimeros",
+      name: "Panteleimon Stanimeros",
+      role: ["ML Engineer"],
+      email: "p.stanimeros@athenarc.gr",
+      img: "imgs/profile/person-place-holder.jpg",
+      links: {
+        linkedin: "https://www.linkedin.com/in/stanimeros/"
+      }
     }
   ],
   academic_collaborators: [
     {
       id: "konstantinoschatzilygeroudis",
       name: "Dr. Konstantinos Chatzilygeroudis",
-      role: ["Assistant Professor","Robotics and AI"],
+      role: ["Assistant Professor - UoP","Robotics and AI"],
       img: "imgs/ibrics/costas.jpg",
       links: {
         webpage: "http://costashatz.github.io/"
+      }
+    },
+    {
+      id: "alexandroskarakasidis",
+      name: "Dr. Alexandros Karakasidis",
+      role: ["Visiting Lecturer - UOM","Big Data - Privacy"],
+      img: "imgs/ibrics/karakasidis.jpg",
+      links: {
+        scholar: "https://scholar.google.gr/citations?user=oYoiZGwAAAAJ",
       }
     }
   ],
