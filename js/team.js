@@ -82,6 +82,7 @@ const teamData = {
       id: "zoilygizou",
       name: "Zoi Lygizou",
       role: ["PhD Candidate", "RL-Agents Technologies"],
+      email: "zoi.lygizou(AT)athenarc.gr"
       img: "imgs/profile/zoi.jpg",
       links: {
         linkedin: "https://www.linkedin.com/in/",
