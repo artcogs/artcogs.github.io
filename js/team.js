@@ -122,8 +122,7 @@ const teamData = {
         webpage: "http://costashatz.github.io/"
       }
     }
-  ]
-
+  ],
   collaborators: [
     {
       id: "dimitriskastaniotis",
