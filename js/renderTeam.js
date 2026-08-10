@@ -100,6 +100,7 @@ function filterPeople({ ids = null, keyword = null } = {}) {
 
   const allPeople = [
     ...teamData.team.map(p => ({ ...p, category: "Team" })),
+    ...teamData.academic_collaborators.map(p => ({ ...p, category: "Academic Collaborators" })),
     ...teamData.collaborators.map(p => ({ ...p, category: "Collaborator" })),
     ...teamData.former.map(p => ({ ...p, category: "Former" })),
     ...teamData.other.map(p => ({ ...p, category: "Other" }))
