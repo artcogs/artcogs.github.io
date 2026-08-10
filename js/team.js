@@ -118,7 +118,7 @@ const teamData = {
       email: "p.stanimeros@athenarc.gr",
       img: "imgs/profile/stanimeros.jpg",
       links: {
-        linkedin: "https://www.linkedin.com/in/stanimeros/"
+        linkedin: "https://www.linkedin.com/in/stanimeros/",
         orcid: "https://orcid.org/0009-0001-1759-6061"
       }
     }
