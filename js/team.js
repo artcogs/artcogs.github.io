@@ -107,7 +107,7 @@ const teamData = {
       name: "Giannis Zikos",
       role: ["Software & ML Engineer"],
       email: "giannis.zikos(AT)athenarc.gr",
-      img: "imgs/profile/person-place-holder.jpg",
+      img: "imgs/profile/zikos.jpeg",
       links: {
         linkedin: "https://www.linkedin.com/in/ioannis-zikos-84a868255/"
       }
