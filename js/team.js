@@ -1,5 +1,112 @@
 const teamData = {
+ academic_collaborators: [
+    {
+      id: "konstantinoschatzilygeroudis",
+      name: "Dr. Konstantinos Chatzilygeroudis",
+      role: ["Assistant Professor - UoP","Robotics and AI"],
+      img: "imgs/ibrics/costas.jpg",
+      links: {
+        webpage: "http://costashatz.github.io/"
+      }
+    },
+    {
+      id: "alexandroskarakasidis",
+      name: "Dr. Alexandros Karakasidis",
+      role: ["Laboratory Lecturer - UoM","Big Data - Privacy"],
+      email: "alexandros.karakasidis(AT)athenarc.gr",
+      img: "imgs/profile/karakasidis.jpeg",
+      links: {
+        scholar: "https://scholar.google.gr/citations?user=oYoiZGwAAAAJ",
+      }
+    }
+  ],
+  collaborators: [
+    {
+      id: "dimitriskastaniotis",
+      name: "Dr. Dimitris Kastaniotis",
+      role: ["Machine Learning & Computer Vision"],
+      img: "imgs/ibrics/kastaniotis.jpeg",
+      links: {
+        webpage: "https://scholar.google.gr/citations?user=V2r7hKEAAAAJ&hl=en"
+      }
+    },
+    {
+      id: "lamprosprintzios",
+      name: "Lampros Printzios",
+      role: ["Machine Learning & Computer Vision"],
+      img: "imgs/ibrics/printzios.png",
+      links: {
+        webpage: "#"
+      }
+    },
+    {
+      id: "konstantinosasimakopoulos",
+      name: "Konstantinos Asimakopoulos",
+      role: ["Physics Informed Reinforcement Learning"],
+      img: "imgs/ibrics/asimakopoulos.jpg",
+      links: {
+        webpage: "#"
+      }
+    },
+    {
+      id: "panossyriopoulos",
+      name: "Panos Syriopoulos",
+      role: ["PhD Student, University of Patras (Department of Mathematics)"],
+      img: "imgs/profile/person-place-holder.jpg",
+      links: {
+        webpage: "https://www.researchgate.net/profile/Panos-Syriopoulos"
+      }
+    },
+    {
+      id: "aristeidisandroutsopoulos",
+      name: "Aristeidis Androutsopoulos",
+      role: ["Robotic Skill Discovery via Manifold Techniques"],
+      img: "imgs/ibrics/aa.jpg",
+      links: {
+        webpage: "#"
+      }
+    }
+  ],
 
+  former: [
+    {
+      id: "evangelostsiatsianas",
+      name: "Evangelos Tsiatsianas",
+      role: ["Kinodynamic Contact Planning"],
+      img: "imgs/ibrics/tsiatsianas.jpeg",
+      links: {
+        webpage: "https://lar.upatras.gr/projects/ibrics.html"
+      }
+    },
+    {
+      id: "alexandrosntagkas",
+      name: "Alexandros Ntagkas",
+      role: ["PhD Student, Oxford Robotics Institute"],
+      img: "imgs/ibrics/ntagkas.jpeg",
+      links: {
+        webpage: "https://lar.upatras.gr/projects/ibrics.html"
+      }
+    }
+  ],
+  other: [
+    {
+      id: "dimitrisgrigoropoulos",
+      name: "Dr. Dimitris Grigoropoulos",
+      role: ["Archaeology"],
+      img: "imgs/profile/person-place-holder.jpg",
+    },
+    {
+      id:"anestiskoutsoudis",
+      name:"Dr Anestis Koutsoudis",
+      role:["Research Director of 3D technolgies – Athena RC"],
+      img: "imgs/cmsml/koutsoudis.jpg",
+       links: {
+        webpage: "https://www.ceti.gr/~akoutsou/"
+      }
+
+    }
+
+  ],
   team: [
     {
       id: "chairikiourt",
@@ -124,112 +231,4 @@ const teamData = {
       }
     }
   ],
-  academic_collaborators: [
-    {
-      id: "konstantinoschatzilygeroudis",
-      name: "Dr. Konstantinos Chatzilygeroudis",
-      role: ["Assistant Professor - UoP","Robotics and AI"],
-      img: "imgs/ibrics/costas.jpg",
-      links: {
-        webpage: "http://costashatz.github.io/"
-      }
-    },
-    {
-      id: "alexandroskarakasidis",
-      name: "Dr. Alexandros Karakasidis",
-      role: ["Laboratory Lecturer - UoM","Big Data - Privacy"],
-      email: "alexandros.karakasidis(AT)athenarc.gr",
-      img: "imgs/profile/karakasidis.jpeg",
-      links: {
-        scholar: "https://scholar.google.gr/citations?user=oYoiZGwAAAAJ",
-      }
-    }
-  ],
-  collaborators: [
-    {
-      id: "dimitriskastaniotis",
-      name: "Dr. Dimitris Kastaniotis",
-      role: ["Machine Learning & Computer Vision"],
-      img: "imgs/ibrics/kastaniotis.jpeg",
-      links: {
-        webpage: "https://scholar.google.gr/citations?user=V2r7hKEAAAAJ&hl=en"
-      }
-    },
-    {
-      id: "lamprosprintzios",
-      name: "Lampros Printzios",
-      role: ["Machine Learning & Computer Vision"],
-      img: "imgs/ibrics/printzios.png",
-      links: {
-        webpage: "#"
-      }
-    },
-    {
-      id: "konstantinosasimakopoulos",
-      name: "Konstantinos Asimakopoulos",
-      role: ["Physics Informed Reinforcement Learning"],
-      img: "imgs/ibrics/asimakopoulos.jpg",
-      links: {
-        webpage: "#"
-      }
-    },
-    {
-      id: "panossyriopoulos",
-      name: "Panos Syriopoulos",
-      role: ["PhD Student, University of Patras (Department of Mathematics)"],
-      img: "imgs/profile/person-place-holder.jpg",
-      links: {
-        webpage: "https://www.researchgate.net/profile/Panos-Syriopoulos"
-      }
-    },
-    {
-      id: "aristeidisandroutsopoulos",
-      name: "Aristeidis Androutsopoulos",
-      role: ["Robotic Skill Discovery via Manifold Techniques"],
-      img: "imgs/ibrics/aa.jpg",
-      links: {
-        webpage: "#"
-      }
-    }
-  ],
-
-  former: [
-    {
-      id: "evangelostsiatsianas",
-      name: "Evangelos Tsiatsianas",
-      role: ["Kinodynamic Contact Planning"],
-      img: "imgs/ibrics/tsiatsianas.jpeg",
-      links: {
-        webpage: "https://lar.upatras.gr/projects/ibrics.html"
-      }
-    },
-    {
-      id: "alexandrosntagkas",
-      name: "Alexandros Ntagkas",
-      role: ["PhD Student, Oxford Robotics Institute"],
-      img: "imgs/ibrics/ntagkas.jpeg",
-      links: {
-        webpage: "https://lar.upatras.gr/projects/ibrics.html"
-      }
-    }
-  ],
-  other: [
-    {
-      id: "dimitrisgrigoropoulos",
-      name: "Dr. Dimitris Grigoropoulos",
-      role: ["Archaeology"],
-      img: "imgs/profile/person-place-holder.jpg",
-    },
-    {
-      id:"anestiskoutsoudis",
-      name:"Dr Anestis Koutsoudis",
-      role:["Research Director of 3D technolgies – Athena RC"],
-      img: "imgs/cmsml/koutsoudis.jpg",
-       links: {
-        webpage: "https://www.ceti.gr/~akoutsou/"
-      }
-
-    }
-
-  ]
 };
