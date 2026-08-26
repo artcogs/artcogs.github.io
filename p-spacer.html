@@ -133,14 +133,20 @@
 
     <section class="spacer-section py-4 mb-4" id="problem">
       <h2 class="mb-4">The Problem</h2>
-      <p class="lead">
-        Where should a delivery drone hand off a parcel to a courier when its battery
-        is low and every extra mile jeopardizes a safe return? Where should an
-        autonomous taxi pick up a passenger who does not want to share their precise
-        location? Where should a rescue helicopter and a medic agree to meet when
-        terrain, fuel constraints, and operational security each favor a different
-        location?
-      </p>
+      <ul class="lead">
+      <li class="mb-2">
+        Where should a delivery drone hand off a parcel to a courier when its
+        battery is low and every extra mile jeopardizes a safe return?
+      </li>
+      <li class="mb-2">
+        Where should an autonomous taxi pick up a passenger who does not want to
+        share their precise location?
+      </li>
+      <li>
+        Where should a rescue helicopter and a medic agree to meet when terrain,
+        fuel constraints, and operational security each favor a different location?
+      </li>
+    </ul>
       <p>
         These are instances of one recurring challenge: two or more autonomous agents,
         human or artificial, with interdependent goals and undisclosed preferences,
@@ -249,8 +255,8 @@
 
       <p class="mt-4">
         This is a cycle, not a one-shot pipeline: if no agreement is reached, agents
-        rescore and try again. If conditions change—before agreement, after agreement
-        but before arrival, or even mid-walk—the cycle re-enters from evaluation. An
+        rescore and try again. If conditions change - before agreement, after agreement
+        but before arrival, or even mid-walk - the cycle re-enters from evaluation. An
         agreed meeting point can stop being reachable or acceptable while agents are
         still en route, so evaluation, negotiation, and navigation may each run more
         than once during a single mission.
@@ -260,8 +266,8 @@
     <section class="spacer-section py-4 mb-4" id="progress">
       <h2 class="mb-4">Current Progress</h2>
       <p>
-        For the evaluation phase—how an agent turns its private state into a score for
-        each candidate location—we currently use a fixed formula rather than a learned
+        For the evaluation phase - how an agent turns its private state into a score for
+        each candidate location - we currently use a fixed formula rather than a learned
         one. Each agent blends a travel-cost score with a privacy score based on the
         geo-indistinguishability notion of privacy, with protection growing according
         to distance from its starting location. The two scores are combined using a
