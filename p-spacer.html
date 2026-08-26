@@ -80,6 +80,12 @@
   .xsmall-card h5 {
     font-size: 0.9rem;
   }
+
+  .spacer-overview-image {
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+}
 </style>
 
 <main class="flex-grow-1">
@@ -104,12 +110,24 @@
         A delivery drone handing a parcel to a ground courier, a taxi picking up
         a passenger, a rescue helicopter meeting a medic: each pair has different
         capabilities and constraints they cannot or will not share. SPACER studies
-        how such heterogeneous agents can agree on a shared spatial outcome—a meeting
-        point, a pickup location, or a handoff site—without a central coordinator and
+        how such heterogeneous agents can agree on a shared spatial outcome - a meeting
+        point, a pickup location, or a handoff site - without a central coordinator and
         without revealing the private information behind their preferences, even as
         the situation keeps changing around them.
       </p>
     </header>
+    <figure class="text-center my-5">
+      <img
+        src="imgs/spacer/spacer-project.png"
+        alt="A human, drone, and ground robot privately coordinating on a shared meeting point"
+        class="img-fluid rounded shadow-sm spacer-overview-image"
+        loading="eager"
+      >
+      <figcaption class="text-muted small mt-3">
+        Heterogeneous human and artificial agents coordinate on a shared spatial
+        outcome while keeping their individual states and preferences private.
+      </figcaption>
+    </figure>
 
    
 
