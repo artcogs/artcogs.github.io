@@ -1,4 +1,4 @@
-<!-- cmsml.html -->
+<!-- spacer.html -->
 
 <div id="top-menu"></div>
 
@@ -9,79 +9,377 @@
       document.getElementById("top-menu").innerHTML = data;
     });
 </script>
+
 <script src="js/bibtexParse.js"></script>
 <script src="js/publications.js"></script>
 <script src="js/team.js"></script>
 <script src="js/renderTeam.js"></script>
 
- <style>
-        .video-container {
-            width: 80%;
-            max-width: 800px;
-            aspect-ratio: 16 / 9; /* Maintains the cinematic ratio */
-            margin: 0 auto; 
-        }
+<style>
+  .spacer-hero {
+    max-width: 960px;
+    margin-inline: auto;
+  }
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-    </style>
+  .spacer-section {
+    scroll-margin-top: 2rem;
+  }
+
+  .spacer-section p {
+    line-height: 1.75;
+  }
+
+  .spacer-figure {
+    max-width: 900px;
+    margin: 2rem auto 0;
+  }
+
+  .spacer-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12);
+  }
+
+  .phase-card,
+  .question-card,
+  .application-card {
+    height: 100%;
+    border: 0;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+  }
+
+  .number-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 2rem;
+    border-radius: 50%;
+    background: #212529;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .social-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+
+  .small-card {
+    font-size: 0.85rem;
+  }
+
+  .xsmall-card {
+    font-size: 0.75rem;
+  }
+
+  .xsmall-card h5 {
+    font-size: 0.9rem;
+  }
+</style>
 
 <main class="flex-grow-1">
   <div class="container py-5">
 
-    <!-- In-page navigation -->
-    <div class="d-flex flex-wrap gap-3 my-4 justify-content-center">
-      <a href="#overview" class="btn btn-outline-dark btn-sm">Overview</a>
-      <!-- <a href="#funding" class="btn btn-outline-dark btn-sm">Funding</a>
-      <a href="#simulation" class="btn btn-outline-dark btn-sm">Simulation &amp; Results</a>
-      <a href="#perception" class="btn btn-outline-dark btn-sm">Perception &amp; Scene Understanding</a>-->
-      <a href="#people" class="btn btn-outline-dark btn-sm">People</a>
-    </div>
-
-    <!-- Title + subtitle -->
-    <header class="mb-4 text-center">
-      <h1 class="mb-2">SPACER</h1>
-      <h3 class="text-muted">
+    <header class="spacer-hero mb-5 text-center">
+      <h1 class="display-4 fw-bold mb-2">SPACER</h1>
+      <h2 class="h4 text-muted mb-4">
         Spatial Coordination of Heterogeneous Agents with Private Preferences
-      </h3>
+      </h2>
+      <p class="lead mb-0">
+        A delivery drone handing a parcel to a ground courier, a taxi picking up
+        a passenger, a rescue helicopter meeting a medic: each pair has different
+        capabilities and constraints they cannot or will not share. SPACER studies
+        how such heterogeneous agents can agree on a shared spatial outcome—a meeting
+        point, a pickup location, or a handoff site—without a central coordinator and
+        without revealing the private information behind their preferences, even as
+        the situation keeps changing around them.
+      </p>
     </header>
 
-    <!-- Abstract / Project overview -->
-    <section class="mb-5" id="overview">
-      <h3>Description</h3>
+    <nav class="d-flex flex-wrap gap-2 my-4 justify-content-center" aria-label="Page sections">
+      <a href="#problem" class="btn btn-outline-dark btn-sm">The Problem</a>
+      <a href="#coupling" class="btn btn-outline-dark btn-sm">The Coupling</a>
+      <a href="#meeting-point" class="btn btn-outline-dark btn-sm">Meeting-Point Selection</a>
+      <a href="#progress" class="btn btn-outline-dark btn-sm">Current Progress</a>
+      <a href="#questions" class="btn btn-outline-dark btn-sm">Research Questions</a>
+      <a href="#applications" class="btn btn-outline-dark btn-sm">Applications</a>
+      <a href="#publications" class="btn btn-outline-dark btn-sm">Publications</a>
+      <a href="#people" class="btn btn-outline-dark btn-sm">People</a>
+    </nav>
+
+    <section class="spacer-section py-4 mb-4" id="problem">
+      <h2 class="mb-4">The Problem</h2>
       <p class="lead">
-        
+        Where should a delivery drone hand off a parcel to a courier when its battery
+        is low and every extra mile jeopardizes a safe return? Where should an
+        autonomous taxi pick up a passenger who does not want to share their precise
+        location? Where should a rescue helicopter and a medic agree to meet when
+        terrain, fuel constraints, and operational security each favor a different
+        location?
+      </p>
+      <p>
+        These are instances of one recurring challenge: two or more autonomous agents,
+        human or artificial, with interdependent goals and undisclosed preferences,
+        must settle on a shared spatial outcome without a trusted central authority.
+        Existing work addresses parts of this: spatial planning coordinates agents in
+        physical environments, location-privacy research protects sensitive spatial
+        data, and decentralized negotiation studies agreement between agents with
+        private preferences. SPACER asks what happens when all three concerns arise
+        together: a spatial outcome must be agreed upon, the information behind each
+        agent's preferences must stay private, and the feasible outcomes can change
+        while coordination is still underway.
       </p>
     </section>
 
-    
+    <section class="spacer-section py-4 mb-4" id="coupling">
+      <h2 class="mb-4">The Coupling</h2>
+      <p>
+        A proposal or a rejection is not just a negotiation move; it can also be
+        evidence about an agent's location, range, or a site it needs to protect.
+        Even the agreed outcome carries information: agreeing on a place says
+        something about where an agent can be, in a way that agreeing on a calendar
+        slot usually does not. The same signals agents exchange to find a mutually
+        acceptable outcome can sharpen an observer's belief about each agent's private
+        state, while the set of acceptable outcomes keeps drifting as conditions change.
+      </p>
 
-
-
-
-    <section class="mb-5">
-      <h2 class="mb-4 text-center">Papers, Presentations &amp; Conferences</h2>
-
-      <ul class="list-group list-group-flush">
-        <div id="filtered-conference-list"> Test test</div>
+      <figure class="spacer-figure text-center">
+        <img
+          src="imgs/spacer-coupling-diagram.png"
+          alt="Diagram showing the coupling between agreement, privacy inference, and changing conditions"
+          loading="lazy"
+        >
+        <figcaption class="text-muted small mt-3">
+          Agreement, privacy inference, and change are tightly coupled in spatial coordination.
+        </figcaption>
+      </figure>
     </section>
 
+    <section class="spacer-section py-4 mb-4" id="meeting-point">
+      <h2 class="mb-4">A Concrete Instance: Meeting-Point Selection</h2>
+      <p>
+        SPACER instantiates the general problem as privacy-preserving meeting-point
+        selection, organized as a three-phase cycle:
+      </p>
 
+      <div class="row g-4 my-2">
+        <div class="col-12 col-md-4">
+          <article class="card phase-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <span class="number-badge">1</span>
+                <h3 class="h5 mb-0">Evaluation</h3>
+              </div>
+              <p class="card-text">
+                Each agent privately scores the candidate locations using its own
+                private state, without revealing that state or the resulting scores.
+              </p>
+            </div>
+          </article>
+        </div>
 
+        <div class="col-12 col-md-4">
+          <article class="card phase-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <span class="number-badge">2</span>
+                <h3 class="h5 mb-0">Negotiation</h3>
+              </div>
+              <p class="card-text">
+                Agents exchange only candidate indices, proposals, acceptances, and
+                refusals, seeking an outcome every agent prefers over disagreement,
+                with no central broker and no access to one another's utilities.
+              </p>
+            </div>
+          </article>
+        </div>
 
-    <!-- People section -->
-    <section class="mb-5" id="people">
-      <h3 class="mb-4">People</h3>
-
-      <div class="row g-3">
-        <div class="row" id="filtered-team"></div>
-
+        <div class="col-12 col-md-4">
+          <article class="card phase-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <span class="number-badge">3</span>
+                <h3 class="h5 mb-0">Navigation</h3>
+              </div>
+              <p class="card-text">
+                Once an outcome is agreed, the agents act on it and move toward the
+                shared location.
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
+
+      <figure class="spacer-figure text-center">
+        <img
+          src="imgs/spacer-three-phase-cycle.png"
+          alt="SPACER cycle consisting of evaluation, negotiation, and navigation"
+          loading="lazy"
+        >
+        <figcaption class="text-muted small mt-3">
+          The three-phase cycle of private evaluation, decentralized negotiation, and navigation.
+        </figcaption>
+      </figure>
+
+      <p class="mt-4">
+        This is a cycle, not a one-shot pipeline: if no agreement is reached, agents
+        rescore and try again. If conditions change—before agreement, after agreement
+        but before arrival, or even mid-walk—the cycle re-enters from evaluation. An
+        agreed meeting point can stop being reachable or acceptable while agents are
+        still en route, so evaluation, negotiation, and navigation may each run more
+        than once during a single mission.
+      </p>
+    </section>
+
+    <section class="spacer-section py-4 mb-4" id="progress">
+      <h2 class="mb-4">Current Progress</h2>
+      <p>
+        For the evaluation phase—how an agent turns its private state into a score for
+        each candidate location—we currently use a fixed formula rather than a learned
+        one. Each agent blends a travel-cost score with a privacy score based on the
+        geo-indistinguishability notion of privacy, with protection growing according
+        to distance from its starting location. The two scores are combined using a
+        weighted-sum approach based on the agent's own balance between cost and privacy.
+      </p>
+
+      <figure class="spacer-figure text-center">
+        <img
+          src="imgs/fig_eval_heatmaps_skydrop_courier.png"
+          alt="Evaluation heatmaps for a delivery drone and ground courier scoring five candidate meeting locations"
+          loading="lazy"
+        >
+        <figcaption class="text-muted small mt-3">
+          A delivery drone and a ground courier score the same five candidate locations
+          using their own cost–privacy weightings.
+        </figcaption>
+      </figure>
+
+      <p class="mt-4">
+        Agreeing on a candidate without a central broker seeing either agent's
+        utilities is a private distributed constraint optimization (DCOP) problem.
+        Existing methods such as SSDPOP and P-SyncBB currently serve as our baselines,
+        although they target the static case rather than SPACER's spatial and repeated
+        setting. For the negotiation and navigation phases, we are exploring agents
+        that learn their behavior through reinforcement learning instead of following
+        a fixed, hand-written protocol, with the goal of negotiating and navigating
+        while keeping each agent's private information undisclosed.
+      </p>
+    </section>
+
+    <section class="spacer-section py-4 mb-4" id="questions">
+      <h2 class="mb-4">Open Research Questions</h2>
+      <p>
+        SPACER's formulation leaves three central questions open, and they are coupled:
+        communication helps agents find an outcome everyone can accept, but it also
+        takes time and can reveal the private information that made that outcome
+        acceptable in the first place.
+      </p>
+
+      <div class="row g-4 mt-2">
+        <div class="col-12 col-lg-4">
+          <article class="card question-card">
+            <div class="card-body">
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <span class="number-badge">1</span>
+                <h3 class="h5 mb-0">Selecting an Outcome</h3>
+              </div>
+              <p class="card-text">
+                Once more than one mutually acceptable outcome exists, which one
+                should be chosen, and by what rule—bargaining, fairness, efficiency,
+                or a learned policy—when no agent can see the others' private utilities?
+                This becomes harder as the number of agents and locations grows.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <article class="card question-card">
+            <div class="card-body">
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <span class="number-badge">2</span>
+                <h3 class="h5 mb-0">Coordinating Under Change</h3>
+              </div>
+              <p class="card-text">
+                Candidate locations, utilities, and the value of disagreement can
+                shift while agents move or resources are consumed. When should agents
+                renegotiate, can a prior agreement warm-start the next round, and can
+                negotiation, movement, and renegotiation be interleaved?
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <article class="card question-card">
+            <div class="card-body">
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <span class="number-badge">3</span>
+                <h3 class="h5 mb-0">Bounding Inference</h3>
+              </div>
+              <p class="card-text">
+                The signals that help agents agree can reveal private state over many
+                rounds, even when no single message is decisive. This includes richer,
+                LLM-based semantic negotiation and human operators who inspect
+                proposals and become observers themselves.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="spacer-section py-4 mb-4" id="applications">
+      <h2 class="mb-4">Applications</h2>
+      <p>
+        These open questions follow directly from the scenarios that motivate SPACER.
+        In each setting, outcome selection, coordination under change, and inference
+        bounds must be addressed together for the framework to become deployable.
+      </p>
+
+      <div class="row g-4 mt-2">
+        <div class="col-12 col-md-6">
+          <article class="card application-card">
+            <div class="card-body">
+              <h3 class="h5">Smart Mobility</h3>
+              <p class="card-text">
+                Delivery drones and couriers, taxis, and shared fleets each retain
+                private information such as state, battery, route, or passenger
+                location, yet still need to agree on where to meet.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <article class="card application-card">
+            <div class="card-body">
+              <h3 class="h5">Humanitarian Logistics</h3>
+              <p class="card-text">
+                Ground vehicles, helicopters, and medics converging on a handoff point
+                must coordinate under partial map knowledge and intermittent
+                communication. Here, the coupling of agreement, privacy, and change is
+                even sharper because communication may be unreliable or discontinuous.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="spacer-section py-4 mb-4" id="publications">
+      <h2 class="mb-4 text-center">Papers, Presentations &amp; Conferences</h2>
+      <div id="filtered-conference-list"></div>
+    </section>
+
+    <section class="spacer-section py-4 mb-4" id="people">
+      <h2 class="mb-4">People</h2>
+      <div class="row" id="filtered-team"></div>
     </section>
 
   </div>
@@ -105,43 +403,17 @@
   );
 </script>
 
-
-<style>
-  .social-icon {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-  }
-
-  .small-card {
-    font-size: 0.85rem;
-  }
-
-  .xsmall-card {
-    font-size: 0.75rem;
-  }
-
-  .xsmall-card h5 {
-    font-size: 0.9rem;
-  }
-</style>
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-
-
-    // ✅ FILTERED RENDER (by id)
     const selectedIds = [
-       "alexandroskarakasidis",
+      "alexandroskarakasidis",
       "pantelisstanimeros",
-      "chairikiourt",
+      "chairikiourt"
     ];
-    const filtered = filterPeople({
-      ids: selectedIds
-    });
 
+    const filtered = filterPeople({ ids: selectedIds });
     renderPeople(filtered, "filtered-team", "small");
-
   });
 </script>
+
 <script src="./js/bootstrap.bundle.min.js"></script>
