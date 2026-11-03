@@ -1,4 +1,4 @@
-<!-- p-artemis.html | ArtCogS — ARTEMIS project -->
+<!-- p-artemis.html | ArtCogS — Crowd Simulation in ARTEMIS -->
 <div id="top-menu"></div>
 <script>
   fetch("top-menu.html")
@@ -21,138 +21,134 @@
   <div class="container py-5">
     <header class="artemis-hero mb-5 text-center">
       <h1 class="display-4 fw-bold mb-2">ARTEMIS</h1>
-      <h2 class="h4 text-muted mb-4">Applying Reactive Twins to Enhance Monument Information Systems</h2>
+      <h2 class="h4 text-muted mb-4">Large-Scale Crowd Simulation with METIS</h2>
       <nav class="d-flex flex-wrap gap-2 my-4 justify-content-center" aria-label="Page sections">
-        <a href="#overview" class="btn btn-outline-dark btn-sm">Project Overview</a>
-        <a href="#objectives" class="btn btn-outline-dark btn-sm">Objectives</a>
-        <a href="#contribution" class="btn btn-outline-dark btn-sm">ArtCogS Contribution</a>
-        <a href="#pilots" class="btn btn-outline-dark btn-sm">Large-Scale Pilots</a>
+        <a href="#overview" class="btn btn-outline-dark btn-sm">Overview</a>
+        <a href="#capabilities" class="btn btn-outline-dark btn-sm">Capabilities</a>
+        <a href="#behaviours" class="btn btn-outline-dark btn-sm">Agent Behaviours</a>
         <a href="#workflow" class="btn btn-outline-dark btn-sm">Simulation Workflow</a>
+        <a href="#applications" class="btn btn-outline-dark btn-sm">Applications</a>
         <a href="#project-info" class="btn btn-outline-dark btn-sm">Project Information</a>
       </nav>
       <p class="lead mb-0">
-        ARTEMIS is a Horizon Europe project advancing the protection, understanding and
-        management of cultural heritage through <strong>Reactive Heritage Digital Twins</strong>.
-        By combining 3D digital representations, simulation services and immersive technologies,
-        it enables heritage professionals to explore scenarios and assess their potential impact
-        before taking action in the real world.
+        Within the ARTEMIS project, the <strong>ArtCogS research team at ATHENA Research Centre</strong>
+        develops a scalable <strong>Crowd Simulation Service</strong> based on its
+        <strong>METIS multi-agent simulation technology</strong>. The service models pedestrian
+        movement in 3D indoor and outdoor environments, enabling virtual experiments on visitor
+        flows, congestion, evacuation and crowd-related risks.
       </p>
     </header>
 
     <figure class="artemis-figure text-center mb-3">
       <img src="./imgs/artemis/artemis.jpeg"
-           alt="Large-scale crowd movement simulation visualised in a three-dimensional historic urban environment"
+           alt="METIS-based crowd simulation in a three-dimensional historic urban environment"
            class="img-fluid" loading="eager">
       <figcaption class="text-muted small mt-3">
-        Crowd movement simulation in a 3D historic urban environment, illustrating the type of
-        large-scale scenario addressed through ArtCogS's contribution to ARTEMIS.
+        Large-scale pedestrian simulation in a historic urban environment using virtual agents.
       </figcaption>
     </figure>
 
     <section class="artemis-section py-4 mb-3" id="overview">
-      <h2 class="mb-3">The Project</h2>
+      <h2 class="mb-3">The METIS Crowd Simulation Service</h2>
       <p>
-        Cultural heritage sites must balance conservation with public access, tourism,
-        changing environmental conditions and visitor safety. ARTEMIS develops
-        <strong>Reactive Heritage Digital Twins (RHDTs)</strong> that combine information
-        about heritage assets with digital models, monitoring information and simulation capabilities.
+        METIS supports the simulation of heterogeneous virtual crowds within three-dimensional
+        digital environments, from museum interiors and archaeological sites to public squares
+        and historic city centres. The service is designed to examine how different crowd sizes,
+        movement behaviours and spatial configurations affect pedestrian circulation.
       </p>
       <p>
-        These digital environments allow researchers and heritage managers to carry out virtual
-        experiments, examine risks and compare possible interventions. The approach is tested
-        through pilots ranging from individual heritage objects to historic urban areas and landscapes.
+        Through configurable <strong>what-if scenarios</strong>, researchers and stakeholders
+        can compare normal visiting conditions with more demanding situations, such as crowded
+        events or emergency evacuation. In ARTEMIS, these simulations contribute to the wider
+        <strong>Reactive Heritage Digital Twin</strong> workflow, supporting the study of visitor
+        safety and potential risks to cultural heritage assets.
       </p>
     </section>
 
-    <section class="artemis-section py-4 mb-3" id="objectives">
-      <h2 class="mb-4">Project Objectives</h2>
+    <section class="artemis-section py-4 mb-3" id="capabilities">
+      <h2 class="mb-4">Core Capabilities</h2>
       <div class="row g-4">
         <div class="col-md-6 col-lg-4"><article class="card artemis-card"><div class="card-body">
-          <h3 class="h5">Reactive Digital Twins</h3>
-          <p class="mb-0">Connect heritage representations with data and computational services to explore how assets and spaces respond to different conditions.</p>
+          <h3 class="h5">Large-Scale Simulation</h3>
+          <p class="mb-0">Model sizeable agent populations in complex 3D environments, with repeated runs to compare crowd dynamics across scenarios.</p>
         </div></article></div>
         <div class="col-md-6 col-lg-4"><article class="card artemis-card"><div class="card-body">
-          <h3 class="h5">Simulation-Based Assessment</h3>
-          <p class="mb-0">Evaluate possible risks, events and management strategies through virtual scenarios without disturbing physical heritage sites.</p>
+          <h3 class="h5">Heterogeneous Crowds</h3>
+          <p class="mb-0">Configure multiple visitor groups with different starting locations, population sizes, behaviours and movement goals.</p>
         </div></article></div>
         <div class="col-md-6 col-lg-4"><article class="card artemis-card"><div class="card-body">
-          <h3 class="h5">Heritage Decision Support</h3>
-          <p class="mb-0">Provide evidence and visual insights that can inform conservation, planning, public access and site management.</p>
+          <h3 class="h5">Configurable Environments</h3>
+          <p class="mb-0">Use externally supplied Unity-based 3D scenes and define destinations, danger zones and static or dynamic obstacles.</p>
+        </div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="card artemis-card"><div class="card-body">
+          <h3 class="h5">What-If Experimentation</h3>
+          <p class="mb-0">Test alternative crowd densities, routes, barriers and evacuation configurations without intervening in the real site.</p>
+        </div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="card artemis-card"><div class="card-body">
+          <h3 class="h5">Detailed Simulation Outputs</h3>
+          <p class="mb-0">Produce time-stamped agent states, positions, movement information and group-level summaries for further analysis.</p>
+        </div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="card artemis-card"><div class="card-body">
+          <h3 class="h5">Service-Based Integration</h3>
+          <p class="mb-0">Exchange scenario configurations and simulation results through JSON and a REST API for integration with external systems.</p>
         </div></article></div>
       </div>
     </section>
 
-    <section class="artemis-section py-4 mb-3" id="contribution">
-      <h2 class="mb-3">ArtCogS Contribution: Crowd Simulation</h2>
-      <p>
-        The <strong>ArtCogS research team at ATHENA Research Centre</strong> contributes to
-        ARTEMIS by developing a scalable <strong>Crowd Simulation Service</strong> that
-        builds upon the team's <strong>METIS</strong> multi-agent simulation technology.
-        The service supports the study of how people move through complex indoor and outdoor
-        heritage environments, including large historic urban areas.
-      </p>
-      <p>
-        Within ARTEMIS, METIS is exploited as a simulation component of the broader Digital Twin
-        ecosystem. It makes it possible to test alternative crowd configurations and movement
-        scenarios, helping stakeholders investigate congestion, visitor flows, evacuation
-        conditions and potential risks to sensitive heritage locations.
-      </p>
+    <section class="artemis-section py-4 mb-3" id="behaviours">
+      <h2 class="mb-3">Simulated Agent Behaviours</h2>
+      <p>METIS provides distinct behavioural modes to represent different ways people move through a virtual environment.</p>
       <div class="row g-4 mt-1">
         <div class="col-md-6"><article class="card artemis-card"><div class="card-body">
-          <h3 class="h5">Different Visitor Behaviours</h3>
-          <p class="mb-0">Model guided groups, independent visitors, ordinary movement and evacuation behaviour using heterogeneous virtual agents.</p>
+          <h3 class="h5">Simple Walking</h3>
+          <p class="mb-0">Agents navigate toward specified destinations using basic movement behaviour.</p>
         </div></article></div>
         <div class="col-md-6"><article class="card artemis-card"><div class="card-body">
-          <h3 class="h5">What-If Experiments</h3>
-          <p class="mb-0">Vary population sizes, destinations, obstacles and movement conditions to compare different situations in a virtual environment.</p>
+          <h3 class="h5">Guided Movement</h3>
+          <p class="mb-0">Groups follow predefined routes or a leader, representing organised tours and group visits.</p>
         </div></article></div>
         <div class="col-md-6"><article class="card artemis-card"><div class="card-body">
-          <h3 class="h5">Large-Scale Environments</h3>
-          <p class="mb-0">Use 3D replicas of heritage areas to study crowd dynamics across public squares, streets and connected urban spaces.</p>
+          <h3 class="h5">Exploration</h3>
+          <p class="mb-0">Agents move more freely within the scene, representing independent visitors.</p>
         </div></article></div>
         <div class="col-md-6"><article class="card artemis-card"><div class="card-body">
-          <h3 class="h5">Analysis-Ready Results</h3>
-          <p class="mb-0">Provide agent trajectories, time-stamped simulation data and summary metrics to support further analysis and visualisation.</p>
+          <h3 class="h5">Evacuation</h3>
+          <p class="mb-0">Agents move away from a configured danger zone toward a designated safe destination.</p>
         </div></article></div>
       </div>
-    </section>
-
-    <section class="artemis-section py-4 mb-3" id="pilots">
-      <h2 class="mb-3">Large-Scale Pilot Applications</h2>
-      <p>
-        ARTEMIS validates its technologies across a range of cultural heritage pilots.
-        Its large-scale pilot activities include <strong>crowd movement simulation in historic
-        city centres</strong>. These settings bring together narrow streets, open squares,
-        heritage assets and variable visitor demand, making them valuable contexts for
-        studying movement and crowd-related risks.
-      </p>
-      <p>
-        In the <strong>Old Town of Xanthi</strong> pilot context, crowd simulation can be
-        used to investigate scenarios such as busy public events, visitor circulation,
-        congested routes and emergency evacuation. The aim is to help evaluate alternative
-        management choices while considering both visitor safety and heritage protection.
-      </p>
     </section>
 
     <section class="artemis-section py-4 mb-3" id="workflow">
-      <h2 class="mb-3">How the Crowd Simulation Supports ARTEMIS</h2>
+      <h2 class="mb-3">Simulation Workflow</h2>
       <div class="row g-4 mt-1">
         <div class="col-md-4"><article class="card artemis-card"><div class="card-body">
-          <div class="d-flex align-items-center gap-3 mb-3"><span class="artemis-number">1</span><h3 class="h5 mb-0">Prepare a Scenario</h3></div>
-          <p class="mb-0">Use a 3D heritage environment and configure crowd groups, routes, destinations and relevant constraints.</p>
+          <div class="d-flex align-items-center gap-3 mb-3"><span class="artemis-number">1</span><h3 class="h5 mb-0">Configure</h3></div>
+          <p class="mb-0">Select a 3D environment and define agent groups, behaviours, destinations, obstacles and repetitions.</p>
         </div></article></div>
         <div class="col-md-4"><article class="card artemis-card"><div class="card-body">
-          <div class="d-flex align-items-center gap-3 mb-3"><span class="artemis-number">2</span><h3 class="h5 mb-0">Run the Simulation</h3></div>
-          <p class="mb-0">Execute agent-based scenarios through the METIS-based service, with configurable populations and repeated runs.</p>
+          <div class="d-flex align-items-center gap-3 mb-3"><span class="artemis-number">2</span><h3 class="h5 mb-0">Simulate</h3></div>
+          <p class="mb-0">Submit the scenario to the METIS-based service for multi-agent execution and data collection.</p>
         </div></article></div>
         <div class="col-md-4"><article class="card artemis-card"><div class="card-body">
-          <div class="d-flex align-items-center gap-3 mb-3"><span class="artemis-number">3</span><h3 class="h5 mb-0">Interpret Outcomes</h3></div>
-          <p class="mb-0">Use trajectories and aggregated results within the wider Digital Twin workflow to compare scenarios and support planning.</p>
+          <div class="d-flex align-items-center gap-3 mb-3"><span class="artemis-number">3</span><h3 class="h5 mb-0">Analyse</h3></div>
+          <p class="mb-0">Examine trajectories and summary indicators, then compare simulation runs to assess alternative scenarios.</p>
         </div></article></div>
       </div>
-      <p class="text-muted small mt-3">
-        The service is designed for integration through structured JSON data and a REST API.
-        Simulations support scenario analysis rather than guaranteeing predictions of real crowd behaviour.
+      <p class="text-muted small mt-3">Simulation outputs support scenario assessment; they are not guaranteed predictions of real-world crowd behaviour.</p>
+    </section>
+
+    <section class="artemis-section py-4 mb-3" id="applications">
+      <h2 class="mb-3">Large-Scale Pilot Applications</h2>
+      <p>
+        ARTEMIS provides an application context for METIS in cultural heritage settings.
+        In particular, the <strong>Old Town of Xanthi</strong> offers a historic urban
+        environment in which crowd simulation can explore pedestrian circulation across
+        narrow streets, public squares and areas surrounding sensitive heritage assets.
+      </p>
+      <p>
+        Example scenarios include high visitor attendance during public events, route
+        congestion, alternative pedestrian flows and emergency evacuation. The resulting
+        data can help compare planning options and identify locations requiring closer attention.
       </p>
     </section>
 
@@ -161,8 +157,8 @@
       <p class="mb-1"><strong>Project:</strong> ARTEMIS — Applying Reactive Twins to Enhance Monument Information Systems</p>
       <p class="mb-1"><strong>Duration:</strong> January 2025 – December 2027</p>
       <p class="mb-1"><strong>Funding:</strong> Horizon Europe · Grant Agreement No. 101188009</p>
-      <p class="mb-1"><strong>Coordinator:</strong> Consiglio Nazionale delle Ricerche (CNR), Italy</p>
-      <p class="mb-3"><strong>ArtCogS role:</strong> Crowd Simulation Service development at ATHENA Research Centre</p>
+      <p class="mb-1"><strong>ArtCogS role:</strong> METIS-based Crowd Simulation Service development at ATHENA Research Centre</p>
+      <p class="mb-3"><strong>Application:</strong> Large-scale crowd simulation for cultural heritage pilots and Digital Twins</p>
       <a href="https://artemis-twin.eu/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Official ARTEMIS Website</a>
     </section>
   </div>
