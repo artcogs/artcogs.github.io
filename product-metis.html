@@ -1,0 +1,89 @@
+<!-- ArtCogS | METIS product overview -->
+<div id="top-menu"></div>
+<script>fetch('top-menu.html').then(r=>r.text()).then(html=>document.getElementById('top-menu').innerHTML=html);</script>
+<style>
+.metis-hero {max-width:960px;margin:auto}.metis-section{scroll-margin-top:2rem}.metis-section p{line-height:1.75}
+.metis-figure{max-width:1000px;margin:2rem auto}.metis-figure img{width:100%;height:auto;border-radius:.75rem;box-shadow:0 .5rem 1.5rem rgba(0,0,0,.12)}
+.metis-card {height:100%;border:0;border-radius:.8rem;box-shadow:0 .25rem 1rem rgba(0,0,0,.08)}
+.metis-card .card-body{padding:1.5rem}.metis-year {font-weight:700;color:#212529}
+.metis-video {aspect-ratio:16/9;width:100%;border:0;border-radius:.8rem}
+.metis-step {display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;flex:0 0 2rem;border-radius:50%;background:#212529;color:#fff;font-weight:700}
+</style>
+<main class="flex-grow-1"><div class="container py-5">
+<header class="metis-hero text-center mb-5">
+  <p class="text-muted text-uppercase fw-semibold small mb-2" style="letter-spacing:.1em">ArtCogS · Research-driven technology</p>
+  <h1 class="display-4 fw-bold mb-2">METIS</h1>
+  <h2 class="h4 text-muted mb-3">Intelligent Crowd Simulation Platform</h2>
+  <p class="lead fw-semibold">Simulate. Analyse. Anticipate.</p>
+  <nav class="d-flex flex-wrap justify-content-center gap-2 my-4" aria-label="Page sections">
+    <a href="#overview" class="btn btn-outline-dark btn-sm">Overview</a>
+    <a href="#capabilities" class="btn btn-outline-dark btn-sm">Capabilities</a>
+    <a href="#workflow" class="btn btn-outline-dark btn-sm">How It Works</a>
+    <a href="#evolution" class="btn btn-outline-dark btn-sm">Evolution</a>
+    <a href="#demos" class="btn btn-outline-dark btn-sm">Demonstrations</a>
+    <a href="#applications" class="btn btn-outline-dark btn-sm">Applications</a>
+  </nav>
+  <p class="lead">METIS is a multi-agent crowd simulation technology developed through ArtCogS research, enabling virtual experiments with pedestrian movement, evacuation and crowd management. Its development spans configurable indoor simulations, AI-assisted crowd understanding and large-scale scenarios in 3D heritage environments.</p>
+</header>
+<figure class="metis-figure text-center">
+  <img src="./imgs/artemis/artemis.jpeg" alt="Crowd simulation in a historical urban environment" loading="eager">
+  <figcaption class="small text-muted mt-3">Illustrative large-scale crowd simulation in a 3D urban environment.</figcaption>
+</figure>
+<section class="metis-section py-4 mb-3" id="overview">
+ <h2 class="mb-3">What Is METIS?</h2>
+ <p>METIS brings together configurable virtual environments and agent-based behaviour models to investigate how crowds move through buildings, public spaces and complex urban areas. Researchers and stakeholders can explore alternative conditions before interventions are implemented in the real world.</p>
+ <p>What started as an accessible crisis-simulation environment has grown through related research projects into a broader family of crowd simulation capabilities, including analysis of evacuation behaviour, AI-based crowd observations and integration with Digital Twin workflows.</p>
+</section>
+<section class="metis-section py-4 mb-3" id="capabilities">
+ <h2 class="mb-4">Capabilities</h2>
+ <div class="row g-4">
+  <div class="col-md-6 col-lg-4"><article class="card metis-card"><div class="card-body"><h3 class="h5">Multi-Agent Crowds</h3><p class="mb-0">Model distinct groups of virtual pedestrians and their interactions with spatial environments.</p></div></article></div>
+  <div class="col-md-6 col-lg-4"><article class="card metis-card"><div class="card-body"><h3 class="h5">Evacuation Scenarios</h3><p class="mb-0">Examine safe routes, movement constraints and response to simulated hazards.</p></div></article></div>
+  <div class="col-md-6 col-lg-4"><article class="card metis-card"><div class="card-body"><h3 class="h5">Configurable 3D Environments</h3><p class="mb-0">Experiment with buildings and larger outdoor spaces under different layouts and conditions.</p></div></article></div>
+  <div class="col-md-6 col-lg-4"><article class="card metis-card"><div class="card-body"><h3 class="h5">Behavioural Variety</h3><p class="mb-0">Represent ordinary movement, guided groups, exploration and evacuation in relevant service configurations.</p></div></article></div>
+  <div class="col-md-6 col-lg-4"><article class="card metis-card"><div class="card-body"><h3 class="h5">Data and Analytics</h3><p class="mb-0">Collect agent trajectories and simulation summaries for scenario comparison and further analysis.</p></div></article></div>
+  <div class="col-md-6 col-lg-4"><article class="card metis-card"><div class="card-body"><h3 class="h5">Integration Potential</h3><p class="mb-0">ARTEMIS work develops a JSON-driven, REST-accessible simulation service for Digital Twin integration.</p></div></article></div>
+ </div>
+ <p class="small text-muted mt-3">Capabilities come from successive METIS-related research developments. Availability depends on the version, configuration and deployment; the page does not imply all features are currently packaged together in one released application.</p>
+</section>
+<section class="metis-section py-4 mb-3" id="workflow">
+ <h2 class="mb-4">How It Works</h2>
+ <div class="row g-4">
+  <div class="col-md-4"><article class="card metis-card"><div class="card-body"><div class="d-flex gap-3 align-items-center mb-3"><span class="metis-step">1</span><h3 class="h5 mb-0">Configure</h3></div><p class="mb-0">Select or design an environment, define populations, behaviours, destinations and obstacles.</p></div></article></div>
+  <div class="col-md-4"><article class="card metis-card"><div class="card-body"><div class="d-flex gap-3 align-items-center mb-3"><span class="metis-step">2</span><h3 class="h5 mb-0">Simulate</h3></div><p class="mb-0">Run agent-based scenarios and explore different conditions or repeated experiments.</p></div></article></div>
+  <div class="col-md-4"><article class="card metis-card"><div class="card-body"><div class="d-flex gap-3 align-items-center mb-3"><span class="metis-step">3</span><h3 class="h5 mb-0">Analyse</h3></div><p class="mb-0">Examine movement patterns, crowded zones, evacuation outcomes and scenario differences.</p></div></article></div>
+ </div>
+</section>
+<section class="metis-section py-4 mb-3" id="evolution">
+ <h2 class="mb-4">From Research to Product</h2>
+ <div class="row g-4">
+  <div class="col-md-4"><article class="card metis-card"><div class="card-body"><p class="metis-year">2020 · METIS</p><h3 class="h5">Original Research</h3><p>Introduced a configurable indoor crisis simulation system with building design, evacuation experiments and reinforcement learning.</p><a href="https://arxiv.org/abs/2009.03934" target="_blank" rel="noopener noreferrer">Read the paper</a></div></article></div>
+  <div class="col-md-4"><article class="card metis-card"><div class="card-body"><p class="metis-year">2025–2026 · CMSML</p><h3 class="h5">AI-Supported Crowd Management</h3><p>Explored computer vision, scene understanding, spatial crowd perception and reinforcement-learning-based evacuation analysis.</p><a href="./p-cmsml.html">Explore CMSML</a></div></article></div>
+  <div class="col-md-4"><article class="card metis-card"><div class="card-body"><p class="metis-year">2025–2027 · ARTEMIS</p><h3 class="h5">Large-Scale Heritage Simulation</h3><p>Extends METIS-based services to crowd movement scenarios in cultural heritage spaces and Digital Twin settings.</p><a href="./p-artemis.html">Explore ARTEMIS</a></div></article></div>
+ </div>
+</section>
+<section class="metis-section py-4 mb-3" id="demos">
+ <h2 class="mb-3">Demonstrations</h2>
+ <p>Explore the progression from interactive building and evacuation experiments to a broader crowd management system.</p>
+ <div class="row g-4">
+  <div class="col-lg-6"><h3 class="h5">Original METIS: Building Design and Evacuation</h3><iframe class="metis-video" src="https://www.youtube-nocookie.com/embed/-B36Gl0XjSc" title="Original METIS evacuation demonstration" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p class="small text-muted mt-2">Interactive building configuration and evacuation demonstration.</p></div>
+  <div class="col-lg-6"><h3 class="h5">CMSML: Crowd Management System</h3><iframe class="metis-video" src="https://www.youtube-nocookie.com/embed/xw2p1KUJDDc" title="CMSML system demonstration" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p class="small text-muted mt-2">Demonstration of the broader CMSML system.</p></div>
+ </div>
+</section>
+<section class="metis-section py-4 mb-3" id="applications">
+ <h2 class="mb-4">Application Areas</h2>
+ <div class="row g-4">
+  <div class="col-md-6"><article class="card metis-card"><div class="card-body"><h3 class="h5">Building Safety and Evacuation</h3><p class="mb-0">Test indoor configurations, movement paths and emergency-planning scenarios.</p></div></article></div>
+  <div class="col-md-6"><article class="card metis-card"><div class="card-body"><h3 class="h5">Public Spaces and Events</h3><p class="mb-0">Study crowd movement, flows and bottlenecks in complex shared spaces.</p></div></article></div>
+  <div class="col-md-6"><article class="card metis-card"><div class="card-body"><h3 class="h5">Cultural Heritage</h3><p class="mb-0">Support visitor-flow studies and crowd-related risk analysis for historic sites and urban districts.</p></div></article></div>
+  <div class="col-md-6"><article class="card metis-card"><div class="card-body"><h3 class="h5">Research and Training</h3><p class="mb-0">Provide repeatable simulation scenarios for investigating agent behaviour and decision support.</p></div></article></div>
+ </div>
+</section>
+<section class="metis-section py-4 mb-3">
+ <h2 class="mb-3">Research and Collaboration</h2>
+ <p>METIS is being developed through ArtCogS research and collaborative projects at ATHENA Research Centre. Interested in a research pilot, technology demonstration or integration discussion? Contact the team through the existing ArtCogS website.</p>
+ <a href="https://arxiv.org/abs/2009.03934" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Original METIS Publication</a>
+</section>
+</div></main>
+<div id="footer"></div><script>fetch('footer.html').then(r=>r.text()).then(html=>document.getElementById('footer').innerHTML=html);</script>
+<script src="./js/bootstrap.bundle.min.js"></script>
