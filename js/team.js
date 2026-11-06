@@ -173,6 +173,17 @@ const teamData = {
       }
     },
     {
+      id: "zoilygizou",
+      name: "Dr. Zoi Lygizou",
+      role: ["Junior Researcher", "RL-Agents Technologies"],
+      email: "zoi.lygizou(AT)athenarc.gr",
+      img: "imgs/profile/zoi.jpg",
+      links: {
+        linkedin: "https://www.linkedin.com/in/",
+        orcid: "https://orcid.org/0000-0001-8414-7963./"
+      }
+    },
+    {
       id: "helenatheodoropoulou",
       name: "Helena G. Theodoropoulou",
       role: ["PhD Candidate", "AI, XR and Creativity"],
@@ -183,17 +194,6 @@ const teamData = {
         scholar: "https://scholar.google.com/citations?user=NjFk0rEAAAAJ&hl=en",
         orcid: "https://orcid.org/0000-0002-5896-0739",
         academia: "https://independent.academia.edu/ElenaTheodoropoulou"
-      }
-    },
-    {
-      id: "zoilygizou",
-      name: "Dr. Zoi Lygizou",
-      role: ["Junior Researcher", "RL-Agents Technologies"],
-      email: "zoi.lygizou(AT)athenarc.gr",
-      img: "imgs/profile/zoi.jpg",
-      links: {
-        linkedin: "https://www.linkedin.com/in/",
-        orcid: "https://orcid.org/0000-0001-8414-7963./"
       }
     },
     {
