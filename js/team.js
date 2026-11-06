@@ -187,8 +187,8 @@ const teamData = {
     },
     {
       id: "zoilygizou",
-      name: "Zoi Lygizou",
-      role: ["PhD Candidate", "RL-Agents Technologies"],
+      name: "Dr. Zoi Lygizou",
+      role: ["Junior Researcher", "RL-Agents Technologies"],
       email: "zoi.lygizou(AT)athenarc.gr",
       img: "imgs/profile/zoi.jpg",
       links: {
